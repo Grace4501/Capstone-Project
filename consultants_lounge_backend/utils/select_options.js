@@ -1,4 +1,4 @@
-export const languages = [
+export const languages_options = [
     "English", "Spanish", "French", "Italian", "German",
     "Portuguese", "Dutch", "Russian", "Chinese", "Japanese",
     "Korean", "Arabic", "Hindi", "Bengali", "Turkish",

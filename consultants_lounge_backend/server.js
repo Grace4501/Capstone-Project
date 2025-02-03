@@ -2,7 +2,11 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import session from "express-session"
-import {session_router} from './routes/session_routes.js'
+import MongoStore from 'connect-mongo'
+import {router} from './routes/routes.js'
+import { connectDB } from './config/db_conn.js';
+
+connectDB();
 
 dotenv.config() //Enviroment Variables
 
@@ -39,7 +43,7 @@ app.use( //CORS policies.
     })
   );
 
-app.use('/api/v1/session', session_router) //Routes Funnelling
+app.use('/api/v1/session', router) //Routes Funnelling
 
 
 //Express Server Listening...

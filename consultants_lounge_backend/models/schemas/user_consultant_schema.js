@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import {languages_options} from "../../utils/select_options"
+import {languages_options} from "../../utils/select_options.js"
 
 const consultant_schema = new mongoose.Schema({
     user_info: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Reference to User schema
