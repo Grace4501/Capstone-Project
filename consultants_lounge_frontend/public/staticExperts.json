@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Sandy Oh",
+        "title": "Financial Advisor",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Adam Perez",
+        "title": "Developer",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Ruth Thompson",
+        "title": "Product Manager",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Eli Palmieri",
+        "title": "UX/UI Designer",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Alex Shum",
+        "title": "Scrum Master",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Jay Sonuga",
+        "title": "Banking Consultant",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Alex Johnson",
+        "title": "UX Designer",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Jane Smith",
+        "title": "Jane Smith",
+        "image": "resources/placeholderExpert.jpg"
+    }
+]
