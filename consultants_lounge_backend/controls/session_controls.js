@@ -13,9 +13,10 @@ export const user_logout = async (req,res)=>{
 
 }
 
-export const register_dummy_users = async ()=>{
+export const register_dummy_users = async (req,res)=>{
     try{
         await session_actions.insert_dummy_user_data()
+        res.status(200).json({ message: 'Dummy users and consultants added successfully.' });
     }
     catch(e){
         console.log(e)
@@ -26,6 +27,7 @@ export const register_dummy_users = async ()=>{
 export const reset_dummy_users = async (req, res)=>{
     try{
         await session_actions.reset_dummy_user_data()
+        res.status(200).json({ message: 'Dummy users and consultants reset successfully.' });
     }
     catch(e){
         console.log(e)

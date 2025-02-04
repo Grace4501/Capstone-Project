@@ -43,7 +43,7 @@ app.use( //CORS policies.
     })
   );
 
-app.use('/api/v1/session', router) //Routes Funnelling
+app.use('/api/v1', router) //Routes Funnelling
 
 
 //Express Server Listening...
