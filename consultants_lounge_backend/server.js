@@ -44,11 +44,21 @@ app.use( //CORS policies.
   );
 
 app.use('/api/v1', router) //Routes Funnelling
-
-
+/*
+app.get('/test-session', (req, res) => {
+    req.session.user = { username: "testUser2" };  // Assign a test value
+    console.log("Session Data:", req.session);
+    res.json({ message: "Session set", session: req.session });
+});
+*/
 //Express Server Listening...
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
     console.log(`Server is running on port: ${PORT}`)
 })
 
+/*
+{"_id":"fCLhF1669h6y-8tyo4s4UeUvFcy5Apr0",
+"expires":{"$date":{"$numberLong":"1738637095959"}},
+"session":"{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2025-02-04T02:33:09.010Z\",\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"user\":{\"username\":\"testUser\"}}"}
+*/
