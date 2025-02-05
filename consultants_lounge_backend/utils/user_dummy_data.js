@@ -5,7 +5,8 @@ export const dummyUserData = [
       last_name: 'Smith',
       email: 'john.smith@example.com',
       password: 'JohnDoe',
-      phone: '1234567890'
+      phone: '1234567890',
+      role: 'consultant'
     },
     {
       first_name: 'Jane',
@@ -13,7 +14,8 @@ export const dummyUserData = [
       last_name: 'Johnson',
       email: 'jane.johnson@example.com',
       password: 'MaryJane',
-      phone: '0987654321'
+      phone: '0987654321',
+      role: 'consultant'
     }
 
   ];

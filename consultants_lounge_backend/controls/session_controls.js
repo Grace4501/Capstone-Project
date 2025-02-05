@@ -1,5 +1,5 @@
 import * as session_actions from "../models/session_models.js"
-
+import bcrypt from "bcrypt"
 
 export const user_register = async (req, res)=>{
     try {
@@ -37,7 +37,7 @@ export const user_login = async (req, res)=>{
  
     try {
         const { email, password } = req.body;
-
+        
         // Validate input
         if (!email || !password) {
             return res.status(400).json({ message: "Email and password are required." });
@@ -46,17 +46,18 @@ export const user_login = async (req, res)=>{
         // Find user by email
         const user = await session_actions.find_user_by_email(email);
         if (!user) {
-            return res.status(401).json({ message: "Invalid credentials." });
+            return res.status(401).json({ message: "Invalid email." });
         }
 
         // Compare passwords
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = await bcrypt.compare(password, user.info.password);
         if (!isMatch) {
-            return res.status(401).json({ message: "Invalid credentials." });
+            return res.status(401).json({ message: "Invalid password." });
         }
 
         // Store user in session
-        req.session.user = { id: user._id, email: user.email };
+        //user.info contains shared properties by consultants and clients like email and phone.
+        req.session.user = { id: user.info._id };
 
         res.status(200).json({ message: "Login successful", user: req.session.user });
 
