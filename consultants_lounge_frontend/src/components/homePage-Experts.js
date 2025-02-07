@@ -1,3 +1,4 @@
+
 export function loadExperts() {
     fetch('staticExperts.json')
       .then(response => response.json())
@@ -34,4 +35,5 @@ export function loadExperts() {
       })
       .catch(error => console.error('Error loading expert data:', error));
   }
+
   

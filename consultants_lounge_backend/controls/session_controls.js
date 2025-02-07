@@ -1,5 +1,6 @@
 import * as session_actions from "../models/session_models.js"
-
+import passport from "passport";
+import bcrypt from "bcrypt"
 
 export const user_register = async (req, res)=>{
     try {
@@ -25,6 +26,7 @@ export const user_register = async (req, res)=>{
             email,
             password: hashedPassword,
         });
+        
 
         res.status(201).json({ message: "User registered successfully.", user: newUser });
     } catch (error) {
@@ -33,63 +35,42 @@ export const user_register = async (req, res)=>{
     }
 }
 
-export const user_login = async (req, res)=>{
- 
-    try {
-        const { email, password } = req.body;
-
-        // Validate input
-        if (!email || !password) {
-            return res.status(400).json({ message: "Email and password are required." });
-        }
-
-        // Find user by email
-        const user = await session_actions.find_user_by_email(email);
+export const user_login = async (req, res, next)=>{
+    //The user parameter comes from the user value returned by done(null, user) in local strategy
+    const auth_middleware = passport.authenticate("local", (err, user, info) => {
+        if (err) return next(err);  // If any error occurs, pass it to next middleware.
+        //checks for the user in DB
         if (!user) {
-            return res.status(401).json({ message: "Invalid credentials." });
+            return res.status(401).json({ message: info.message });  // Send error message if user not found
         }
+        //Uses the found user to compare passwords and login.
+        console.log("...\nA user is trying to log in...")
+        req.logIn(user.info, (err) => {
 
-        // Compare passwords
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            return res.status(401).json({ message: "Invalid credentials." });
-        }
+            if (err) return next(err);  // Handle any error during login
+            console.log(`User_id: ${user.info._id} has been authenthicated`)
+            return res.json({ message: "Login successful", user });  // Send success response
+        });
+    })
 
-        // Store user in session
-        req.session.user = { id: user._id, email: user.email };
-
-        res.status(200).json({ message: "Login successful", user: req.session.user });
-
-    } 
-    catch (error) {
-        console.error(error);
-        res.status(500).json({ message: "Internal Server Error", error });
-    }
+    auth_middleware(req, res, next);  // passport.authenticate("local") return a func that needs to be executed using (req,res,next).
+    //console.log(req.User)
     
 }
 
-export const user_logout = async (req,res)=>{
+export const user_logout = (req, res) => {
+    //Remove the session record from the session store
+    req.logout((err) => {
+        if (err) return next(err);
 
-}
+        // Destroy the session
+        //destroy is implictly called when no callback is passed as args
+        req.session.destroy((err) => {
+            if (err) return next(err);
 
-export const register_dummy_users = async (req,res)=>{
-    try{
-        await session_actions.insert_dummy_user_data()
-        res.status(200).json({ message: 'Dummy users and consultants added successfully.'});
-    }
-    catch(e){
-        console.log(e)
-        res.status(500).json(e)
-    }
-    
-}
-export const reset_dummy_users = async (req, res)=>{
-    try{
-        await session_actions.reset_dummy_user_data()
-        res.status(200).json({ message: 'Dummy users and consultants reset successfully.' })
-    }
-    catch(e){
-        console.log(e)
-        res.status(500).json(e)
-    }
+            // Explicitly clear the cookie from the browser
+            res.clearCookie("connect.sid"); 
+            res.json({ message: "Logged out successfully" });
+        });
+    });
 }
