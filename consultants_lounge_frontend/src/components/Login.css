@@ -1,0 +1,94 @@
+
+
+.Login {
+    display: flex;
+    height: 100vh;
+    gap: 90px;
+}
+
+.logo-container {
+    width: 60%;
+    background-color: azure;
+}
+
+
+.logo-container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(93, 192, 249, 0.4); 
+    z-index: 1;
+    width: 60%;
+}
+
+.form-container {
+    margin-top: 7%;
+    padding: 20px;
+    width: 300px;
+}
+
+h1,h5{
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 30%;
+    color: white;
+}
+
+h5{
+    font-size: 20px;
+    color: gray;
+}
+
+
+h4 {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 13px;
+    margin-right: 100%;
+}
+
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(136, 133, 133);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.buttons {
+    margin-top: 30pt;
+}
+
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.login-button{
+background-color: black;
+color: white;
+}
+
+.google{
+border: 1px solid rgb(185, 185, 185);
+background-color: white;
+}
+
+.google img{
+margin-right: 10px;
+width: 20px;
+height: 20px;
+}
+
