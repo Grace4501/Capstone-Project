@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import '../App.css'; // Global styles
 import { Link } from 'react-router-dom';
@@ -168,5 +169,6 @@ const HomePage = () => {
     </div>
   );
 };
+
 
 export default HomePage;
