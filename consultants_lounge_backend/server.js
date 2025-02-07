@@ -1,40 +1,30 @@
 import cors from 'cors'
+import path from "path"
 import dotenv from 'dotenv'
 import express from 'express'
 import session from "express-session"
 import MongoStore from 'connect-mongo'
 import {router} from './routes/routes.js'
+import passport from "./strategies/local_strategy.js";
 import { connectDB } from './config/db_conn.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+// Import the session change stream function
+import { startSessionChangeStream } from './models/session_log_track_model.js';
 
 connectDB();
 
 dotenv.config() //Enviroment Variables
 
 const app = express()
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-app.use(express.json()) //Json Parsing
-app.use(express.urlencoded({extended: true})) //WebForms Parsing
+//Serving React's static files
+app.use(express.static(path.join(__dirname, "build")))
 
-app.use( //Session Store
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false,
-        store: MongoStore.create({
-            mongoUrl: process.env.MONGO_URI,  // Using Atlas MongoDB
-            collectionName: "sessions",  // Custom collection to store sessions
-            ttl: 60 * 60 * 24,  // Sessions expire after 24 hours
-        }),
-        cookie: {
-            name: process.env.SESSION_COOKIE_NAME,
-            httpOnly: process.env.SESSION_COOKIE_HTTPONLY === "true",
-            secure: process.env.SESSION_COOKIE_SECURE === "true",
-            maxAge: parseInt(process.env.SESSION_COOKIE_MAXAGE),  // 1 hour
-        },
-    })
-);                  
-
-app.use( //CORS policies.
+//CORS policies.
+app.use( 
     cors({
       origin: 'http://localhost:3000', //Receiving only from port:3000 for development purposes.
       methods: ['GET', 'POST', 'PUT', 'DELETE'], //Allowed Methods
@@ -43,22 +33,44 @@ app.use( //CORS policies.
     })
   );
 
-app.use('/api/v1', router) //Routes Funnelling
-/*
-app.get('/test-session', (req, res) => {
-    req.session.user = { username: "testUser2" };  // Assign a test value
-    console.log("Session Data:", req.session);
-    res.json({ message: "Session set", session: req.session });
-});
-*/
+app.use(express.json()) //Json Parsing
+app.use(express.urlencoded({extended: true})) //WebForms Parsing
+
+//Session Store.
+app.use( 
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: true,
+        // MongoStore chosen for session storing
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGO_URI,  // We located the session store in our core DB.
+            collectionName: "sessions",  
+            ttl: parseInt(process.env.SESSION_COOKIE_MAXAGE),  // Session removed from sessions after last interaction with server (15 mins). Same as coookie expiration time.
+        }),
+        cookie: {
+            name: process.env.SESSION_COOKIE_NAME,
+            httpOnly: process.env.SESSION_COOKIE_HTTPONLY === "true",
+            secure: process.env.SESSION_COOKIE_SECURE === "true",
+            expires: null
+            //maxAge: parseInt(process.env.SESSION_COOKIE_MAXAGE),  // 1 hour
+        },
+    })
+);                  
+
+
+// Initialize Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+//Routes Funnelling
+app.use('/api/v1', router) 
+
 //Express Server Listening...
 const PORT = process.env.PORT || 3001
 app.listen(PORT, ()=>{
     console.log(`Server is running on port: ${PORT}`)
+    startSessionChangeStream()
 })
 
-/*
-{"_id":"fCLhF1669h6y-8tyo4s4UeUvFcy5Apr0",
-"expires":{"$date":{"$numberLong":"1738637095959"}},
-"session":"{\"cookie\":{\"originalMaxAge\":3600000,\"expires\":\"2025-02-04T02:33:09.010Z\",\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"user\":{\"username\":\"testUser\"}}"}
-*/
