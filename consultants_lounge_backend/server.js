@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import session from "express-session"
 import {session_router} from './routes/session_routes.js'
+import MongoStore from 'connect-mongo'
 
 dotenv.config() //Enviroment Variables
 
