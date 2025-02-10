@@ -3,6 +3,7 @@ import { Strategy as LocalStrategy } from "passport-local";
 import bcrypt from "bcrypt";
 import * as session_actions from "../models/session_models.js";
 
+
 // Configure Local Strategy for username/password authentication. This method is called when passport.Authenthicate("local") is esxecuting calling its local strategy
 passport.use(
   new LocalStrategy(
@@ -26,7 +27,7 @@ passport.use(
 );
 
 // Serialize User for Sessions if strategy shows no errors. When the user logs in.
-passport.serializeUser((user, done) => {
+passport.serializeUser(async (user, done) => {
     console.log(`...\nSerializing user_id ${user.id} into session store...`)
     done(null, user.id)
 }); // saves user_id in sessionStore.

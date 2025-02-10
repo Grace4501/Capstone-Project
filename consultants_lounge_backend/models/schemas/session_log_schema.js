@@ -2,10 +2,10 @@ import mongoose from "mongoose"
 
 const session_log_schema = new mongoose.Schema({
   session_id: { type: String, required: true },
-  user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Track registered users in session_control with req.session.passport.user. Comes from the deserialized user id from session store.
+  user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' } || "visitor", // Track registered users in session_control with req.session.passport.user. Comes from the deserialized user id from session store.
   metadata: {
-    user_agent: String, // Browser/device info
-    ip_address: String, // Visitor IP. Assigned in session_controls throug req.session.metadata
+    type: Map,
+    of: String, // Convert metadata fields to a Map for consistency
   },
   activity: { //Activity is assigned to the req.session.activity
     type: Map,

@@ -2,6 +2,7 @@ import { User } from './schemas/user_schema.js';  // Import your User model
 import { Consultant } from './schemas/user_consultant_schema.js';  // Import your Consultant model
 
 
+
 export const create_user = async (userData) => {
     const user = new User(userData)
     return await user.save()
