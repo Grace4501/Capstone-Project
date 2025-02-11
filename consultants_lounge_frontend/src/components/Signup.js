@@ -16,7 +16,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3001/api/v1/session/signup', {
+            const response = await fetch('http://localhost:3000/api/v1/session/signup', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
