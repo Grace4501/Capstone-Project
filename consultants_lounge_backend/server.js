@@ -2,6 +2,7 @@ import cors from 'cors'
 import path from "path"
 import dotenv from 'dotenv'
 import express from 'express'
+import cookieParser from 'cookie-parser'
 import {router} from './routes/routes.js'
 import passport from "./strategies/local_strategy.js";
 import { connectDB } from './config/db_conn.js';
@@ -37,14 +38,22 @@ app.use(
   );
 
 app.use(express.json()) //Json Parsing
-app.use(express.urlencoded({extended: true})) //WebForms Parsing
+app.use(express.urlencoded({extended: true})) //WebForms Parsing.
+app.use(cookieParser());  
 
-app.use((req,res,next)=>{
-    if(!req.session) req.isNew = true
-    else req.isNew = false
+app.use(async (req, res, next) => {
+    // Check if the client has a session cookie
+    const hasSessionCookie = req.cookies["connect.sid"];
 
-    next()
-})
+    if (hasSessionCookie) { req.isNew = false; console.log(hasSessionCookie);} // If session exists, it's not new.
+        
+    else req.isNew = true; // No session cookie means a new visitor
+    
+    next();
+});
+
+
+
 
 //Session Store
 app.use( 
@@ -52,7 +61,7 @@ app.use(
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: true,
-        // MongoStore chosen for session storing
+        // MongoStore chosen for session storing.
         store: MongoStore.create({
             mongoUrl: process.env.MONGO_URI,  // We located the session store in our core DB.
             collectionName: "sessions",  

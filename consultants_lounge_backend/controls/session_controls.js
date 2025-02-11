@@ -41,35 +41,35 @@ export const user_login = async (req, res, next)=>{
     //The user parameter comes from the user value returned by done(null, user) in local strategy
 
 
-    const auth_middleware = passport.authenticate("local", (err, user, info) => { //Uses local strategy to authenticate credentials
+    const auth_middleware = passport.authenticate("local", (err, user, info) => { //Uses local strategy to authenticate credentials.
         if (err) return next(err);  // If any error occurs, pass it to next middleware.
         //checks for the user in DB
         if (!user) {
+            console.log("--\nProblem logging in : ", info.message)
             return res.status(401).json({ message: info.message });  // Send error message if user not found
         }
         //Uses the authenticateed user to log the uses into session by calling serializeUser and storing user_id in req.session.passport.user.
        
         console.log(`User: ${user.info.email} has been authenthicated`)
 
+        //This inserts a new session document into sessions
         req.logIn(user.info, async (err) => {
 
-            if (err) {
-                //Login Failuer
-                return
-            }
+            if (err) return console.log("Serializing Error: ", err)
+            
+                //else...
+            console.log(`...\nUser_id: ${user.info._id} has been serialized into session store`)
 
-                 console.log(`...\nUser_id: ${user.info._id} has been serialized into session store`)
-
-            // Preserve existing session data
+            // Preserve existing session data.
             req.session.metadata = req.session.metadata || {}; 
+            req.session.activity = req.session.activity || {}; 
             req.session.metadata.ip_address = req.socket.remoteAddress;
             req.session.metadata.user_agent = req.headers['user-agent'];
-
-            req.session.activity = req.session.activity || {};
             req.session.activity.logged_in = true;
 
-            // Save session to persist changes
-            req.session.save((saveErr) => {
+            // Save session to persist changes.
+            //This updated the session in sessions
+            await req.session.save((saveErr) => {
                 if (saveErr) {
                     console.error("Session save error:", saveErr);
                 }
@@ -77,14 +77,14 @@ export const user_login = async (req, res, next)=>{
                 res.json({ message: "Login successful", user });
             });
        
-            next()
         });
     })
+
+
+
     console.log("...\nA user is trying to log in...")
     auth_middleware(req, res, next);  // passport.authenticate("local") return a func that needs to be executed using (req,res,next)..
     //console.log(req.User).
-
-
 }
 
 export const user_logout = (req, res) => {

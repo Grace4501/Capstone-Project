@@ -2,15 +2,15 @@
 import express from 'express'
 import * as session_controls from '../controls/session_controls.js'
 import * as testing_controls from '../controls/testing_controls.js'
-import * as tracking_controls from '../controls/middlewares/tracker.js'
+import { authenticate_user } from '../controls/middlewares/authentication.js' 
 
 export const session_router = express.Router()
 
 //Login implemented with passport middleware
 //React front end is responsible for redirection
 session_router.post('/register', session_controls.user_register) //User registration activity can be tracked directly with the users collection.
-session_router.post("/login", session_controls.user_login, tracking_controls.track_login_activity )
-session_router.get('/logout', session_controls.user_logout)
+session_router.post("/login", session_controls.user_login)
+session_router.get('/logout', authenticate_user, session_controls.user_logout)
 
 
 //Testing actions...

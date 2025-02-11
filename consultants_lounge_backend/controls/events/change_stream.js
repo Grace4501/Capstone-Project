@@ -28,53 +28,48 @@ async function startSessionChangeStream() {
         console.log("Operation Type:", change.operationType);
         console.log("Change Details:", JSON.stringify(change, null, 2));
 
-    
+        
         if (change.operationType === 'delete') {
-            console.log("...\nSession deleted. No data to process.");
-            return;
+            return console.log("...\nSession deleted. No data to process.");
+            
         }
+        //We only care about session changes
+        if (change.operationType === 'update' && !change.updateDescription.updatedFields.session ) {
 
-        if (change.operationType === 'update') {
-
-            if(!updatedDocument.session){
-                console.log("...\nSkipping session update: No relevant fields changed.");
-                return;
-            }
-
+            return console.log("...\nSkipping session update: No changes were made on session");            
         }
-    
+        
+
+        //Insert and session updates go in here.....
         try {
             const session = JSON.parse(updatedDocument.session)
 
-            console.log(`Updated session: `, session)
+            console.log(`--\nCurrent session was modified or created: `, session)
 
-            if (!session['activity'] && !session['metadata']) {
-                console.log("...\nSkipping session update: No relevant fields changed.");
-                return;
-            }
 
             let sessionId = updatedDocument._id;
-            let userId = session.passport?.user || 'visitor' // Extract userId from passport
-            let activity = session.activity || {...session.activity, logged_in:true};
-            let metadata = session.metadata || {...session.metadata, lol:'lol'};
+            let userId = session.passport?.user || await get_visitor_session_id() // Extract userId from passport
+            let activity = session.activity 
+            let metadata = session.metadata 
     
-            if (!userId) {
-                console.warn(`...\nSkipping session log: No userId found for session ${sessionId}`);
-                return;
-            }
     
             if (change.operationType === 'insert') {
-                console.log("...\nNew session created. Inserting new session into session logs...");
-                await createSessionLog(sessionId, userId, activity, metadata);
+
+                console.log("...\nNew session created. Inserting new session into session logs...")
+                await createSessionLog(sessionId, userId, activity, metadata)
+
             } else if (change.operationType === 'update') {
-                console.log("...\nSession updated. Updating session log...");
-                await updateSessionLog(sessionId, activity, metadata);
+
+                console.log("...\nSession was updated. Updating session log...", change.updateDescription.updatedFields.session)
+                await updateSessionLog(sessionId, activity, metadata)
+
             }
         } catch (err) {
-            console.error("Error handling session change:", err);
-            return
+
+            console.error("Error handling session change:", err)
+            
         }
-    });
+    })
     
 
 
@@ -82,12 +77,6 @@ async function startSessionChangeStream() {
 
 // Create Session Log Helper Function
 async function createSessionLog(session_id, userId , activity,  metadata) {
-
-    console.log(userId)
-    if(userId === "visitor"){
-        userId = await get_visitor_session_id()
-    }
-
     
     const sessionLog = new SessionLog({
         session_id,
@@ -98,7 +87,6 @@ async function createSessionLog(session_id, userId , activity,  metadata) {
 
     await sessionLog.save();
     
-
 }
 
 // Update Session Log Helper Function
@@ -106,15 +94,8 @@ async function updateSessionLog(session_id, activity, metadata) {
 
     const log = await SessionLog.findOne({ session_id }).sort({ createdAt: -1 }).limit(1); 
 
-    if (!log) {
-        console.log("No existing session log found.");
-        return;
-    }
-
-    console.log("session log found: ", log);
-    console.log("metadata log found: ", metadata);
-    console.log("activity log found: ", activity);
-    
+    if (!log) return console.log("Session updating error: No existing session log was found.");
+        
     if (!log.activity) log.activity = new Map();
     if (!log.metadata) log.metadata = new Map();
 
