@@ -15,10 +15,9 @@ export default function Login() {
             </div>
                 {/* Form */}
             <div className="form-container">
-         
                 <form>
                     <h4> Welcome Back </h4>
-                    <div >
+                    <div>
                         <label>Email:</label>
                         <input type="email" />
                     </div>

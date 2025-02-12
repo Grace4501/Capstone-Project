@@ -1,0 +1,26 @@
+/* Overall layout of the admin page */
+.Admin {
+    display: flex;
+    height: 1000px;
+    width: 30%;
+  }
+  
+
+.Nav{
+    border-style: solid 2px rgb(195, 193, 193);
+    background-color: rgb(234, 233, 233);
+}
+
+
+.Nav ul li{
+    list-style: none;
+    padding-left: 0;
+  }
+  
+
+  .Nav ul li a:hover {
+    background-color: #b1e5ff;
+    border-radius: 5px;
+  }
+  
+ 
