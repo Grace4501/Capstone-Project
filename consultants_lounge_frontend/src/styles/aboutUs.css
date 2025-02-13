@@ -132,6 +132,8 @@
     font-weight: 600;
     transform: scaleY(1.3) translateX(-25px);
     transform: scaleX(0.8);
+    background-color: #ebf1f4;
+
 }
 
 /* Container for the leadership cards */
@@ -144,6 +146,8 @@
     width: 100%;
     padding: 10px;
     overflow-x: hidden;
+    background-color: #ebf1f4;
+
 }
 
 /* Each leader card */

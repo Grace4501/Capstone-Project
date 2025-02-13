@@ -30,9 +30,8 @@ html, body {
 
 /* Logo styling*/
 .logo {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
-    font-family: 'Libre Caslon', serif;
     padding-left: 15px;
 }
 
@@ -182,13 +181,15 @@ a {
 .footer-logo-container {
     flex: 1;
     margin-right: 50px;
+    background-color: #174267;
 }
 
 /* Logo styling */
 .footer-logo {
-    font-family: 'Libre Caslon', serif;
-    font-size: 24px;
     margin: 0;
+    background-color: #174267;
+    max-width: 60%;
+    height: auto;
 }
 
 /* Styling for info list section styling */
@@ -198,6 +199,7 @@ a {
     flex: 7;
     gap: 75px;
     margin-top: 70px;
+    background-color: #174267;
 }
 
 /* Styling for info list groups */
@@ -205,29 +207,42 @@ a {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
+    background-color: #174267;
+}
+
+.footer-lists p {
+    background-color: #174267;
+}
+
+.footer-lists b {
+    background-color: #174267;
 }
 
 /* Info list Styling */
 .footer-lists ul {
     list-style: none;
     padding: 0;
+    background-color: #174267;
 }
 
 /* List item styling */
 .footer-lists li {
     padding: 5px 0;
     font-size: 12px;
+    background-color: #174267;
 }
 
 /* List link styling */
 .footer-lists a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.893);
+    background-color: #174267;
 }
 
 /* Logo & info styling */
 .logo-list-container {
     flex-direction: column;
+    background-color: #174267;
 }
 
 /* Styling for signup section */
@@ -237,6 +252,7 @@ a {
     align-items: flex-start;
     margin-top: 0;
     padding-left: 20px;
+    background-color: #174267;
 }
 
 /* Styling for signup paragraph */
@@ -245,6 +261,7 @@ a {
     margin-top: 150px;
     margin-bottom: 30px;
     width: 370px;
+    background-color: #174267;
 }
 
 /* Styling for signup button */

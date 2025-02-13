@@ -26,7 +26,7 @@ const HomePage = () => {
       {/* Header Section */}
       <div className="header">
         <div className="logo-container">
-          <h1 className="logo" alt="Consultants Lounge Logo">Website Logo</h1>
+        <img src="resources/CompanyLogo-White.png" className="logo" alt="company logo" />
         </div>
 
         <div className="pageList">
@@ -124,7 +124,7 @@ const HomePage = () => {
       <div className="footer">
         <div className="logo-list-container">
           <div className="footer-logo-container">
-            <h1 className="footer-logo">Website Logo</h1>
+          <img src="resources/CompanyLogo-Blue.png" className="footer-logo" alt="company logo" />
           </div>
 
           <div className="footer-lists">

@@ -11,7 +11,7 @@ const AboutUs = () => {
       {/* Header */}
       <div className="header">
         <div className="logo-container">
-          <h1 className="logo">Website Logo</h1>
+        <img src="resources/CompanyLogo-White.png" className="logo" alt="company logo" />
         </div>
         <div className="pageList">
           <ul>
@@ -32,7 +32,7 @@ const AboutUs = () => {
         <div className="text-whatDo">
           <h1 className="title-whatDo">WHAT WE DO</h1>
           <p className="paragraph-whatDo">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            We make great work happen by connecting talent with small businesses. Sign up to find a consultant for your unique business needs.
           </p>
           <Link to="/signup" className="signup-whatDo">SIGN UP</Link>
         </div>
@@ -49,7 +49,7 @@ const AboutUs = () => {
       <div className="footer">
         <div className="logo-list-container">
           <div className="footer-logo-container">
-            <h1 className="footer-logo">Website Logo</h1>
+          <img src="resources/CompanyLogo-Blue.png" className="footer-logo" alt="company logo" />
           </div>
 
           <div className="footer-lists">

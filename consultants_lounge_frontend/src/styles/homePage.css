@@ -1,6 +1,7 @@
 
 * {
     text-align: left;
+    background-color: #fbfbfb;
 }
 
 /* Next Level Buisness Section */
@@ -86,6 +87,8 @@
 .search-icon {
     width: 20px;
     height: 20px;
+    background-color: rgb(94, 177, 113);
+
 }
 
 
@@ -460,6 +463,8 @@
     font-weight: 600;
     transform: scaleY(1.3) translateX(-25px);
     transform: scaleX(0.8);
+    background-color: #ebf1f4;
+
 }
 
 /* Container for the expert cards with horizontal scroll */
@@ -469,6 +474,8 @@
     gap: 40px;
     padding: 10px;
     max-width: 1200px;
+    background-color: #ebf1f4;
+
 }
 
 /* Styling for the left and right arrows */
@@ -479,16 +486,32 @@
     font-size: 2em;
     cursor: pointer;
     z-index: 1;
+    background-color: #ebf1f4;
+
 }
 
 /* Styling for the left arrow */
 .scroll-arrow-left {
     left: 120px;
+    background-color: #ebf1f4;
+
+}
+
+.scroll-arrow-left span {
+    background-color: #ebf1f4;
+
 }
 
 /* Styling for the right arrow */
 .scroll-arrow-right {
     right: 120px;
+    background-color: #ebf1f4;
+
+}
+
+.scroll-arrow-right span {
+    background-color: #ebf1f4;
+
 }
 
 /* Styling for each expert card */
@@ -513,6 +536,7 @@
 .expert-info {
     font-size: 1em;
     padding: 0 15px;
+    background-color: white;
 }
 
 /* Styling for expert card info specifically name */
@@ -521,6 +545,8 @@
     margin: 0;
     color: #174267;
     font-size: 20px;
+    background-color: white;
+
 }
 
 /* Styling for expert card info specifically title */
@@ -528,5 +554,7 @@
     font-style: italic;
     margin: 0;
     color: #777;
+    background-color: white;
+
 }
 
