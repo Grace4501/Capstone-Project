@@ -99,7 +99,7 @@ const HomePage = () => {
       <div className="consultant">
         <div className="text-consultant">
           <h1 className="title-consultant">BECOME A CONSULTANT</h1>
-          <p className="paragraph-consultant">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+          <p className="paragraph-consultant">Do you have the skills that can help a small business thrive? Become a consultant and earn from your very own fine-tune set of skills. Work wherever suits you, choose a full-time, part-time, or flexi-time project.</p>
           <Link to="/signUp" className="signup-consultant">SIGN UP</Link>
         </div>
         <img className="img-consultant" src="resources/consultant_section.png" alt="Consultant Section" />
