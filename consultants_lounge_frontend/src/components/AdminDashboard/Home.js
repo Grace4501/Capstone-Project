@@ -23,7 +23,7 @@ export default function Home() {
             </table>
             <button > Previous </button>
             <button> Next </button>
-            <p> Page of 10</p>
+            <p> Page  of 10</p>
         </div>
     );
 }

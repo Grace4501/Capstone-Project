@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function UserAccess() {
     return (
         <div className="UserAccessControls">
@@ -15,8 +16,8 @@ export default function UserAccess() {
                     <p><b>Role: Admin</b></p>
                 </div>
                 <div className="buttons">
-                    <button> Details </button>
-                    <button> User Activity </button>
+                    <Link to="./details"> Details </Link>
+                    <Link to="./userActivity"> User Activity </Link>
                 </div>
                      {/* Permission controls */}
                 <div className="PermissionControls">

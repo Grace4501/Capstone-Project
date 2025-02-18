@@ -1,5 +1,10 @@
 export default function Payments(){
     return(
-    <div> Hello World</div>
+    <div> 
+        <div> 
+            <h2> Payments </h2>
+
+        </div>
+    </div>
     )
 }

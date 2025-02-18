@@ -2,7 +2,7 @@ import './Admin.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Home from './Home.js'
 import UserAccess from './UserAccessControls.js';
-import CustomerService from './CostumerService.js';
+import CustomerService from './CS/CostumerService.js';
 import Payments from './Payments.js';
 import Analytics from './Analytics.js';
 import CRM from './CRM.js';
@@ -24,14 +24,17 @@ export default function Admin() {
           </ul>
         </nav>
         {/* top div */}
-        <div> 
-
+        <div className="topDiv"> 
+       <input type="search" placeholder='Search'/>
+       <p> image </p>
+       <p> image </p>
+       <p> image </p>
         </div>
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/user-access" element={<UserAccess />} />
-            <Route path="/customer-service" element={<CustomerService />} />
+            <Route path="/customer-service/*" element={<CustomerService />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/CRM" element={<CRM />} />
