@@ -34,6 +34,16 @@ margin-top: 5px;
  margin-left: 65%;
 }
 
+.topDiv img{
+  position: absolute;
+ left: 10px;
+ top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+
+}
+
 .Nav ul li { 
     list-style: none;
     padding-left: 0;

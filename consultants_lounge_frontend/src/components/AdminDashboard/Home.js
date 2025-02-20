@@ -18,12 +18,9 @@ export default function Home() {
             </div>
             <button> More Filters </button>
             <input type="search" ></input>
-            <table>
-                
-            </table>
-            <button > Previous </button>
+            <button> Previous </button>
             <button> Next </button>
-            <p> Page  of 10</p>
+            <p> Page 1 of 10</p>
         </div>
     );
 }
