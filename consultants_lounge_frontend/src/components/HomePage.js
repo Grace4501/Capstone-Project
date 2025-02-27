@@ -105,6 +105,16 @@ const HomePage = () => {
         <img className="img-consultant" src="resources/consultant_section.png" alt="Consultant Section" />
       </div>
 
+      {/* Blog Section */}
+      <div className="blog">
+      <img className="img-blog" src="resources/consultant_section.png" alt="Blog Section" />
+        <div className="text-blog">
+          <h1 className="title-blog">VISIT THE BLOG</h1>
+          <p className="paragraph-blog">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+          <a href="https://blog.consultantslounge.com/" className='blog-btn' target="_blank" rel="noopener noreferrer">BLOG</a>
+        </div>
+      </div>
+
       {/* Find an Expert Section */}
       <div className="findexpert">
         <h1 className="title-findexpert">FIND AN EXPERT</h1>

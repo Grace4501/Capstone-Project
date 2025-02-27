@@ -438,6 +438,119 @@
     }
 }
 
+
+/* Styling for the Blog Section */
+
+
+/* Overall layout for the Blog section */
+.blog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Text layout within the Blog section */
+.text-blog {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 120px 100px;
+}
+
+/* Title styling within Blog section */
+.title-blog {
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Paragraph styling within Blog section */
+.paragraph-blog {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Signup button styling in Blog section */
+.blog-btn {
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    width: auto;
+    align-self: flex-start;
+}
+
+/* Image styling in Blog section */
+.img-blog {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+    padding-right: 50px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Media Query for Mobile View (responsive design) for Blog Section */
+@media (max-width: 768px) {
+    .img-blog {
+        display: none;
+    }
+
+    /* Mobile-specific layout for Blog section */
+    .blog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    /* Mobile-specific styling for text section */
+    .text-blog {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Mobile-specific font size for title */
+    .title-blog {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile-specific styling for paragraph */
+     .paragraph-blog {
+        font-size: 16px;
+    }
+
+    /* Mobile-specific styling for signup button */
+    .signup-blog {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
 /* Styling for the Find an Expert section */
 
 /* Overall styling */

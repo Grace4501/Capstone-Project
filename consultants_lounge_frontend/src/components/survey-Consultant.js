@@ -45,7 +45,7 @@ const SurveyConsultant = () => {
 
     // Redirect to the homepage
     const handleBackToHomepage = () => {
-        window.location.href = '/';
+        window.location.href = 'https://blog.consultantslounge.com/';
     };
 
     return (
@@ -144,7 +144,7 @@ const SurveyConsultant = () => {
                     <>
                         <h1>SURVEY - BUSINESS OWNER</h1>
                         <p>Thank you for completing our survey. Your feedback is greatly appreciated.</p>
-                        <button className="nxt-btn" onClick={handleBackToHomepage}>Return to Homepage</button>
+                        <button className="nxt-btn" onClick={handleBackToHomepage}>VISIT THE BLOG</button>
                     </>
                 )}
             </div>
