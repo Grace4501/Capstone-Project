@@ -1,0 +1,33 @@
+.crm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 400px;
+}
+.crm h2{
+    margin-left: 11%;
+    margin-bottom: 8%;
+}
+    /* Style for the details container */
+.details ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ font-size: 11px;
+  }
+
+  .details li{
+    padding: 0;
+
+  }
+
+  .email{
+    margin-right: 100%;
+  }
+  .appointments{
+    margin-right: 100%;
+  }
+

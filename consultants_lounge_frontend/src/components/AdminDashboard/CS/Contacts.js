@@ -5,8 +5,8 @@ export default function Contacts() {
             <div>
               <input type="search"/>
               <select> 
-                <option value="Newest"> Newest</option>
-                <option value="Oldest">  Oldest </option>
+                <option value="Newest">Newest</option>
+                <option value="Oldest">Oldest</option>
               </select>
             </div>
             <div className="Cards">

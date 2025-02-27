@@ -6,32 +6,73 @@ import CustomerService from './CS/CostumerService.js';
 import Payments from './Payments.js';
 import Analytics from './Analytics/Analytics.js';
 import CRM from './CRM.js';
-import SearchLogo from  '../../resources/SearchLogo.png';
+import searchLogo from  '../../resources/SearchLogo.png';
+import companyLogo from '../../resources/CompanyLogo.png';
+import homelogo from '../../resources/Home.png';
+import analyticsLogo from '../../resources/Analytics.png';
+import customerserviceLogo from '../../resources/CustomerService.png';
+import paymentsLogo from '../../resources/Payments.png';
+import userLogo from '../../resources/User.png';
+
+
+
 
 export default function Admin() {
   return (
     <Router>
+      
       <div className="Admin">
+              {/* Navigation side bar */}
         <nav className="Nav">
           <ul>
-            <h3> Company </h3>
-            <h5> Logo </h5>
-            <li> <Link to="/">Home</Link></li>
-            <li> <Link to="/user-access"> User Access Controls </Link>  </li>
-            <li> <Link to="/customer-service"> Customer Service </Link>  </li>
-            <li> <Link to="/payments"> Payments </Link> </li>
-            <li> <Link to="/analytics"> Analytics </Link>  </li>
-            <li> <Link to="/CRM"> CRM </Link>  </li>
+            <img className="companyLogo" src={companyLogo} alt="CompanyLogo.png" />
+            <li> 
+              <Link to="/">
+                <img className="navIcon" src={homelogo} alt="Home Logo" />
+                Home
+              </Link>
+            </li>
+            <li> 
+              <Link to="/user-access">
+                <img className="navIcon" src={userLogo} alt="User Access Logo" />
+                User Access Controls
+              </Link>
+            </li>
+            <li> 
+              <Link to="/customer-service">
+                <img className="navIcon" src={customerserviceLogo} alt="Customer Service Logo" />
+                Customer Service
+              </Link>
+            </li>
+            <li> 
+              <Link to="/payments">
+                <img className="navIcon" src={paymentsLogo} alt="Payments Logo" />
+                Payments
+              </Link>
+            </li>
+            <li> 
+              <Link to="/analytics">
+                <img className="navIcon" src={analyticsLogo} alt="Analytics Logo" />
+                Analytics
+              </Link>
+            </li>
+            <li> 
+              <Link to="/CRM">
+                <img className="navIcon" alt="CRM Logo" />
+                CRM
+              </Link>
+            </li>
           </ul>
         </nav>
-        {/* top div */}
+         {/* Top div bar */}
         <div className="topDiv">
-        <img src={SearchLogo}/>
           <input type="search"  placeholder='Search'/>
-          <p> image </p>
-          <p> image </p>
+          <img className="searchLogo" src={searchLogo} alt="SearchLogo.png"/> 
+          <span className="material-icons-outlined">help_outline</span>
+          <span className="material-icons-outlined" style={{border:'none'}}>notifications</span>
           <p> image </p>
         </div>
+           {/* Main content area with routes*/}
         <div>
           <Routes>
             <Route path="/" element={<Home />} />

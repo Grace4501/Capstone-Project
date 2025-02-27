@@ -1,12 +1,16 @@
 import './CRM.css'
 export default function CRM(){
     return(
-    <div> 
+    <div className='crm'> 
         <h2>CRM</h2>
         <div> 
-             <b> Appointments </b> 
-            <b> Email </b>
-           <b> Export-CSV-Like Exporting Contact Information </b>
+            <div className="details"> 
+                <ul> 
+           <li className ="appointments"> <b> Appointments </b> </li>
+           <li className = "email"> <b> Email </b> </li>
+           <li> <b>Export - CSV - Like Exporting Contact Information</b></li>
+           </ul>
+           </div>
         </div>
     </div>
     )

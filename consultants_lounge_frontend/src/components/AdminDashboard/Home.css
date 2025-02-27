@@ -1,0 +1,104 @@
+.container-welcome-buttons{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 600px;
+width: 150%;
+margin-top: 12%;
+margin-left: 4%;
+}
+
+.Welcome h4{
+float: left;
+font-size: 20px;
+margin: 0;
+}
+
+
+.Welcome p{
+ float: left;
+ font-size: 12px;
+ color: gray;
+margin: 0;
+}
+
+.import{
+  width: 70px;
+  height: 30px;
+ background-color: white;
+ border-width: 1px;
+ border-color: rgb(230, 229, 229);
+ border-radius: 5px;
+}
+
+.add{
+width: 70px;
+height: 30px;
+background-color: rgb(125, 43, 220);
+color: white;
+border: none;
+margin-left: 10px;
+border-radius: 5px;
+}
+
+/**** Cards ********/
+
+
+.Cards {
+  display: flex;               
+  gap: 30px;                    
+  padding: 20px;   
+  margin-top: 4%;
+  margin-left: 50px;        
+}
+
+.card {
+  background-color: #ffffff;   
+  padding: 30px;                 
+  border-radius: 10px; 
+  border-style: solid;   
+  border-color: rgba(229, 229, 229, 0.85); 
+  flex: 1;                      
+  min-width: 250px;             
+  max-width: 400px;      
+  height:  30%;        
+}
+
+.card p {
+  float: left;
+  font-size: 12px;             
+  font-weight: bold;            
+  color: #000000;                   
+}
+
+
+
+/***  Filters ***/
+
+
+
+.Filters {
+  display: flex;
+  margin-left:  200px;
+  gap: 70%;
+}
+
+.Filters button {
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  border-color: whitesmoke;
+  height: 30px;
+}
+
+.Filters input[type="search"] {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  height: 20px;
+}
+
+.previous-next-buttons{
+  margin-top: 2%;
+}

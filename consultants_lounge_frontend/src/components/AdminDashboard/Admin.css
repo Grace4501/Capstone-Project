@@ -3,22 +3,60 @@
     display: flex;
     height: 1000px;
     width: 30%;
+    margin: 0;
+    padding: 0;
   }
-  
+
+
+
+
+  /* Styling Side nav bar */
 
 .Nav{
-    border-style: solid 2px rgb(195, 193, 193);
-    background-color: rgb(234, 233, 233);
+    border-style: solid 4px rgb(255, 255, 255);
+    background-color: rgb(252, 252, 252);
+    width: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.companyLogo{
+width: 200px;
+height: 50px;
+margin-bottom: 50px;
+}
+
+
+
+.Nav ul li { 
+  list-style: none;
+  padding-left: 0;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.Nav a{
+text-decoration: none;
+color: black; 
+
+}
+
+.Nav ul li a:hover {
+  background-color: #b1e5ff;
+  border-radius: 6px;
+}
+
+/* Styling the top div bar */
 
 .topDiv{
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
-  width: 100%;
+  margin-left: 16%;
   position: fixed;
+  width: 90%;
   margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0 ,0.1);
   z-index: 2;
 }
 
@@ -27,42 +65,36 @@
 }
 
 .topDiv input[type="search"]{
+padding-left: 30px;
 border: 1px solid rgb(167, 171, 176);
 border-radius: 8px;
+height: 25px;
 width: 200px;
 margin-top: 5px;
- margin-left: 65%;
+ margin-left: 60%;
+ outline: none;
 }
 
-.topDiv img{
-  position: absolute;
- left: 10px;
- top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-
+.topDiv button{
+  width: 50px;
+  height: 40px;
 }
 
-.Nav ul li { 
-    list-style: none;
-    padding-left: 0;
-    font-size: 12px;
-    margin-top: 6px;
-  }
+.notificationsLogo{
+  width: 30px;
+}
+.questionsLogo{
+  width: 40px;
+}
 
-.Nav a{
-  text-decoration: none;
-  color: black; 
-  
- }
-
-  .Nav ul li a:hover {
-    background-color: #b1e5ff;
-    border-radius: 6px;
-  }
+.searchLogo{
+margin-left:  -200px;
+margin-right: 200px;
+margin-top: 10px;
+width: 18px;
+height: 18px
+}
 
 
 
-  
- 
+
