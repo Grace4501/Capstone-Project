@@ -43,7 +43,7 @@ const SurveyConsultant = () => {
         setStep(6);
     };
 
-    // Redirect to the homepage
+    // Redirect to the blog
     const handleBackToHomepage = () => {
         window.location.href = 'https://blog.consultantslounge.com/';
     };

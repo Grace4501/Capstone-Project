@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
 import '../styles/homePage.css';
@@ -7,9 +7,23 @@ import '../styles/headerFooter.css';
 import { loadExperts } from './homePage-Experts';
 
 const HomePage = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
   useEffect(() => {
     loadExperts();
   }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleToBusinessSurvey = () => {
+    window.location.href = '/survey-Businesses';
+};
+
+const handleToConsultantSurvey = () => {
+  window.location.href = '/survey-Consultant';
+};
 
   const handleScroll = (direction) => {
     const expertsContainer = document.getElementById('experts-container');
@@ -23,6 +37,21 @@ const HomePage = () => {
   
   return (
     <div className="App">
+
+    {showPopup && (
+      <div className='popup-overlay'>
+        <div className='popup'>
+          <button className='close-btn' onClick={handleClosePopup}>x</button>
+          <h1>SURVEY</h1>
+          <p>Would you like to take part in our survey to let us know how we can help you better?</p>
+          <div className='popup-btns'>
+            <button onClick={handleToBusinessSurvey} className='popup-btn primary'>BUSINESS OWNERS</button>
+            <button onClick={handleToConsultantSurvey} className='popup-btn secondary'>CONSULTANTS</button>
+          </div>
+        </div>
+      </div>
+    )}
+
       {/* Header Section */}
       <div className="header">
         <div className="logo-container">
