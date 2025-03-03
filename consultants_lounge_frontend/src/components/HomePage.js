@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
 import '../styles/homePage.css';
@@ -7,9 +7,23 @@ import '../styles/headerFooter.css';
 import { loadExperts } from './homePage-Experts';
 
 const HomePage = () => {
+  const [showPopup, setShowPopup] = useState(true);
+
   useEffect(() => {
     loadExperts();
   }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
+  const handleToBusinessSurvey = () => {
+    window.location.href = '/survey-Businesses';
+};
+
+const handleToConsultantSurvey = () => {
+  window.location.href = '/survey-Consultant';
+};
 
   const handleScroll = (direction) => {
     const expertsContainer = document.getElementById('experts-container');
@@ -23,10 +37,25 @@ const HomePage = () => {
   
   return (
     <div className="App">
+
+    {showPopup && (
+      <div className='popup-overlay'>
+        <div className='popup'>
+          <button className='close-btn' onClick={handleClosePopup}>x</button>
+          <h1>SURVEY</h1>
+          <p>Would you like to take part in our survey to let us know how we can help you better?</p>
+          <div className='popup-btns'>
+            <button onClick={handleToBusinessSurvey} className='popup-btn primary'>BUSINESS OWNERS</button>
+            <button onClick={handleToConsultantSurvey} className='popup-btn secondary'>CONSULTANTS</button>
+          </div>
+        </div>
+      </div>
+    )}
+
       {/* Header Section */}
       <div className="header">
         <div className="logo-container">
-          <h1 className="logo" alt="Consultants Lounge Logo">Website Logo</h1>
+        <img src="resources/CompanyLogo-White.png" className="logo" alt="company logo" />
         </div>
 
         <div className="pageList">
@@ -99,10 +128,20 @@ const HomePage = () => {
       <div className="consultant">
         <div className="text-consultant">
           <h1 className="title-consultant">BECOME A CONSULTANT</h1>
-          <p className="paragraph-consultant">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+          <p className="paragraph-consultant">Do you have the skills that can help a small business thrive? Become a consultant and earn from your very own fine-tune set of skills. Work wherever suits you, choose a full-time, part-time, or flexi-time project.</p>
           <Link to="/signUp" className="signup-consultant">SIGN UP</Link>
         </div>
         <img className="img-consultant" src="resources/consultant_section.png" alt="Consultant Section" />
+      </div>
+
+      {/* Blog Section */}
+      <div className="blog">
+      <img className="img-blog" src="resources/consultant_section.png" alt="Blog Section" />
+        <div className="text-blog">
+          <h1 className="title-blog">VISIT THE BLOG</h1>
+          <p className="paragraph-blog">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+          <a href="https://blog.consultantslounge.com/" className='blog-btn' target="_blank" rel="noopener noreferrer">BLOG</a>
+        </div>
       </div>
 
       {/* Find an Expert Section */}
@@ -124,7 +163,7 @@ const HomePage = () => {
       <div className="footer">
         <div className="logo-list-container">
           <div className="footer-logo-container">
-            <h1 className="footer-logo">Website Logo</h1>
+          <img src="resources/CompanyLogo-Blue.png" className="footer-logo" alt="company logo" />
           </div>
 
           <div className="footer-lists">
