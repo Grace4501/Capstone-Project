@@ -436,6 +436,8 @@
 }
 
 /* Styling for the Find an Expert section */
+
+/* Overall styling */
 .findexpert {
     text-align: center;
     padding: 100px;
@@ -446,6 +448,7 @@
     background-color: #ebf1f4;
 }
 
+/* Styling for Expert section title */
 .title-findexpert {
     font-size: 35px;
     margin-bottom: 20px;
@@ -468,6 +471,7 @@
     max-width: 1200px;
 }
 
+/* Styling for the left and right arrows */
 .scroll-arrow-left, .scroll-arrow-right {
     position: absolute;
     top: 50%;
@@ -477,15 +481,17 @@
     z-index: 1;
 }
 
+/* Styling for the left arrow */
 .scroll-arrow-left {
     left: 120px;
 }
 
+/* Styling for the right arrow */
 .scroll-arrow-right {
     right: 120px;
 }
 
-/* Each expert card */
+/* Styling for each expert card */
 .expert-card {
     flex: 0 0 auto;
     width: 200px;
@@ -495,6 +501,7 @@
     background-color: white;
 }
 
+/* Styling for expert card images */
 .expert-img {
     width: 100%;
     height: 70%;
@@ -502,11 +509,13 @@
     margin-bottom: 10px;
 }
 
+/* Styling for expert card info */
 .expert-info {
     font-size: 1em;
     padding: 0 15px;
 }
 
+/* Styling for expert card info specifically name */
 .expert-name {
     font-weight: 450;
     margin: 0;
@@ -514,6 +523,7 @@
     font-size: 20px;
 }
 
+/* Styling for expert card info specifically title */
 .expert-title {
     font-style: italic;
     margin: 0;

@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import '../App.css'; // Global styles
+import '../App.css';
 import { Link } from 'react-router-dom';
 import '../styles/homePage.css';
 import '../styles/headerFooter.css';
@@ -13,7 +13,7 @@ const HomePage = () => {
 
   const handleScroll = (direction) => {
     const expertsContainer = document.getElementById('experts-container');
-    const scrollAmount = 300; // Scroll by 300px per click
+    const scrollAmount = 300;
     if (direction === 'right') {
       expertsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     } else if (direction === 'left') {
