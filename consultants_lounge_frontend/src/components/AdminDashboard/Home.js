@@ -32,16 +32,18 @@ export default function Home() {
             </div>
             </div>
             <div className="Filters">
-            <button> More Filters </button>
+           <button className="alltime"> All time X </button>
+           <button className="country"> US, AU, +4   X </button>
+            <button className="more-filters"> More Filters </button>
             <input type="search" placeholder='Search'></input>
             </div>
             <div className="Data"> 
             </div>
             <div className="previous-next-buttons">
-            <button> Previous </button>
-            <button> Next </button>
-            <p> Page 1 of 10</p>
-            </div>
+            <button className="previous"> Previous </button>
+            <button className="next"> Next </button>
+           </div>
+            <p className="select-pages"> Page 1 of 10</p>
         </div>
     );
 }

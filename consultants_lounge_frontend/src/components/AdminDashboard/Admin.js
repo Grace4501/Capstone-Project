@@ -13,14 +13,12 @@ import analyticsLogo from '../../resources/Analytics.png';
 import customerserviceLogo from '../../resources/CustomerService.png';
 import paymentsLogo from '../../resources/Payments.png';
 import userLogo from '../../resources/User.png';
-
-
+import crmLogo from '../../resources/crm.png';
 
 
 export default function Admin() {
   return (
     <Router>
-      
       <div className="Admin">
               {/* Navigation side bar */}
         <nav className="Nav">
@@ -58,7 +56,7 @@ export default function Admin() {
             </li>
             <li> 
               <Link to="/CRM">
-                <img className="navIcon" alt="CRM Logo" />
+                <img className="navIcon" src={crmLogo} alt="CRM Logo" />
                 CRM
               </Link>
             </li>

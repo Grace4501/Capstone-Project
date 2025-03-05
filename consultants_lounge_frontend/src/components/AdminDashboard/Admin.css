@@ -37,13 +37,27 @@ margin-bottom: 50px;
 .Nav a{
 text-decoration: none;
 color: black; 
+}
 
+
+.Nav li {
+  display: flex;
+  align-items: center; 
+  padding: 10px 0; 
 }
 
 .Nav ul li a:hover {
   background-color: #b1e5ff;
   border-radius: 6px;
 }
+
+
+.navIcon  {
+  width: 30px;
+  height: auto; 
+  margin-right: 10px;
+  }
+  
 
 /* Styling the top div bar */
 
@@ -94,7 +108,5 @@ margin-top: 10px;
 width: 18px;
 height: 18px
 }
-
-
 
 
