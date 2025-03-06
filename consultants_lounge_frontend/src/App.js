@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import SurveyConsultant from './components/survey-Consultant';
 import SurveyBusinesses from './components/survey-Businesses';
 import FAQ from './components/FAQ';
+import Resources from './components/resources';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/survey-Consultant' element={<SurveyConsultant />} />
         <Route path='/survey-Businesses' element={<SurveyBusinesses />} />
         <Route path='/FAQ' element={<FAQ />} />
+        <Route path='/resources' element={<Resources />} />
 
       </Routes>
     </div>

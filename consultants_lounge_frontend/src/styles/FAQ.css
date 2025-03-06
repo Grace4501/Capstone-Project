@@ -1,11 +1,10 @@
+/* GLOBAL STYLES */
 * {
     background-color: #fbfbfb;
-}
-
-/* SEARCH */
-
-
-.search {
+  }
+  
+  /* SEARCH SECTION STYLES */
+  .search {
     background-color: #ebf1f4;
     padding: 50px 0;
     text-align: center;
@@ -17,7 +16,7 @@
     height: 400px;
   }
   
-  .search h1{
+  .search h1 {
     margin: 0;
     padding: 10px 0;
     background-color: #ebf1f4;
@@ -29,7 +28,6 @@
     font-size: 50px;
   }
   
-  
   .search p {
     margin: 0;
     padding: 10px 0;
@@ -40,17 +38,17 @@
   }
   
   /* Search container styling within the text section */
-.search-container {
+  .search-container {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
     max-width: 500px;
     background-color: #ebf1f4;
-}
-
-/* Input field styling for the search */
-.search-landing {
+  }
+  
+  /* Input field styling for the search */
+  .search-landing {
     padding: 10px;
     font-size: 16px;
     flex-grow: 1;
@@ -61,10 +59,10 @@
     max-width: 100%;
     box-sizing: border-box;
     border: none;
-}
-
-/* Search icon container and styling */
-.search-icon-container {
+  }
+  
+  /* Search icon container and styling */
+  .search-icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,17 +72,16 @@
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
     height: 40px;
     width: 45px;
-}
-
-/* Search icon image styling */
-.search-icon {
+  }
+  
+  /* Search icon image styling */
+  .search-icon {
     width: 20px;
     height: 20px;
     background-color: rgb(94, 177, 113);
-
-}
+  }
   
-  /* Positioning images */
+  /* Positioning images within the search section */
   .detail1 {
     position: absolute;
     top: 75px;
@@ -99,8 +96,8 @@
     width: 90px; /* Adjust as needed */
   }
   
-  /* Quick links container styling */
-.quickLink-container {
+  /* QUICK LINKS SECTION STYLES */
+  .quickLink-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -151,6 +148,7 @@
     color: #0e4b69; /* Hover effect */
   }
   
+  /* SECTION TITLE STYLES */
   .sectionTitle {
     margin: 0;
     padding: 10px 0;
@@ -160,43 +158,43 @@
     font-weight: 500;
     transform: scaleX(0.85);
     font-size: 28px;
-
   }
-
+  
+  /* FAQ STYLES */
   .FAQ-item {
     font-family: 'Noto Sans', sans-serif;
     font-size: 13px;
   }
-
+  
   .itemParagraph {
     padding-top: 10px;
     padding-bottom: 30px;
   }
-
+  
   .itemTitle {
     font-weight: 500;
   }
-
-
+  
+  /* FAQ SECTION STYLES */
   .FAQ-section {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 70px 20px;
   }
-
+  
+  /* FILLER SECTION STYLES */
   .filler {
     font-family: 'Noto Sans', sans-serif;
     background-color: #ebf1f4 !important;
     text-align: center;
     padding: 60px;
   }
-
+  
   .fillerText {
     background-color: #ebf1f4;
     text-align: center;
-    color:rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
     font-weight: 400;
     font-size: 25px;
-    
-  }
+  }  
