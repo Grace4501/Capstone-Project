@@ -1,6 +1,6 @@
 import './Signup.css';
 import logoBackground from '../resources/LogoBackground.jpg';
-import googleLogo from '../resources/GoogleLogo.png';
+//import googleLogo from '../../public/resources/GoogleLogo.png';
 import { useState } from 'react';
 
 export default function Signup() {
@@ -19,7 +19,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/api/v1/session/signup', {
+            const response = await fetch('http://localhost:3000/api/v1/session/register', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -145,7 +145,7 @@ export default function Signup() {
                     <div className="buttons">
                         <button type="submit" className="signup-button"> SIGN UP </button>
                         <button className="google">
-                            <img src={googleLogo} alt="Google Logo" /> SIGN UP WITH GOOGLE 
+                            
                         </button>
                     </div>
                 </form>
