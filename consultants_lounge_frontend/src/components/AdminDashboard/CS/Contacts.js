@@ -1,6 +1,6 @@
 export default function Contacts() {
     return (
-        <div>
+        <div >
             <h5> Have An Option To Change The View, Table Or Cards</h5>
             <div>
               <input type="search"/>

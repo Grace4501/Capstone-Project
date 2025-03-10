@@ -9,7 +9,6 @@
 
 
 
-
   /* Styling Side nav bar */
 
 .Nav{
@@ -24,6 +23,7 @@ width: 200px;
 height: 50px;
 margin-bottom: 50px;
 }
+
 
 
 
@@ -51,13 +51,24 @@ color: black;
   border-radius: 6px;
 }
 
+.Nav ul li a {
+  display: flex; 
+  align-items: center; 
+  padding: 10px; 
+  text-decoration: none; 
+  border: none;
+}
 
 .navIcon  {
   width: 30px;
   height: auto; 
   margin-right: 10px;
   }
-  
+
+  .navIcon:hover {
+    opacity: 0.2; 
+  }
+
 
 /* Styling the top div bar */
 
