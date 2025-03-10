@@ -7,7 +7,7 @@ import HomePage from './components/HomePage';
 import SurveyConsultant from './components/survey-Consultant';
 import SurveyBusinesses from './components/survey-Businesses';
 import Login from './components/Login';
-import Signup from './components/Signup';
+
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path='/survey-Consultant' element={<SurveyConsultant />} />
         <Route path='/survey-Businesses' element={<SurveyBusinesses />} />
         <Route path='/Login' element={<Login />} />
-        <Route path='/Signup' element={<Signup />} />
+        
 
       </Routes>
     </div>

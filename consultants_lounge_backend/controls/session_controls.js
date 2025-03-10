@@ -3,38 +3,38 @@ import passport from "passport";
 import bcrypt from "bcrypt"
 import mongoose from "mongoose";
 
-export const user_register = async (req, res)=>{
+export const user_register = async (req, res) => {
     try {
-        const { username, email, password } = req.body;
+        
+        const { first_name, middle_name, last_name, email, password, phone } = req.body;
 
-        // Validate input
-        if (!username || !email || !password) {
-            return res.status(400).json({ message: "All fields are required." });
+        if (!first_name || !last_name || !email || !password || !phone) {
+            return res.status(400).json({ message: "All required fields must be filled." });
         }
 
-        // Check if user already exists
         const existingUser = await session_actions.find_user_by_email(email);
         if (existingUser) {
             return res.status(400).json({ message: "User already exists." });
         }
 
-        // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Insert user into database
         const newUser = await session_actions.create_user({
-            username,
+            first_name,
+            middle_name,
+            last_name,
             email,
             password: hashedPassword,
+            phone
         });
-        
 
-        res.status(201).json({ message: "User registered successfully.", user: newUser });
+        res.status(201).json({ message: "User registered successfully."});
+
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Internal Server Error", error });
+        res.status(500).json({ message: "Internal Server Error", problem: error });
     }
-}
+};
 
 export const user_login = async (req, res, next)=>{
 
@@ -48,7 +48,7 @@ export const user_login = async (req, res, next)=>{
             console.log("--\nProblem logging in : ", info.message)
             return res.status(401).json({ message: info.message });  // Send error message if user not found
         }
-        //Uses the authenticateed user to log the uses into session by calling serializeUser and storing user_id in req.session.passport.user.
+        //Uses the authenticateed user to log the uses into session by calling serializeUser and storing user_id in req.session.passport.user
        
         console.log(`User: ${user.info.email} has been authenthicated`)
 

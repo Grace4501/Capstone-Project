@@ -8,7 +8,7 @@ const router = express.Router()
 router.use("/session", session_router)
 router.use("/education", education_router)
 
-router.post('/signup', signupController)
+
 
 //If user refresh the browser based on route != index.html this will providde the index.html and react will take navigation control.
 router.get('*', (req, res) => {
