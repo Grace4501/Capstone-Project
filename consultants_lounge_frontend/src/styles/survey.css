@@ -90,18 +90,18 @@
 }
 
 /* Detail Images Positioning */
-.detail1 {
+.detail1-survey {
     position: absolute;
-    bottom: 80px;
-    left: 120px;
-    width: 160px;
+    bottom: 90px;
+    left: 230px;
+    width: 120px;
 }
 
-.detail2 {
+.detail2-survey {
     position: absolute;
     top: 100px;
-    right: 140px;
-    width: 160px;
+    right: 230px;
+    width: 120px;
 }
 
 /* Button styles for the start button */
@@ -142,29 +142,6 @@
     text-align: center;
     width: 60%;
     max-width: 700px;
-}
-
-/* Thank You Heading */
-.survey-container h1 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 60px;
-    margin-top: 30px;
-    font-family: 'Almarai', serif;
-    font-weight: 500;
-    transform: scaleY(1.3) translateX(-25px);
-    transform: scaleX(0.8);
-}
-
-/* Thank You Paragraph */
-.survey-container p {
-    text-align: center;
-    margin-bottom: 70px;
-    margin-top: 30px;
-    font-size: 20px;
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Return to Homepage Button */

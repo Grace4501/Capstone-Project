@@ -52,8 +52,8 @@ const FAQ = () => {
               <img src="resources/search-icon.png" className="search-icon" alt="search icon" />
             </div>
           </div>
-          <img src="/resources/Detail2.png" className="detail1" />
-          <img src="/resources/Detail2.png" className="detail2" />
+          <img src="/resources/Detail2.png" className="detail1-FAQ" />
+          <img src="/resources/Detail2.png" className="detail2-FAQ" />
       </div>
 
 

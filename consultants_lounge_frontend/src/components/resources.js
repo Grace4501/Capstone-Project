@@ -36,10 +36,10 @@ const Resources = () => {
                 <img src="resources/search-icon.png" className="search-icon" alt="search icon" />
                 </div>
             </div>
-            <img src="/resources/Detail2.png" className="detail1" />
-            <img src="/resources/Detail2.png" className="detail2" />
-            <img src="/resources/resourcesSearch1.png" className="detail3" />
-            <img src="/resources/resourcesSearch2.png" className="detail4" />
+            <img src="/resources/Detail2.png" className="detail1-resources" />
+            <img src="/resources/Detail2.png" className="detail2-resources" />
+            <img src="/resources/resourcesSearch1.png" className="detail3-resources" />
+            <img src="/resources/resourcesSearch2.png" className="detail4-resources" />
         </div>
 
     {/* Resources content */}

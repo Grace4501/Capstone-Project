@@ -1,0 +1,69 @@
+[
+    {
+        "sectionTitle": "Buyer",
+        "heading": "THE JOURNEY",
+        "items": [
+            {
+                "title":"Step 1 - Search for Expertise",
+                "description":"What skills do you need for your project? Type in the search to find a list of consultants with that skillset.",
+                "image": "resources/HIW-buyer1.png"
+            },
+            {
+                "title":"Step 2 - Select your Consultant",
+                "description":"Search the list of consultants for the expertise you are looking for. Refine your search by skill, location, and expertise. Contact consultants and request a proposal for your project.",
+                "image": "resources/HIW-buyer2.png"
+            },
+            {
+                "title":"Step 3 - Get to Know you Session",
+                "description":"Define scope, set expectations and delivery date with your consultant.",
+                "image": "resources/HIW-buyer3.png"
+            },
+            {
+                "title":"Step 4 - Receive a Quote",
+                "description":"Your consultant will provide you with a quote so you know the exact cost. Confirm the quote and your consultant will begin the project.",
+                "image": "resources/HIW-buyer4.png"
+            },
+            {
+                "title":"Step 5 - The Work",
+                "description":"Ongoing communications with your consultant as they work with you on completing your project.",
+                "image": "resources/HIW-buyer5.png"
+            },
+            {
+                "title":"Step 6 - Delivery",
+                "description":"Your project is delivered and you will receive an invoice. Payment is collected.",
+                "image": "resources/HIW-buyer6.png"
+            },
+            {
+                "title":"Step 7 - Rate your Consultant",
+                "description":"We take the quality of our consultants very seriously. Reward your consultant for their hard work by giving them a rating out of five.",
+                "image": "resources/HIW-buyer2.png"
+            },
+            {
+                "title":"Step 8 - Repeat",
+                "description":"Continue working with your consultant for as many project as you like, or hire a new consultant with different areas of expertise.",
+                "image": "resources/HIW-buyer3.png"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "Consultant",
+        "heading": "THE PROCESS",
+        "items": [
+            {
+                "title":"Step 1 - Sign Up",
+                "description":"Apply to become a certified consultant. Complete an online application. Once approved, you'll gain access to projects from our client community.",
+                "image": "resources/HIW-consultant1.png"
+            },
+            {
+                "title":"Step 2 - Create a Profile",
+                "description":"Apply to become a certified consultant. Complete an online application. Once approved, you'll gain access to projects from our client community.",
+                "image": "resources/HIW-consultant2.png"
+            },
+            {
+                "title":"Step 3 - Profile Share",
+                "description":"Your contact information will be shared with clients who are searching for someone with your expertise.",
+                "image": "resources/HIW-consultant3.png"
+            }       
+        ]
+    }
+]

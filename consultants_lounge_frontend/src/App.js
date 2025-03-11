@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import{Routes, Route, Link} from 'react-router-dom';
@@ -9,6 +8,7 @@ import SurveyConsultant from './components/survey-Consultant';
 import SurveyBusinesses from './components/survey-Businesses';
 import FAQ from './components/FAQ';
 import Resources from './components/resources';
+import HowItWorks from './components/howItWorks';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <Route path='/survey-Businesses' element={<SurveyBusinesses />} />
         <Route path='/FAQ' element={<FAQ />} />
         <Route path='/resources' element={<Resources />} />
-
+        <Route path='/howItWorks' element={<HowItWorks />} />
       </Routes>
     </div>
   );

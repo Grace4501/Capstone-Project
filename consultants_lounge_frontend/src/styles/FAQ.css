@@ -21,7 +21,7 @@
     padding: 10px 0;
     background-color: #ebf1f4;
     font-family: 'Almarai', serif;
-    font-weight: 465;
+    font-weight: 400;
     letter-spacing: -3px;
     transform: scaleY(1.3) translateX(-25px);
     transform: scaleX(0.85);
@@ -82,14 +82,14 @@
   }
   
   /* Positioning images within the search section */
-  .detail1 {
+  .detail1-FAQ {
     position: absolute;
     top: 75px;
     left: 420px;
     width: 110px; /* Adjust as needed */
   }
   
-  .detail2 {
+  .detail2-FAQ {
     position: absolute;
     top: 250px !important;
     right: 400px;

@@ -77,28 +77,28 @@
   }
   
   /* Positioning images within the search section */
-  .detail1 {
+  .detail1-resources {
     position: absolute;
     top: 75px;
     left: 420px;
     width: 110px;
   }
   
-  .detail2 {
+  .detail2-resources {
     position: absolute;
     top: 250px !important;
     right: 400px;
     width: 90px;
   }
   
-  .detail3 {
+  .detail3-resources {
     position: absolute;
     top: 100px !important;
     left: 225px;
     width: 150px;
   }
   
-  .detail4 {
+  .detail4-resources {
     position: absolute;
     top: 100px !important;
     right: 225px;
