@@ -5,16 +5,15 @@ import mongoose from "mongoose";
 
 export const user_register = async (req, res) => {
     try {
-        
-        const { first_name, middle_name, last_name, email, password, phone } = req.body;
+        const { first_name, middle_name, last_name, email, password, phone, role } = req.body;
 
         if (!first_name || !last_name || !email || !password || !phone) {
-            return res.status(400).json({ message: "All required fields must be filled." });
+            return res.status(400).json({ success: false, message: "All required fields must be filled." });
         }
 
         const existingUser = await session_actions.find_user_by_email(email);
         if (existingUser) {
-            return res.status(400).json({ message: "User already exists." });
+            return res.status(400).json({ success: false, message: "User already exists." });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -25,16 +24,18 @@ export const user_register = async (req, res) => {
             last_name,
             email,
             password: hashedPassword,
-            phone
+            phone,
+            role
         });
 
-        res.status(201).json({ message: "User registered successfully."});
+        res.status(201).json({ success: true, message: "User registered successfully."});
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: "Internal Server Error", problem: error });
+        res.status(500).json({ success: false, message: "Internal Server Error", error: error.toString() });
     }
 };
+
 
 export const user_login = async (req, res, next)=>{
 

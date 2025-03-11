@@ -22,7 +22,7 @@ const AboutUs = () => {
             <li><Link to="/resources">RESOURCES</Link></li>
             <li><Link to="/FAQ">FAQ</Link></li>
             <li><Link to="/login" className="login">LOGIN</Link></li>
-            <li><Link to="/signUp" className="signup">SIGN UP</Link></li>
+            <li><Link to="/signUp" className="signup">SIGN UP2</Link></li>
           </ul>
         </div>
       </div>

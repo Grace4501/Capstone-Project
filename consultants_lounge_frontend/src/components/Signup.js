@@ -72,9 +72,10 @@ export default function Signup() {
         if (!validateForm()) return;
     
         try {
+
             const response = await postData('http://localhost:5000/api/v1/session/register', formData);
             console.log("response", response)
-            if (response.data) {
+            if (response.success) {
                 // Successful registration
                 setServerMessage("Registration successful! Redirecting to login...");
                 setServerMessageType("success");
@@ -162,8 +163,8 @@ export default function Signup() {
                         <label>Role*</label>
                         <select name="role" value={formData.role} onChange={handleChange} >
                             <option value="">Select your role</option>
-                            <option value="business_owner">Business Owner</option>
-                            <option value="consultant">Consultant</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Consultant">Consultant</option>
                         </select>
                         {errors.role && <p className="error">{errors.role}</p>}
                     </div>

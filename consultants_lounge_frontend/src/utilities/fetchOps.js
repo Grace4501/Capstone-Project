@@ -30,21 +30,20 @@ export const deleteData = async (url)=>{
   }
 }
 
-export const postData = async (url, payload)=>{
-  try 
-  {
+export const postData = async (url, payload) => {
+  try {
     axios.defaults.withCredentials = true;
-    const response = await axios.post(url, payload? payload : {}, { withCredentials: true })
-    console.log("response: \n", response)
-    return {data: response.data}
+    const response = await axios.post(url, payload || {}, { withCredentials: true });
+
+    console.log("response: \n", response);
+    return response.data; // Directly return the standardized API response
   } 
-  catch (error) 
-  {
-    console.log("error: ", error)
-    const code = error.response.data.problem.code
-    return {submissionError: code }
+  catch (error) {
+    console.log("error: ", error);
+    return error.response?.data || { success: false, message: "Unknown error occurred" };
   }
-}
+};
+
 
 export const getData = async (url)=>{
   
