@@ -1,0 +1,148 @@
+.Login {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Login .logo-container {
+    width: 60%;
+    background-color: azure;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login .logo-container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(93, 192, 249, 0.4); 
+    z-index: 1;
+    width: 100%;
+}
+
+.Login .logo-container h1,
+.Login .logo-container h5 {
+    position: relative;
+    z-index: 2;
+}
+
+.Login .form-container {
+    width: 40%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.Login form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin-top: -5%;
+}
+
+.Login h1,
+.Login h5 {
+    margin: 0;
+}
+
+.Login h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.Login h5 {
+    font-size: 20px;
+    color: gray;
+}
+
+.Login h4 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.Login label {
+    font-size: 13px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.Login input {
+    border: none;
+    border-bottom: 1px solid rgb(136, 133, 133);
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+}
+
+.Login input:focus {
+    outline: none;
+    border-bottom: 2px solid #5dc0f9;
+}
+
+.Login input::placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.Login .buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.Login .login-button {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.Login .login-button:hover {
+    background-color: #333;
+}
+
+.Login .google {
+    border: 1px solid rgb(185, 185, 185);
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Login .google:hover {
+    background-color: #f8f8f8;
+}
+
+.Login .google img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
