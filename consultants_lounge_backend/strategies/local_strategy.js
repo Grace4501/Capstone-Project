@@ -13,10 +13,10 @@ passport.use(
         //As we are in using a strategy it means we are authenticating a user that can be a consultant or client
         //const user_role is actually a Consultan/Client containing the user info in user_role.info
         const user_role = await session_actions.find_user_by_email(email);
-        if (!user_role) return done(null, false, { message: "Invalid credentials." });
+        if (!user_role) return done(null, false, { message: "Invalid email." });
 
         const isMatch = await bcrypt.compare(password, user_role.info.password);
-        if (!isMatch) return done(null, false, { message: "Invalid credentials." });
+        if (!isMatch) return done(null, false, { message: "Invalid password." });
 
         return done(null, user_role); // Successfully authenticated
       } catch (error) {

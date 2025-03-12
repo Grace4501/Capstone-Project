@@ -45,20 +45,19 @@ export default function Login() {
         if (!validateForm()) return;
 
         try {
+
             const response = await postData('http://localhost:5000/api/v1/session/login', formData);
             if (response.success) {
                 setServerMessage("Login successful! Redirecting...");
                 setServerMessageType("success");
-                setTimeout(() => navigate('/dashboard'), 2000);
+                setTimeout(() => navigate('/'), 2000);
             }
-            else if(response.status === 401){
-                setServerMessage(response.data.message);
+            else {
+                setServerMessage(response.message);
                 setServerMessageType("danger");
-            }
-             else {
-                setServerMessage("Invalid email or password.");
-                setServerMessageType("danger");
-            }
+            }          
+     
+
         } catch (error) {
             console.error("Login error:", error);
             setServerMessage("Server error. Please try again later.");

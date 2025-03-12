@@ -6,7 +6,7 @@ import { authenticate_user } from '../controls/middlewares/authentication.js'
 
 export const session_router = express.Router()
 
-//Login implemented with passport middleware
+//Login implemented with passport middleware.
 //React front end is responsible for redirection
 session_router.post('/register', session_controls.user_register) //User registration activity can be tracked directly with the users collection.
 session_router.post("/login", session_controls.user_login)

@@ -1,13 +1,13 @@
 import * as session_actions from "../models/session_models.js"
 import passport from "passport";
 import bcrypt from "bcrypt"
-import mongoose from "mongoose";
+
 
 export const user_register = async (req, res) => {
     try {
         const { first_name, middle_name, last_name, email, password, phone, role } = req.body;
 
-        if (!first_name || !last_name || !email || !password || !phone) {
+        if (!first_name || !last_name || !email || !password || !phone || !role) {
             return res.status(400).json({ success: false, message: "All required fields must be filled." });
         }
 
@@ -28,6 +28,12 @@ export const user_register = async (req, res) => {
             role
         });
 
+        if (role === "Consultant") {
+            await session_actions.create_consultant(newUser._id);
+        } else if (role === "Business Owner") {
+            await session_actions.create_client(newUser._id);
+        }
+
         res.status(201).json({ success: true, message: "User registered successfully."});
 
     } catch (error) {
@@ -47,7 +53,7 @@ export const user_login = async (req, res, next)=>{
         //checks for the user in DB
         if (!user) {
             console.log("--\nProblem logging in : ", info.message)
-            return res.status(401).json({ message: info.message });  // Send error message if user not found
+            return res.status(401).json({ message: info.message });  // Send error message if user not found.
         }
         //Uses the authenticateed user to log the uses into session by calling serializeUser and storing user_id in req.session.passport.user
        
@@ -75,7 +81,7 @@ export const user_login = async (req, res, next)=>{
                     console.error("Session save error:", saveErr);
                 }
                 console.log(`Session (${req.sessionID}) updated with metadata and activity.`);
-                res.json({ message: "Login successful", user });
+                res.json({ success: true, message: "User registered successfully.", message: "Login successful", user });
             });
        
         });

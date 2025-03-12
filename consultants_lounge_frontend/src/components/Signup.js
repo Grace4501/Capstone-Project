@@ -80,13 +80,9 @@ export default function Signup() {
                 setServerMessage("Registration successful! Redirecting to login...");
                 setServerMessageType("success");
                 setTimeout(() => navigate('/login'), 2000);
-            } else if (response.submissionError === 11000) {
+            } else{
                 // Error from server (400 or 500)
-                setServerMessage("User already exists.");  // Directly use the error message
-                setServerMessageType("danger");
-            } else {
-                // Unexpected error case
-                setServerMessage("An unexpected error occurred.");
+                setServerMessage(response.message);  // Directly use the error message
                 setServerMessageType("danger");
             }
         } catch (error) {
