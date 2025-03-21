@@ -1,21 +1,57 @@
-import React, { useEffect, useState } from "react";
-import "../App.css";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 import "../styles/FAQ.css";
 import "../styles/headerFooter.css";
 
 const FAQ = () => {
   const [FAQContent, setFAQContent] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredFAQ, setFilteredFAQ] = useState([]);
+  const firstResultRef = useRef(null);
 
   useEffect(() => {
     fetch("/FAQ-Content.json")
     .then((reponse) => reponse.json())
-    .then((data) => setFAQContent(data))
+    .then((data) => {
+      setFAQContent(data);
+      setFilteredFAQ(data);
+    })
     .catch((error) => console.error("Error loading FAQ content", error));
   }, []);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth"});
+  useEffect(() => {
+    if (!searchQuery) {
+      setFilteredFAQ(FAQContent);
+      return;
+    }
+  
+    const lowerCaseQuery = searchQuery.toLowerCase();
+  
+    const filteredData = FAQContent.map((section) => ({
+      ...section,
+      items: section.items.filter(
+        (item) =>
+          item.title.toLowerCase().includes(lowerCaseQuery) ||
+          item.text.toLowerCase().includes(lowerCaseQuery)
+      ),
+    })).filter((section) => section.items.length > 0);
+  
+    setFilteredFAQ(filteredData);
+  }, [searchQuery, FAQContent]);  
+
+    const scrollToSection = (id) => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth"});
+    };
+
+  const handleSearch = () => {
+    setSearchQuery(searchQuery.trim());
+  
+    setTimeout(() => {
+      if (firstResultRef.current) {
+        firstResultRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   return (
@@ -47,8 +83,17 @@ const FAQ = () => {
         <h1>FAQ</h1>
         <p>What can we help you with?</p>
         <div className="search-container">
-            <input type="text" placeholder="search" className="search-landing" />
-            <div className="search-icon-container">
+            <input 
+              type="text" 
+              placeholder="search" 
+              className="search-landing"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSearch();
+              }}
+            />
+            <div className="search-icon-container" onClick={handleSearch}>
               <img src="resources/search-icon.png" className="search-icon" alt="search icon" />
             </div>
           </div>
@@ -120,17 +165,31 @@ const FAQ = () => {
 
       {/* FAQ Content */}
       <div className="FAQ-section">
-        {FAQContent.map(({ sectionTitle, items }) => (
-          <div key={sectionTitle} className="FAQ-category">
-            <h2 className="sectionTitle">{sectionTitle}</h2>
-            {items.map(({ id, title, text }) => (
-              <div key={id} id={id} className="FAQ-item">
-                <h3 className="itemTitle">{title}</h3>
-                <p className="itemParagraph">{text}</p>
+        {filteredFAQ.length > 0 ? (
+          filteredFAQ.map(({ sectionTitle, items }, sectionIndex) => {
+            const isFirstSection = sectionIndex === 0; // Attach ref to first section title
+
+            return (
+              <div key={sectionTitle} className="FAQ-category">
+                <h2 
+                  className="sectionTitle" 
+                  ref={isFirstSection ? firstResultRef : null} // Attach ref to first matching section
+                >
+                  {sectionTitle}
+                </h2>
+                {items.map(({ id, title, text }) => (
+                  <div key={id} id={id} className="FAQ-item">
+                    <h3 className="itemTitle">{title}</h3>
+                    <p className="itemParagraph">{text}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ))}
+            );
+          })
+        ) : (
+          <p className="no-results">No results found</p>
+        )}
+
       </div>
 
       {/* Filler */}

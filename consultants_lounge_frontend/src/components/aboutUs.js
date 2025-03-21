@@ -3,7 +3,7 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import "../styles/aboutUs.css";
 import "../styles/headerFooter.css";
-import LeadershipTeam from "./aboutUs-Leaders"; // Import the new component
+import LeadershipTeam from "./aboutUs-Leaders";
 
 const AboutUs = () => {
   return (

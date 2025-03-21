@@ -9,6 +9,7 @@ import SurveyBusinesses from './components/survey-Businesses';
 import FAQ from './components/FAQ';
 import Resources from './components/resources';
 import HowItWorks from './components/howItWorks';
+import Consultants from './components/consultants';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/FAQ' element={<FAQ />} />
         <Route path='/resources' element={<Resources />} />
         <Route path='/howItWorks' element={<HowItWorks />} />
+        <Route path='/consultants' element={<Consultants />} />
       </Routes>
     </div>
   );
