@@ -8,6 +8,7 @@ pipeline {
 
     environment {
         NETLIFY_SITE_ID = '65d89961-a09c-45d0-8272-9d940b10bcdf'
+        NETLIFY_AUTH_TOKEN = credentials('for-cap-temp-deploy')
     }
 
     stages {
