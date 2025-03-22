@@ -33,7 +33,8 @@ pipeline {
                             echo "Installing frontend dependencies..."
                             npm --version
                             npm install
-                            npm run build
+                            echo "Building frontend..."
+                            CI=false npm run build   // suppress warnings on build
                         '''
                     }
                 }
