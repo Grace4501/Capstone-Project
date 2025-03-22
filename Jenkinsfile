@@ -33,7 +33,7 @@ pipeline {
                 script {
                     dir('consultants_lounge_frontend') {
                         sh '''
-                            echo "Installing backend dependencies..."
+                            echo "Installing frontend dependencies..."
                             npm --version
                             npm install
                             npm run build
