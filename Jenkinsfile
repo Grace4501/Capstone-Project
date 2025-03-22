@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     dir('consultants_lounge_backend') {
-                        sh 'npm test || echo "Tests failed, but continuing...'
+                        sh 'npm test || echo "Tests failed, but continuing..."'
                     }
                 }
             }
@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     dir('consultants_lounge_backend') {
-                        sh 'npm test || echo Tests failed, but continuing...'
+                        sh 'npm test || echo "Tests failed, but continuing..."'
                     }
                 }
             }
