@@ -19,7 +19,7 @@ pipeline {
                             echo "Installing backend dependencies..."
                             npm --version
                             npm install
-                            npm run build
+                            npm run
                         '''
                     }
                 }
