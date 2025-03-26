@@ -1,6 +1,7 @@
+import '../../styles/Payments.css';
 export default function Payments() {
     return (
-        <div>
+        <div className="Payments">
             <div>
                 <h2> Payments </h2>
                 <p><b>Click On The Row and See The Pricing Package That The Client Recieved</b></p>
@@ -17,7 +18,6 @@ export default function Payments() {
                     </ul>
                 </div>
                 <div className="paymentsData">
-
                 </div>
                 <div className="bottomContainer">
                     <button>← Previous</button>
