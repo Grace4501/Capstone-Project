@@ -1,4 +1,4 @@
-import  './CostumerService.css';
+import '../../../styles/CostumerService.css';
 import { Routes,Route,Link  } from "react-router-dom"
 import Contacts from "./Contacts.js"
 import Customers from "./Customers.js"

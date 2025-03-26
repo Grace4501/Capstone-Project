@@ -1,7 +1,7 @@
-import './Admin.css';
+import '../../styles/Admin.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Home from './Home.js'
-import UserAccess from './UserAccessControls.js';
+import Home from './AdminHome.js'
+import UserAccess from './UAC/UserAccessControls.js';
 import CustomerService from './CS/CostumerService.js';
 import Payments from './Payments.js';
 import Analytics from './Analytics/Analytics.js';
@@ -74,7 +74,7 @@ export default function Admin() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/user-access" element={<UserAccess />} />
+            <Route path="/user-access/*" element={<UserAccess />} />
             <Route path="/customer-service/*" element={<CustomerService />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/analytics" element={<Analytics />} />

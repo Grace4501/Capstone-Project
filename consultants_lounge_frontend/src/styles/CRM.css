@@ -7,21 +7,22 @@
     margin-left: 100px;
     width: 400px;
 }
+
 .crm h2{
     margin-left: 11%;
     margin-bottom: 8%;
 }
+
     /* Style for the details container */
-.details ul {
+.crmdetails ul {
  list-style-type: none;
  margin: 0;
  padding: 0;
  font-size: 11px;
   }
 
-  .details li{
+  .crmdetailss li{
     padding: 0;
-
   }
 
   .email{

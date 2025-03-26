@@ -1,4 +1,6 @@
-import './Home.css'
+import '../../styles/AdminHome.css';
+import DecreasingData from '../../resources/DescreasingData.png';
+import IncreasingData from '../../resources/IncreasingData.png';
 export default function Home() {
     return (
         <div className="Home">
@@ -16,19 +18,28 @@ export default function Home() {
             </div>
             <div className="Cards"> 
             <div className="card">
-                <p> Total Customers </p>
+                <h6> Total Customers </h6>
                 <br/>
-                <p> 2,420 </p>
+                <h5> 2,420 </h5>
+                <br/>
+                <img  className="IncreasingData" src={IncreasingData}   />
+                <p> <b> ↑ 40% </b> vs last month </p>
             </div>
             <div className="card">
-                <p> Members</p>
+                <h6> Members</h6>
                 <br/>
-                <p> 1,210</p>
+                <h5> 1,210</h5>
+                <br/>
+                <img className="DecreasingData" src={DecreasingData}   />
+                <p> <b> ↓ 10% </b> vs last month </p>
             </div>
             <div className ="card">
-                <p> Active now</p>
+                <h6> Active now</h6>
                 <br/>
-                <p> 316</p>
+                <h5> 316</h5>
+                <br/>
+                <img  className="IncreasingData" src={IncreasingData}   />
+                <p> <b> ↑ 20% </b> vs last month </p>
             </div>
             </div>
             <div className="Filters">
@@ -37,6 +48,7 @@ export default function Home() {
             <button className="more-filters"> More Filters </button>
             <input type="search" placeholder='Search'></input>
             </div>
+            {/* Backend and frontend integration*/}
             <div className="Data"> 
             </div>
             <div className="previous-next-buttons">
