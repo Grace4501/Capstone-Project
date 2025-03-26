@@ -48,7 +48,7 @@ color: black;
 
 .Nav ul li a:hover {
   background-color: #b1e5ff;
-  border-radius: 6px;
+  border-radius: 20px;
 }
 
 .Nav ul li a {

@@ -1,6 +1,7 @@
+import '../../../styles/Customers.css';
 export default function Customers(){
     return(
-        <div>
+        <div className="Customer">
             <button> + Add Customer </button>
             <select>
               <option> Newest</option>
