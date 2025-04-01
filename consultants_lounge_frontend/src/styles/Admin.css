@@ -121,3 +121,13 @@ height: 18px
 }
 
 
+/* Admin-Account */
+
+.AdminAccount{
+border-radius: 40px;
+width: 30px;
+height: 30px;
+padding: 2px;
+background-color: #0E4B69 ;
+color: white;
+}

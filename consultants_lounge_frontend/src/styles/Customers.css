@@ -6,8 +6,9 @@
 
   /* Button Styling */
  .Customer button {
-    padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
+    width: 500px;
+    height: 50px;
     color: #fff;
     background-color: #440dc5;
     margin-left: 800px;
@@ -24,7 +25,7 @@
   /* Select Dropdown Styling */
   .Customer select {
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;

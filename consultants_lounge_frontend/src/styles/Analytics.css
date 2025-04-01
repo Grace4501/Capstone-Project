@@ -1,0 +1,207 @@
+
+.Analytics{
+width: 800px;
+}
+
+.Analytics h4{
+margin-top: 100px;
+margin-right: 200px;
+font-size: 24px;
+
+}
+
+/* Analytics Filter*/
+
+.AnalyticFilter {
+    display: flex;
+    align-items: center; 
+    margin-top: 20%;
+    margin-left: 132%;
+}
+
+.AnalyticFilter input,
+.AnalyticFilter select {
+    display: inline-block;
+    margin-right: 8px; 
+}
+
+.AnalyticFilter input{
+}
+
+
+/* Analytic Cards */
+
+.AnalyticCards {
+    display: flex;
+    justify-content: space-between;
+    width: 150%;
+    height: 100%;
+    gap: 70px; 
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.AnalyticCards > div {
+    width: 200px;
+    padding: 2px;
+    border-radius: 8px; 
+    width: 40%; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.marketingCard {
+    background-color: rgb(73, 22, 255);
+}
+.marketingCard p  {
+    color: white;
+}
+
+.marketingCard b  {
+    color: white;
+}
+
+.AnalyticCards img{
+    float: left;
+    width: 60px;
+}
+
+.marketingCard img{
+    float: right;
+    width: 60px;
+}
+
+.AnalyticCards  {
+    color: gray;
+}
+
+.AnalyticCards b{
+color: black;
+}
+
+
+/* Card Title Styles */
+.Cards div p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* Admin Sales */
+
+.AdminSales {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+  
+
+/* Sales Analytics Section */
+
+
+.salesAnalytics, .recentSales {
+    flex: 1; 
+    margin: 10px; 
+  }
+  
+  .salesAnalytics h4, .recentSales p {
+    margin: 0;
+  }
+  
+  .salesAnalytics label {
+    display: block; 
+  }
+
+
+
+.salesAnalytics {
+    background-color: white;
+    width: 1000px;
+    padding: 100px 400px;
+    width:700px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.salesAnalytics h4 {
+    font-size: 20px;
+    color: #1e3d58;
+    margin-bottom: 15px;
+}
+
+.salesAnalytics label {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+/* Recent Sales Section */
+.recentSales {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recentSales p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Customer Data */
+.customerData {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Latest Invoices Section */
+.latestInvoices {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.latestInvoices button {
+    padding: 10px 20px;
+    background-color: rgb(73, 22, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.latestInvoices button:hover {
+    background-color: #9d00ff;
+}
+
+/* Invoice Table */
+.latestInvoices ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-top: 2px solid #ccc;
+}
+
+.latestInvoices li {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.latestInvoices li:hover {
+    background-color: #e2e2e2;
+}

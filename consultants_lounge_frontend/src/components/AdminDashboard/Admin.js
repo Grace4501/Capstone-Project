@@ -68,7 +68,8 @@ export default function Admin() {
           <img className="searchLogo" src={searchLogo} alt="SearchLogo.png"/> 
           <span className="material-icons-outlined">help_outline</span>
           <span className="material-icons-outlined" style={{border:'none'}}>notifications</span>
-          <p> image </p>
+          {/* Admin-Account"*/}
+          <p className="AdminAccount"> A </p>
         </div>
            {/* Main content area with routes*/}
         <div>
