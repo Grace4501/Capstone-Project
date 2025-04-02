@@ -51,6 +51,9 @@ export default function Analytics() {
                     <h4> Sales Analytics </h4>
                     <label> Marketing Sales </label>
                     <label> Online Sales</label>
+                    <select>
+                    <option this="This Year"> This Year </option>
+                </select>
                 </div>
                 <div className="recentSales">
                     <p> Recent Sales </p>
@@ -60,8 +63,14 @@ export default function Analytics() {
                 </div>
             </div>
             <div className="latestInvoices">
-                <button> Generate Report </button>
-                <p> ... </p>
+                <h2 style={{ float: "left" }}> Latest Invoices</h2>
+                <button style={{ float: "left" }}> Generate Report </button>
+                <p style={{ float: "left" }}>  ... </p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <ul>
                     <li> Invoice No. </li>
                     <li> Customer Name </li>

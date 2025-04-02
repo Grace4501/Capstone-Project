@@ -16,7 +16,7 @@ font-size: 24px;
     display: flex;
     align-items: center; 
     margin-top: 20%;
-    margin-left: 132%;
+    margin-left: 100%;
 }
 
 .AnalyticFilter input,
@@ -26,8 +26,25 @@ font-size: 24px;
 }
 
 .AnalyticFilter input{
+ border: 1px solid rgb(167, 171, 176);
+border-radius: 8px;
+height: 30px;
+width: 300px;
+margin-top: 5px;
+ margin-left: 60%;
+ outline: none;
 }
 
+.AnalyticFilter select {
+padding: 15px 40px;
+font-size: 13px; 
+border: 1px solid #ccc;
+border-radius: 20px; 
+background-color: #f9f9f9; 
+color: #333; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+cursor: pointer; 
+}
 
 /* Analytic Cards */
 
@@ -93,6 +110,7 @@ color: black;
     justify-content: space-between;
     margin-top: 10%;
     margin-left: 10%;
+    gap: 40px;
 }
   
 
@@ -115,18 +133,17 @@ color: black;
 
 
 .salesAnalytics {
+    display: flex;
     background-color: white;
-    width: 1000px;
-    padding: 100px 400px;
-    width:700px;
+    gap: 40px;
+    padding: 100px 200px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- 
+
 }
 
 .salesAnalytics h4 {
     font-size: 20px;
-    color: #1e3d58;
     margin-bottom: 15px;
 }
 
@@ -137,11 +154,22 @@ color: black;
     margin-bottom: 5px;
 }
 
+.salesAnalytics select{
+    margin-left: 30%;
+    padding: 10px 40px;
+    font-size: 13px; 
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    cursor: pointer; 
+}
 
 /* Recent Sales Section */
 .recentSales {
     background-color: white;
-    padding: 15px;
+    padding: 100px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -161,10 +189,23 @@ color: black;
 
 /* Latest Invoices Section */
 .latestInvoices {
+    margin-top: 20px;
+    margin-left: 12%;
+    width: 150%;
     background-color: white;
-    padding: 15px;
+    padding: 20px, 400px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.latestInvoices h2{
+    margin-left: 50px;
+
+}
+
+.latestInvoices p{
+    margin-top: 40px;
 }
 
 .latestInvoices button {
@@ -175,18 +216,22 @@ color: black;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-left: 500px;
+    margin-top: 40px;
+
 }
 
 .latestInvoices button:hover {
     background-color: #9d00ff;
 }
 
+
 /* Invoice Table */
 .latestInvoices ul {
+    margin-top: 20px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 2;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 10px;
