@@ -1,18 +1,17 @@
-
 import './App.css';
 //import Login  from './components/Login.js';
 //import  Signup  from './components/Signup.js';
-import Admin from './components/AdminDashboard/Admin.js';
+import Consultants from './components/ConsultantsDashboard/ConsultantsDB.js';
 
 function App() {
   return (
     <div className="App">
       <div>
-        {/* Testing */}
-      <Admin/>
-      </div>
+         {/* Testing */}
+      <Consultants/>
+     </div>
     </div>
-  );
-}
+   );
+ }
 
-export default App;
+ export default App;

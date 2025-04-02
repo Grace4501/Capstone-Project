@@ -1,0 +1,140 @@
+/* Sidebar Styling */
+.Nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fafbfc;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset -2px 0px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Company Logo */
+.companyLogo {
+    width: 85%;
+    margin-bottom: 30px;
+}
+
+/* Navigation List */
+.Nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Items */
+.Nav li {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+}
+
+/* Navigation Links */
+.Nav a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    margin-bottom: 7px;
+    border-radius: 15px;
+    width: 100%;
+    transition: background 0.3s;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Fix hover exceeding sidebar */
+.Nav a:hover {
+    background-color: #def0f9;
+}
+
+/* Navigation Icons */
+.navIcon {
+    width: 25px;
+    margin-right: 12px;
+}
+
+.current {
+    background-color: #def0f9;
+}
+
+/* Top Bar Styling */
+.topDiv {
+    position: fixed; /* Fix to the top */
+    top: 0;
+    right: 0; /* Align to the right side */
+    width: calc(100% - 300px); /* Subtract the width of the sidebar */
+    height: 60px; /* Adjust the height of the top bar */
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end; /* Align elements to the right */
+    align-items: center; /* Vertically center items */
+    padding: 30px 40px; /* Add some padding */
+    padding-top: 40px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    z-index: 10; /* Ensure top bar is above the sidebar */
+    border: #eeeeee solid 1px;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for the search input and icon */
+.searchWrapper {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    padding-right: 20px;
+}
+
+/* Search Bar */
+.topDiv input[type="search"] {
+    padding: 6px 15px;
+    padding-left: 45px; /* Add extra padding on the left for the icon */
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    width: 100%; /* Full width of the container */
+    font-size: 14px; /* Optional for styling */
+    box-sizing: border-box;
+}
+
+/* Search Icon */
+.searchLogo {
+    position: absolute;
+    left: 15px; /* Space from the left edge */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%); /* Adjust the icon to be vertically centered */
+    width: 25px; /* Adjust icon size */
+    height: auto;
+    cursor: pointer;
+}
+
+
+/* Icon Buttons */
+.material-icons-outlined {
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Admin Account */
+.AdminAccount {
+    background-color: #0e4b69;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
