@@ -1,0 +1,180 @@
+/* Course Card Styling */
+.course-card {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+/* Course Image Styling */
+.course-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Course Content Layout */
+.course-content {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/* Course Title Styling */
+.course-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Course Description Styling */
+.course-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Start Button Styling */
+.start-button {
+    align-self: flex-end;
+    padding: 4px 40px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+/* Start Button Hover Effect */
+.start-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Courses Container Layout */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* Resource Card Styling */
+.resource-card {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Resource Image Styling */
+.resource-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Resource Content Layout */
+.resource-content {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/* Resource Title Styling */
+.resource-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Resource Description Styling */
+.resource-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Resource Button Styling */
+.resource-button {
+    align-self: flex-end;
+    padding: 4px 40px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+/* Resource Button Hover Effect */
+.resource-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Resources Container Layout */
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* Tabs Section Layout */
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Page Title Alignment */
+.ConsultantsLearning {
+    text-align: left;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Tabs Button Styling */
+.tabs button {
+    margin-right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    padding: 7px 25px;
+    background-color: #ffffff;
+}
+
+/* Active Tab Button Styling */
+.tabs button.active {
+    padding: 7px 25px;
+    background-color: #def0f9;
+    border: none;
+    border-radius: 20px;
+}

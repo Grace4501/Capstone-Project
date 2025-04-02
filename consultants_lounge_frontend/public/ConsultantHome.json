@@ -1,0 +1,37 @@
+{
+    "courses": [
+        {
+            "name": "Project Management",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "lessons": "4",
+            "time": "1h28m",
+            "img":"/resources/manage.png"
+        },
+        {
+           "name": "Communications",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "lessons": "4",
+            "time": "1h28m",
+            "img": "/resources/communicate.png"
+        },
+        {
+            "name": "Copywriting",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+             "lessons": "4",
+             "time": "1h28m",
+             "img": "/resources/copywrite.png"
+         }
+    ],
+    "resources": 
+    [
+        {
+            "title": "Boosting efficiency within the workplace."
+        },
+        {
+            "title": "How to drive your sales with the right team members."
+        },
+        {
+            "title": "How to market your services as a consultant."
+        }
+    ]
+}

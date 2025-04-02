@@ -1,4 +1,4 @@
-/* Sidebar Styling */
+/* Sidebar Styling - Fixed sidebar on the left side of the screen */
 .Nav {
     position: fixed;
     left: 0;
@@ -12,15 +12,16 @@
     align-items: center;
     box-shadow: inset -2px 0px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    z-index: 1000;
 }
 
-/* Company Logo */
+/* Company Logo - Adjust logo width and spacing */
 .companyLogo {
     width: 85%;
     margin-bottom: 30px;
 }
 
-/* Navigation List */
+/* Navigation List - Styles for the sidebar navigation list */
 .Nav ul {
     list-style: none;
     padding: 0;
@@ -31,14 +32,14 @@
     align-items: center;
 }
 
-/* Navigation Items */
+/* Navigation Items - Defines layout for each navigation item */
 .Nav li {
     width: 100%;
     text-align: left;
     margin: 5px 0;
 }
 
-/* Navigation Links */
+/* Navigation Links - Style for links within the sidebar */
 .Nav a {
     text-decoration: none;
     color: black;
@@ -53,79 +54,79 @@
     box-sizing: border-box;
 }
 
-/* Fix hover exceeding sidebar */
+/* Hover Effect - Changes background color on hover */
 .Nav a:hover {
     background-color: #def0f9;
 }
 
-/* Navigation Icons */
+/* Navigation Icons - Adjusts icon size and spacing */
 .navIcon {
     width: 25px;
     margin-right: 12px;
 }
 
+/* Current Active Link - Highlights the currently active link */
 .current {
     background-color: #def0f9;
 }
 
-/* Top Bar Styling */
+/* Top Bar Styling - Fixed top bar on the right of the sidebar */
 .topDiv {
-    position: fixed; /* Fix to the top */
+    position: fixed;
     top: 0;
-    right: 0; /* Align to the right side */
-    width: calc(100% - 300px); /* Subtract the width of the sidebar */
-    height: 60px; /* Adjust the height of the top bar */
+    right: 0;
+    width: calc(100% - 300px);
+    height: 60px;
     background-color: #fff;
     display: flex;
-    justify-content: flex-end; /* Align elements to the right */
-    align-items: center; /* Vertically center items */
-    padding: 30px 40px; /* Add some padding */
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 40px;
     padding-top: 40px;
-    box-sizing: border-box; /* Include padding in the element's total width */
-    z-index: 10; /* Ensure top bar is above the sidebar */
+    box-sizing: border-box;
+    z-index: 10;
     border: #eeeeee solid 1px;
     box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Wrapper for the search input and icon */
+/* Search Wrapper - Contains the search bar and icon */
 .searchWrapper {
     position: relative;
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
     padding-right: 20px;
 }
 
-/* Search Bar */
+/* Search Bar - Input field for searching */
 .topDiv input[type="search"] {
     padding: 6px 15px;
-    padding-left: 45px; /* Add extra padding on the left for the icon */
+    padding-left: 45px;
     margin-right: 20px;
     border-radius: 20px;
     border: 2px solid #ddd;
-    width: 100%; /* Full width of the container */
-    font-size: 14px; /* Optional for styling */
+    width: 100%;
+    font-size: 14px;
     box-sizing: border-box;
 }
 
-/* Search Icon */
+/* Search Icon - Positioning for the search icon inside the bar */
 .searchLogo {
     position: absolute;
-    left: 15px; /* Space from the left edge */
-    top: 50%; /* Vertically center the icon */
-    transform: translateY(-50%); /* Adjust the icon to be vertically centered */
-    width: 25px; /* Adjust icon size */
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
     height: auto;
     cursor: pointer;
 }
 
-
-/* Icon Buttons */
+/* Icon Buttons - Styles for action icons in the top bar */
 .material-icons-outlined {
     font-size: 24px;
     margin: 10px;
     cursor: pointer;
 }
 
-/* Admin Account */
+/* Admin Account - Circular profile icon for admin user */
 .AdminAccount {
     background-color: #0e4b69;
     color: white;
@@ -137,4 +138,13 @@
     font-size: 14px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+/* Main Content Styling - Ensures content does not overlap with the sidebar */
+.main-content {
+    margin-left: 320px;
+    padding: 20px;
+    width: calc(100% - 320px);
+    box-sizing: border-box;
+    margin-top: 70px;
 }
