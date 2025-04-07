@@ -6,7 +6,6 @@ export default function ConsultantsLearning() {
     const [activeTab, setActiveTab] = useState('courses');
     const [data, setData] = useState({ courses: [], resources: [] });
 
-    // List of colors for course backgrounds
     const courseColors = ['#d9eae8', '#e6f2f7', '#f9f2e0'];
 
     useEffect(() => {

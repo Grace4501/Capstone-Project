@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import Home from './ConsultantsHome.js';
 import Learning from './ConsultantsLearning.js';
+import Appointments from './ConsultantsAppointments';
 
 import searchLogo from '../../resources/SearchLogo.png';
 import companyLogo from '../../resources/CompanyLogo.png';
@@ -91,6 +92,7 @@ function Consultants() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ConsultantsLearning" element={<Learning />} />
+          <Route path="/ConsultantsAppointments" element={<Appointments />} />
         </Routes>
       </div>
     </div>
