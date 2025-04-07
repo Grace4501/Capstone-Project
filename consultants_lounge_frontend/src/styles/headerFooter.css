@@ -1,0 +1,298 @@
+
+/* Overall styling*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* HEADER STYLING */
+
+
+/* Overall styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* Logo styling*/
+.logo {
+    max-width: 60%;
+    height: auto;
+    padding-left: 15px;
+}
+
+/* Page list (navigation menu) styling */
+.pageList ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 15px;
+}
+
+/* Navigation item styling */
+.pageList li {
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Hover effect for navigation links */
+.pageList a:hover {
+    color: #1d4587;
+}
+
+/* Styling for current active link*/
+.current {
+    color: #1d4587;
+}
+
+/* Styling for login button */
+.login {
+    background-color: white;
+    border: 1.6px solid black;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Styling for signup button */
+.signup {
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Override hover effect for login button */
+.pageList a.login:hover {
+    color: inherit;
+    border-color: inherit;
+    background-color: inherit;
+}
+
+/* Override hover effect for signup button */
+.pageList a.signup:hover {
+    color: white;
+    border-color: black;
+    background-color: black;
+}
+
+/* General link styling */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Media Query for Mobile View (responsive design) */ 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+    }
+
+    #landingPage {
+        display: none;
+    }
+
+    .pageList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .pageList ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .pageList li {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .login, .signup {
+        display: inline-block;
+        margin: 0;
+        padding: 6px 20px;
+        background-color: white;
+        border: 1.6px solid black;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .login {
+        background-color: white;
+        color: black;
+    }
+
+    .signup {
+        background-color: black;
+        color: white;
+    }
+}
+
+
+/* FOOTER STYLING */
+
+
+/* Overall styling*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 50px;
+    background-color: #174267;
+    color: rgba(255, 255, 255, 0.893);
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Logo section styling */
+.footer-logo-container {
+    flex: 1;
+    margin-right: 50px;
+    background-color: #174267;
+}
+
+/* Logo styling */
+.footer-logo {
+    margin: 0;
+    background-color: #174267;
+    max-width: 60%;
+    height: auto;
+}
+
+/* Styling for info list section styling */
+.footer-lists {
+    display: flex;
+    justify-content: flex-start;
+    flex: 7;
+    gap: 75px;
+    margin-top: 70px;
+    background-color: #174267;
+}
+
+/* Styling for info list groups */
+.footer-lists div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    background-color: #174267;
+}
+
+.footer-lists p {
+    background-color: #174267;
+}
+
+.footer-lists b {
+    background-color: #174267;
+}
+
+/* Info list Styling */
+.footer-lists ul {
+    list-style: none;
+    padding: 0;
+    background-color: #174267;
+}
+
+/* List item styling */
+.footer-lists li {
+    padding: 5px 0;
+    font-size: 12px;
+    background-color: #174267;
+}
+
+/* List link styling */
+.footer-lists a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.893);
+    background-color: #174267;
+}
+
+/* Logo & info styling */
+.logo-list-container {
+    flex-direction: column;
+    background-color: #174267;
+}
+
+/* Styling for signup section */
+.signupFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    padding-left: 20px;
+    background-color: #174267;
+}
+
+/* Styling for signup paragraph */
+.signupFooter p {
+    font-size: 12px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    width: 370px;
+    background-color: #174267;
+}
+
+/* Styling for signup button */
+.signupFooterBtn {
+    background-color: rgb(94, 177, 113);
+    color: rgba(255, 255, 255, 0.893);
+    padding: 10px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Media Query for Mobile View (responsive design) */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: left;
+        padding: 20px;
+    }
+
+    .footer-lists {
+        flex-direction: column;
+        gap: 30px;
+        align-items: left;
+    }
+
+    .signupFooter {
+        align-items: left;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+}

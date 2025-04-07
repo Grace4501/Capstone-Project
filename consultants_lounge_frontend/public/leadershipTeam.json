@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Tolu Amadi",
+        "title": "CEO & Founder",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Nancy Ihebom",
+        "title": "Project Manager",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Jocey Fuego",
+        "title": "Cheif Revenue Officer",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Shantel Williams",
+        "title": "Talent Operations",
+        "image": "resources/placeholderExpert.jpg"
+    },
+
+    {
+        "name": "Maria Hodges",
+        "title": "Business Operations",
+        "image": "resources/placeholderExpert.jpg"
+    }
+]

@@ -1,0 +1,754 @@
+
+* {
+    text-align: left;
+    background-color: #fbfbfb;
+}
+
+/* Next Level Buisness Section */
+
+
+/* Overall styling for the landing section */
+.landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 700px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Text section within the landing */
+.text-landing {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 30px 50px;
+}
+
+/* Title styling within the text section */
+.title-landing {
+    font-size: 65px;
+    margin-bottom: 20px;
+    max-width: 470px;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Paragraph styling within the text section */
+.paragraph-landing {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Search container styling within the text section */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Input field styling for the search */
+.search-landing {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    flex-grow: 1;
+    padding-right: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    height: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Search icon container and styling */
+.search-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(94, 177, 113);
+    padding: 0 12px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: 45px;
+}
+
+/* Search icon image styling */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(94, 177, 113);
+
+}
+
+
+/* Image styling within the landing section */
+.img-landing img {
+    height: 700px;
+    max-width: 1000px; 
+    padding-right: 50px;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .img-landing {
+        display: none;
+    }
+
+    /* Overall mobile styling for landing section */
+    .landing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    /* Mobile-specific styling for text section */
+    .text-landing {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Mobile-specific styling for the title */
+    .title-landing {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        
+
+    }
+
+    /* Mobile-specific styling for the search section */
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Mobile-specific styling for search input */
+    .search-landing {
+        padding: 12px;
+        font-size: 14px;
+        height: 40px;
+        border-radius: 5px;
+        margin: 10px;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    /* Mobile-specific styling for search icon container */
+    .search-icon-container {
+        width: 45px;
+        height: 40px;
+        margin-left: -12px;
+    }
+
+    /* Mobile-specific styling for search icon */
+    .search-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+
+/* How it Works Section */
+
+
+/* Overall layout for the How it Works section */
+.howitworks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Title and image layout within How it Works section */
+.titleimg-howitworks {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 0 50px;
+}
+
+/* Title styling within How it Works section */
+.title-howitworks {
+    font-size: 65px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    max-width: 470px;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Image styling within How it Works section */
+.img-howitworks {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text section layout within How it Works */
+.text-howitworks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 60%;
+    padding-right: 50px;
+
+}
+
+/* Styling for each step of How it Works section */
+.text-howitworks > div{
+    flex: 1;
+    max-width: 25%;
+    padding: 0;
+    box-sizing: border-box;
+    border-top: solid 2px black ;
+}
+
+/* Numbering styling for steps */
+.numbering-founding, .numbering-optimizing {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Almarai', serif;
+    margin-bottom: 20px;
+}
+
+/* Title styling for steps */
+.title-founding, .title-optimizing {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Paragraph styling for steps */
+.paragraph-founding, .paragraph-optimizing {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Media Query for Mobile View in How it Works Section */
+@media (max-width: 768px) {
+    /* Mobile-specific layout for How it Works section */
+    .howitworks {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Mobile-specific styling for title */
+    .titleimg-howitworks {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Mobile-specific styling for title font size */
+    .title-howitworks {
+        font-size: 50px;
+    }
+
+    /* Mobile-specific text layout */
+    .text-howitworks {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    /* Mobile-specific layout for each text section */
+    .text-howitworks > div {
+        max-width: 100%;
+        flex: none;
+    }
+
+    /* Mobile-specific font size for numbering */
+    .numbering-founding, .numbering-optimizing {
+        font-size: 28px;
+    }
+
+    /* Mobile-specific font size for step titles */
+    .title-founding, .title-optimizing {
+        font-size: 20px;
+    }
+
+    /* Mobile-specific font size for paragraphs */
+    .paragraph-founding, .paragraph-optimizing {
+        font-size: 14px;
+    }
+}
+
+
+/* Company Logo Section */
+
+
+/* Styling for the company logos section */
+.companylogos {
+    background-color: #ebf1f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 15%;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Styling for individual company logos */
+.img-companylogos {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+/* Become a consultant Section */
+
+
+/* Overall layout for the Become a Consultant section */
+.consultant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Text layout within Become a Consultant section */
+.text-consultant {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 120px 100px;
+}
+
+/* Title styling within Become a Consultant section */
+.title-consultant {
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Paragraph styling within Become a Consultant section */
+.paragraph-consultant {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Signup button styling in Become a Consultant section */
+.signup-consultant {
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    width: auto;
+    align-self: flex-start;
+}
+
+/* Image styling in Become a Consultant section */
+.img-consultant {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+    padding-right: 50px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Media Query for Mobile View (responsive design) for Consultant Section */
+@media (max-width: 768px) {
+    .img-consultant {
+        display: none;
+    }
+
+    /* Mobile-specific layout for Become a Consultant section */
+    .consultant {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    /* Mobile-specific styling for text section */
+    .text-consultant {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Mobile-specific font size for title */
+    .title-consultant {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile-specific styling for paragraph */
+     .paragraph-consultant {
+        font-size: 16px;
+    }
+
+    /* Mobile-specific styling for signup button */
+    .signup-consultant {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+
+/* Styling for the Blog Section */
+
+
+/* Overall layout for the Blog section */
+.blog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Text layout within the Blog section */
+.text-blog {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding: 120px 100px;
+}
+
+/* Title styling within Blog section */
+.title-blog {
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Paragraph styling within Blog section */
+.paragraph-blog {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Signup button styling in Blog section */
+.blog-btn {
+    background-color: black;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    width: auto;
+    align-self: flex-start;
+}
+
+/* Image styling in Blog section */
+.img-blog {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+    padding-right: 50px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Media Query for Mobile View (responsive design) for Blog Section */
+@media (max-width: 768px) {
+    .img-blog {
+        display: none;
+    }
+
+    /* Mobile-specific layout for Blog section */
+    .blog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    /* Mobile-specific styling for text section */
+    .text-blog {
+        padding: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    /* Mobile-specific font size for title */
+    .title-blog {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile-specific styling for paragraph */
+     .paragraph-blog {
+        font-size: 16px;
+    }
+
+    /* Mobile-specific styling for signup button */
+    .signup-blog {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+/* Styling for the Find an Expert section */
+
+/* Overall styling */
+.findexpert {
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ebf1f4;
+}
+
+/* Styling for Expert section title */
+.title-findexpert {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: 'Almarai', serif;
+    font-weight: 600;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.8);
+    background-color: #ebf1f4;
+
+}
+
+/* Container for the expert cards with horizontal scroll */
+.experts-container {
+    display: flex;
+    overflow-x: hidden;
+    gap: 40px;
+    padding: 10px;
+    max-width: 1200px;
+    background-color: #ebf1f4;
+
+}
+
+/* Styling for the left and right arrows */
+.scroll-arrow-left, .scroll-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(40%);
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+    background-color: #ebf1f4;
+
+}
+
+/* Styling for the left arrow */
+.scroll-arrow-left {
+    left: 120px;
+    background-color: #ebf1f4;
+
+}
+
+.scroll-arrow-left span {
+    background-color: #ebf1f4;
+
+}
+
+/* Styling for the right arrow */
+.scroll-arrow-right {
+    right: 120px;
+    background-color: #ebf1f4;
+
+}
+
+.scroll-arrow-right span {
+    background-color: #ebf1f4;
+
+}
+
+/* Styling for each expert card */
+.expert-card {
+    flex: 0 0 auto;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0;
+    background-color: white;
+}
+
+/* Styling for expert card images */
+.expert-img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Styling for expert card info */
+.expert-info {
+    font-size: 1em;
+    padding: 0 15px;
+    background-color: white;
+}
+
+/* Styling for expert card info specifically name */
+.expert-name {
+    font-weight: 450;
+    margin: 0;
+    color: #174267;
+    font-size: 20px;
+    background-color: white;
+
+}
+
+/* Styling for expert card info specifically title */
+.expert-title {
+    font-style: italic;
+    margin: 0;
+    color: #777;
+    background-color: white;
+
+}
+
+
+/* Styling for the Popup section */
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup {
+    position: relative;
+    border-radius: 25px;
+    padding: 20px;
+    width: 550px;
+    text-align: center;
+    position: relative;
+    z-index: 10000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.popup h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Almarai', serif;
+    font-weight: 465;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    padding: 35px;
+  }
+  
+  .popup p {
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  
+  .popup-btns {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 35px;
+    
+  }
+  
+  .popup-btn {
+    padding: 7px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 10px;
+  }
+  
+  .popup-btn.primary {
+    background-color: black;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .popup-btn.secondary {
+    background-color: black;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+  }

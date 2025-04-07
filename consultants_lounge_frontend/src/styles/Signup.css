@@ -1,18 +1,24 @@
 
-
-.Signup{
+.Signup {
     display: flex;
     height: 100vh;
-    gap: 90px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.logo-container {
+.Signup .logo-container {
     width: 60%;
     background-color: azure;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.logo-container::before {
+.Signup .logo-container::before {
     content: ""; 
     position: absolute;
     top: 0;
@@ -24,11 +30,7 @@
     width: 60%;
 }
 
-.form-container {
-    margin-top: 7%;
-    padding: 20px;
-    width: 300px;
-}
+
 
 h1,h5{
     margin: 0;
@@ -40,55 +42,140 @@ h1 {
     color: white;
 }
 
-h5{
+
+.Signup .logo-container h1,
+.Signup .logo-container h5 {
+    position: relative;
+    z-index: 2;
+}
+
+.Signup .form-container {
+    width: 40%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.Signup form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.Signup h1,
+.Signup h5 {
+    margin: 0;
+}
+
+.Signup h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.Signup h5 {
     font-size: 20px;
     color: gray;
 }
 
 
-h4 {
+.Signup h4 {
     margin-bottom: 20px;
+    text-align: left;
 }
 
-label {
+.Signup label {
     font-size: 13px;
-    margin-right: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
-
-input {
+.Signup input,
+.Signup .role-select {
     border: none;
     border-bottom: 1px solid rgb(136, 133, 133);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
-    max-width: 400px;
-
+    padding: 8px 0;
+    background: transparent;
 }
 
-.buttons {
-    margin-top: 30pt;
+.Signup .role-select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1px center;
+    background-size: 16px;
+    padding-right: 24px;
 }
 
+.Signup input:focus,
+.Signup .role-select:focus {
+    outline: none;
+    border-bottom: 2px solid #5dc0f9;
+}
 
-button {
+.Signup input::placeholder {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.Signup .buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Signup button {
     margin-top: 10px;
     width: 100%;
-    max-width: 200px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-.login-button{
-background-color: black;
-color: white;
+.Signup .signup-button {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
-.google{
-border: 1px solid rgb(185, 185, 185);
-background-color: white;
+.Signup .signup-button:hover {
+    background-color: #333;
 }
 
-.google img{
-margin-right: 10px;
-width: 20px;
-height: 20px;
+.Signup .google {
+    border: 1px solid rgb(185, 185, 185);
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
+.Signup .google:hover {
+    background-color: #f8f8f8;
+}
+
+.Signup .google img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
