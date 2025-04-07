@@ -104,7 +104,6 @@ export default function Signup() {
                 <h5> Logo </h5>
             </div>
             <div className="form-container">
-
                 <form>
                     <h4> Create Your Account </h4>
                     <div>
@@ -122,7 +121,8 @@ export default function Signup() {
                     <div className="buttons">
                         <button className="login-button"> LOGIN </button>
                         <button className="google"> <img src={googleLogo} alt='GoogleLogo'></img>SIGN UP WITH GOOGLE </button>
-
+                     </div>
+                 </form>
                 <form onSubmit={handleSubmit}>
                     <h4> Create Your Account </h4>
 
@@ -196,7 +196,6 @@ export default function Signup() {
                 </form>
             </div>
         </div>
-
     );
 }
 

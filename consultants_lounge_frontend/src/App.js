@@ -1,8 +1,7 @@
 
-
 //import Login  from './components/Login.js';
 //import  Signup  from './components/Signup.js';
-//import Admin from './components/AdminDashboard/Admin.js';
+import Admin from './components/AdminDashboard/Admin.js';
 
 import './App.css';
 import React from 'react';
