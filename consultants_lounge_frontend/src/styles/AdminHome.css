@@ -1,0 +1,185 @@
+.container-welcome-buttons{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 600px;
+width: 110%;
+margin-top: 12%;
+margin-left: 4%;
+}
+
+.Welcome h4{
+float: left;
+font-size: 24px;
+margin: 0;
+}
+
+
+.Welcome p{
+ float: left;
+ font-size: 14px;
+ color: gray;
+margin: 0;
+}
+
+.import{
+  width: 70px;
+  height: 30px;
+ background-color: white;
+ border-width: 1px;
+ border-color: rgb(230, 229, 229);
+ border-radius: 5px;
+}
+
+.add{
+width: 70px;
+height: 30px;
+margin-left: 10px;
+background-color: rgb(125, 43, 220);
+color: white;
+border: none;
+border-radius: 5px;
+}
+
+/**** Cards ********/
+
+
+.Cards {
+  display: flex;               
+  gap: 30px;                    
+  padding: 20px;   
+  margin-top: 4%;
+  margin-left: 30px;        
+}
+
+.card {
+  background-color: #ffffff;   
+  padding: 30px;                 
+  border-radius: 10px; 
+  border-style: solid;   
+  border-color: rgba(229, 229, 229, 0.85); 
+  flex: 1;                      
+  min-width: 270px;             
+  max-width: 400px;      
+  height:  30%;        
+}
+
+.card p {
+  margin-right: 120px;
+  margin-top: 100px;
+  font-size: 14px;                    
+  color: #000000;                   
+}
+
+.card h6{
+float: left;
+  font-size: 13px;
+}
+
+.card h5{
+  float: left;
+  font-size: 23px;
+}
+
+.IncreasingData, .DecreasingData {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  float: right;
+}
+
+.card b {
+  color: green; 
+}
+
+.card:nth-child(2) b {
+color: red;
+}
+
+
+
+
+/***  Filters ***/
+
+
+
+.Filters {
+  display: flex;
+  margin-left:  50px;
+  gap: 2%;
+}
+
+.alltime{
+  background-color: rgb(239, 228, 255);
+  color: rgb(97, 39, 244);
+  font-size: 12px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  
+}
+
+.country
+{
+  background-color: rgb(239, 228, 255);
+  color: rgb(97, 39, 244);
+  width: 100px;
+  font-size: 12px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  
+}
+
+.more-filters{
+  font-size: 12px;
+  width: 100px;
+  background-color: white;
+  border-color: whitesmoke;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+
+}
+
+
+
+.Filters input[type="search"] {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  margin-left: 50%;
+  margin-top: 20px;
+
+}
+
+.previous-next-buttons {
+  margin-left: 3%;
+}
+
+.previous-next-buttons button{
+  float: left;
+  margin-top: 20%;
+  margin-left: 1%;
+  font-size: 12px;
+  background-color: white;
+  border-color: whitesmoke;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.next{
+  width: 50px;
+}
+
+
+.select-pages{
+  float: right;
+  margin-top: 20%;
+
+}
+
+

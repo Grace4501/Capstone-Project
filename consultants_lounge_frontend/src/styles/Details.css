@@ -1,0 +1,38 @@
+.PermissionControls {
+width: 400px;
+height: 40px;
+margin-top: 5%;
+margin-left: 40%;
+font-size: 16px;
+background-color: rgb(197, 192, 192);
+}
+
+.PermissionControls p {
+   width: 100px;
+ }
+
+
+ .PermissionsTable{
+    margin-left: 1%;
+}
+
+.PermissionsTable th {
+    border-color: #f2f2f2; /* Highlights the header row */
+    border-style: solid;
+    font-weight: bold;
+}
+
+.PermissionsTable tr:nth-child(even) {
+    border-color: #f9f9f9; 
+    border-style: solid;
+    font-weight: bold;
+}
+
+.PermissionsTable td{
+    border-color: #f2f2f2; /* Highlights the header row */
+    border-style: solid;
+    width: 40px;
+    padding: 13px;
+    font-weight: bold;
+}
+

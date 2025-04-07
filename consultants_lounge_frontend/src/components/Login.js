@@ -1,3 +1,4 @@
+
 import '../styles/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
@@ -91,6 +92,7 @@ export default function Login() {
 
                     <div className="buttons">
                         <button type="submit" className="btn btn-primary">LOGIN</button>
+
                     </div>
                 </form>
             </div>

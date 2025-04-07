@@ -1,3 +1,9 @@
+
+
+//import Login  from './components/Login.js';
+//import  Signup  from './components/Signup.js';
+//import Admin from './components/AdminDashboard/Admin.js';
+
 import './App.css';
 import React from 'react';
 import{Routes, Route, Link} from 'react-router-dom';
@@ -12,7 +18,7 @@ import Login from './components/Login';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />
@@ -20,8 +26,6 @@ function App() {
         <Route path='/survey-Consultant' element={<SurveyConsultant />} />
         <Route path='/survey-Businesses' element={<SurveyBusinesses />} />
         <Route path='/Login' element={<Login />} />
-        
-
       </Routes>
     </div>
   );

@@ -1,0 +1,20 @@
+.customerservice{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 200px;
+
+}
+
+/* Sections*/
+
+.customerservice a {
+    text-decoration: none;
+    color: black; 
+    padding: 5px 10px; 
+}
+
+.customerservice a:hover {
+    background-color: #EBF3F8;
+    border-radius: 15px;
+    transition: background-color 0.3s ease; 
+}

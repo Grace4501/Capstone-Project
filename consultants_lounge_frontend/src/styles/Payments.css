@@ -1,0 +1,95 @@
+.Payments {
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.Payments h2 {
+    font-size: 24px;
+    margin-right: 80%;
+    margin-bottom: 10px;
+
+}
+
+.Payments p {
+    width: 400px;
+    margin-left: 30%;
+    font-size: 16px;
+}
+
+.topContainer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1000px;
+}
+
+.topContainer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topContainer li {
+    margin-right: 150px;
+    font-size: 16px;
+    color: #333;
+}
+
+.topContainer select {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.paymentsData {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottomContainer button {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bottomContainer button:hover {
+    background-color: #45a049;
+}
+
+.bottomContainer nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottomContainer  nav li {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.bottomContainer nav li:hover {
+    text-decoration: underline;
+}
+
