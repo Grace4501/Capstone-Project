@@ -38,7 +38,7 @@ export const user_register = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ success: false, message: "Internal Server Error", error: error.toString() });
+        res.status(500).json({ success: false, message: "Internal Server Error", error: error });
     }
 };
 

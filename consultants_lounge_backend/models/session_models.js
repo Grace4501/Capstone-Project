@@ -1,7 +1,7 @@
 import { User } from './schemas/user_schema.js';  // Import your User model
 import { Consultant } from './schemas/user_consultant_schema.js';  // Import your Consultant model
 import { Client } from './schemas/user_client_schema.js';  // Import your Consultant model
-import mongoose from "mongoose";
+
 
 export const create_user = async (userData) => {
     const user = new User(userData)
@@ -15,7 +15,7 @@ export const create_consultant = async (user_id) => {
         availability_status: "Available", // Default value
         languages: "English", // Default value (or modify based on needs)
         description: "",
-        employment_history: "",
+        employment_history: [],
         education: "",
     });
 
