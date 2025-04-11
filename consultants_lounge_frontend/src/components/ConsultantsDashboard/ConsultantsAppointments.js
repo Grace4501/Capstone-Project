@@ -18,7 +18,7 @@ export default function ConsultantsAppointments() {
             <h1>Appointments</h1>
 
             {/* Content */}
-            <div className="content">
+            <div className="contentAppointments">
                 <img src={noAppointments} alt="no-appointments" className='no-appointments-img' />
                 <p className='no-appointments-txt'>You Have No Appointments</p>
             </div>

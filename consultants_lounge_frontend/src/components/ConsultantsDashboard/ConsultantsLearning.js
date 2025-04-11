@@ -35,10 +35,10 @@ export default function ConsultantsLearning() {
             </div>
             
             {/* Content */}
-            <div className="content">
+            <div className="contentLearning">
                 {activeTab === 'courses' ? (
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                        <p className='content-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         <div className="courses-container">
                             {data.courses.map((course, index) => (
                                 <div 
@@ -58,7 +58,7 @@ export default function ConsultantsLearning() {
                     </div>
                 ) : (
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p className='content-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div className="resources-container">
                             {data.resources.map((resource, index) => (
                                 <div 

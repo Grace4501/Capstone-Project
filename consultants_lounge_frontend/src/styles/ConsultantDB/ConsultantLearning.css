@@ -21,7 +21,7 @@
     margin-top: 25px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;  /* Ensure the content aligns to the left */
     flex-grow: 1;
 }
 
@@ -30,6 +30,7 @@
     font-size: 30px;
     font-weight: bold;
     margin: 0;
+    text-align: left;  /* Ensure the title is left-aligned */
 }
 
 /* Course Description Styling */
@@ -37,6 +38,7 @@
     font-size: 14px;
     color: #555;
     margin: 10px 0;
+    text-align: left;  /* Ensure the description is left-aligned */
 }
 
 /* Start Button Styling */
@@ -104,6 +106,7 @@
     font-size: 30px;
     font-weight: bold;
     margin: 0;
+    text-align: left;
 }
 
 /* Resource Description Styling */
@@ -111,6 +114,7 @@
     font-size: 14px;
     color: #555;
     margin: 10px 0;
+    text-align: left;
 }
 
 /* Resource Button Styling */
@@ -155,7 +159,7 @@
 }
 
 /* Content Layout */
-.content {
+.contentLearning {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -177,4 +181,9 @@
     background-color: #def0f9;
     border: none;
     border-radius: 20px;
+}
+
+/* Content Text Styling */
+.content-description {
+    text-align: left;
 }
