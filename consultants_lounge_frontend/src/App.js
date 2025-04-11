@@ -18,7 +18,8 @@ import BusinessMyProfile from './components/BusinessOwnerDashboard/BusinessMyPro
 function App() {
   return (
     <div>
-     <BusinessMyProfile/>
+     <BusinessHome/>
+     <Calendar />
      {/* <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />
