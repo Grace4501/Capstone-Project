@@ -1,5 +1,5 @@
 import '../../styles/Admin.css';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './AdminHome.js'
 import UserAccess from './UAC/UserAccessControls.js';
 import CustomerService from './CS/CostumerService.js';
@@ -13,7 +13,7 @@ import analyticsLogo from '../../resources/Analytics.png';
 import customerserviceLogo from '../../resources/CustomerService.png';
 import paymentsLogo from '../../resources/Payments.png';
 import userLogo from '../../resources/User.png';
-import crmLogo from '../../resources/crm.png';
+import crmLogo from '../../resources/folder.png';
 
 
 export default function Admin() {
@@ -73,14 +73,12 @@ export default function Admin() {
         </div>
            {/* Main content area with routes*/}
         <div>
-          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/user-access/*" element={<UserAccess />} />
             <Route path="/customer-service/*" element={<CustomerService />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/CRM" element={<CRM />} />
-          </Routes>
         </div>
       </div>
     </Router>

@@ -92,7 +92,6 @@ export default function Login() {
 
                     <div className="buttons">
                         <button type="submit" className="btn btn-primary">LOGIN</button>
-
                     </div>
                 </form>
             </div>

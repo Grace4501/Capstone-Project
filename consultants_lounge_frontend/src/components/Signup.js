@@ -104,25 +104,6 @@ export default function Signup() {
                 <h5> Logo </h5>
             </div>
             <div className="form-container">
-                <form>
-                    <h4> Create Your Account </h4>
-                    <div>
-                        <label> Name </label>
-                        <input type="text" />
-                    </div>
-                    <div >
-                        <label>Email:</label>
-                        <input type="email" />
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input type="password" />
-                    </div>
-                    <div className="buttons">
-                        <button className="login-button"> LOGIN </button>
-                        <button className="google"> <img src={googleLogo} alt='GoogleLogo'></img>SIGN UP WITH GOOGLE </button>
-                     </div>
-                 </form>
                 <form onSubmit={handleSubmit}>
                     <h4> Create Your Account </h4>
 
