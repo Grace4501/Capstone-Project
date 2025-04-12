@@ -1,8 +1,16 @@
-import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes, useLocation, Navigate } from 'react-router-dom';
 import Home from './ConsultantsHome.js';
 import Learning from './ConsultantsLearning.js';
 import Appointments from './ConsultantsAppointments';
 import Profile from './ConsultantsProfile.js';
+
+import WorkRouter from './ConsultantsWork/WorkRouter.js';
+import WorkInvites from './ConsultantsWork/WorkInvites.js'
+import NewProjects from './ConsultantsWork/WorkNewProjects.js'
+import CurrentProjects from './ConsultantsWork/WorkProjects.js'
+import Reviews from './ConsultantsWork/WorkReviews.js'
+import Invoices from './ConsultantsWork/WorkInvoices.js'
+import ProjectHistory from './ConsultantsWork/WorkHistory.js'
 
 import searchLogo from '../../resources/SearchLogo.png';
 import companyLogo from '../../resources/CompanyLogo.png';
@@ -95,6 +103,9 @@ function Consultants() {
           <Route path="/ConsultantsLearning" element={<Learning />} />
           <Route path="/ConsultantsAppointments" element={<Appointments />} />
           <Route path="/ConsultantsProfile" element={<Profile />} />
+          <Route path="/ConsultantsWork" element={<Navigate to="/ConsultantsWork/invites" />} />
+          <Route path="/ConsultantsWork/:tab" element={<WorkRouter />} />
+
         </Routes>
       </div>
     </div>

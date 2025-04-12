@@ -1,0 +1,97 @@
+.ConsultantsWork {
+    padding-left: 20px;
+  }
+
+  .ConsultantsWork h2 {
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  
+  .work-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .tab.active {
+    background-color: #def0f9;
+  }
+
+  .WorkInvoices {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .WorkInvoices h1 {
+    position: relative;
+    font-weight: 500;
+    padding: 20px 0;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .WorkInvoices h1::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    height: 15px;
+    width: 100%;
+    background-color: #def0f9;
+    z-index: -1;
+  }
+  
+  .contentInvoices {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  
+  
+  .Invoices-txt {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }  
+
+  .Invoices-title {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .Invoices-btn {
+    padding: 10px 30px;
+    border-radius: 999px;
+    background-color: white;
+    border: 1.8px solid black;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .Invoices-btn:hover {
+    background-color: black;
+    color: white;
+  }
