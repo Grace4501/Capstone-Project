@@ -12,8 +12,6 @@ import ColoredPencils from '../../resources/ColoredPencils.png';
 import BlankProfile from '../../resources/BlankProfile.png';
 
 export default function BusinessesHome() {
-
-  
   // State for managing posts
   const [posts, setPosts] = useState([
     {
@@ -131,7 +129,7 @@ export default function BusinessesHome() {
             <button onClick={() => handleEditClick(post)}>
                   <img src={Arrow} alt="Edit Post" />
              </button>
-            <p> {post.tags} </p>
+             <p>{post.description}</p>
             {editingPostId === post.id ? (
               <div>
                 <h2> Edit Post</h2>
@@ -176,7 +174,7 @@ export default function BusinessesHome() {
                 <button onClick={handleCancelClick}>Cancel</button>
               </div>
             ) : (
-                <p>{post.description}</p>
+              <p> {post.tags} </p>
             )}
           </div>
         ))}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import '../../styles/BusinessMyProfile.css'
 import Profile from '../../resources/Profile.png';
 import Edit from '../../resources/Edit.png';
+
 
 export default function BusinessMyProfile() {
   // State to manage profile picture
@@ -26,15 +28,14 @@ export default function BusinessMyProfile() {
   return (
     <div>
       <h2>My Profile</h2>
-      <div>
+      <div className="profile-container"> {/* Container for the entire page */}
+      <div className="profile-section"> {/* Profile picture section */}
         <div>
-          {/* Display profile picture */}
-          <img src={profilePic || Profile} alt="Profile" />
+          <img src={profilePic || Profile} alt="Profile" className="profile-pic" />
           <br />
           <br />
-          {/* Add Photo button */}
-          <button>
-            <label  htmlFor="upload-photo" style={{ cursor: 'pointer' }}>
+          <button className="add-photo-btn">
+            <label htmlFor="upload-photo" style={{ cursor: 'pointer' }}>
               Add Photo
             </label>
             <input
@@ -45,8 +46,9 @@ export default function BusinessMyProfile() {
             />
           </button>
         </div>
-        <div>
-          {/* Editable Business Owner Name and Role */}
+      </div>
+      <div className="info-section"> {/* Editable fields section */}
+        <div className="owner-info">
           <h3>
             {isEditingOwner ? (
               <input
@@ -69,11 +71,11 @@ export default function BusinessMyProfile() {
               role
             )}
           </h5>
-          <button onClick={() => setIsEditingOwner(!isEditingOwner)}>
+          <button onClick={() => setIsEditingOwner(!isEditingOwner)} className="edit-btn">
             <img src={Edit} alt="Edit Owner Button" />
           </button>
-
-          {/* Editable Business Description */}
+        </div>
+        <div className="description-section">
           <h4>Business Description</h4>
           <p>
             {isEditingDescription ? (
@@ -85,12 +87,14 @@ export default function BusinessMyProfile() {
               description
             )}
           </p>
-          <button onClick={() => setIsEditingDescription(!isEditingDescription)}>
+          <button onClick={() => setIsEditingDescription(!isEditingDescription)} className="edit-btn">
             <img src={Edit} alt="Edit Description Button" />
           </button>
         </div>
       </div>
     </div>
+    </div>
   );
+
 }
 

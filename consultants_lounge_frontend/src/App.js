@@ -13,13 +13,13 @@ import Login from './components/Login';
 import Calendar from './components/BusinessOwnerDashboard/Calender.js';
 import BusinessHome from './components/BusinessOwnerDashboard/BusinessHome.js';
 import BusinessMyProfile from './components/BusinessOwnerDashboard/BusinessMyProfile.js';
+import BusinessSettings from './components/BusinessOwnerDashboard/BusinessSettings.js';
 
 
 function App() {
   return (
     <div>
-     <BusinessHome/>
-     <Calendar />
+     <BusinessSettings/>
      {/* <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />
