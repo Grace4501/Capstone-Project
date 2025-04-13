@@ -12,6 +12,8 @@ import ColoredPencils from '../../resources/ColoredPencils.png';
 import BlankProfile from '../../resources/BlankProfile.png';
 
 export default function BusinessesHome() {
+  
+
   // State for managing posts
   const [posts, setPosts] = useState([
     {

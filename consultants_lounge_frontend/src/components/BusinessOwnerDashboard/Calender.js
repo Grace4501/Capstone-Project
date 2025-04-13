@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/./Calendar.css'
 
 const Calendar = () => {
   // State to keep track of the current date
@@ -50,10 +51,20 @@ const Calendar = () => {
 
   return (
     <div>
+      <input type="search"/>
+      <select> 
+        <option> All time</option>
+      </select>
       <div className="calendar-header">
-        <button onClick={prevMonth}>Previous</button>
+        <button onClick={prevMonth}> Next </button>
         <span>{monthName} {year}</span>
-        <button onClick={nextMonth}>Next</button>
+        <button onClick={nextMonth}> Previous  </button>
+        <div>
+          <button> Day </button>
+          <button> Week</button>
+          <button> Month  </button>
+          <button> Year </button>
+        </div>
       </div>
       <div className="calendar-grid">
         <div className="weekdays">
