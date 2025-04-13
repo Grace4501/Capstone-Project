@@ -12,6 +12,12 @@ import Reviews from './ConsultantsWork/WorkReviews.js'
 import Invoices from './ConsultantsWork/WorkInvoices.js'
 import ProjectHistory from './ConsultantsWork/WorkHistory.js'
 
+import SettingsRouter from './ConsultantsSettings/SettingsRouter.js';
+import SettingsAccount from './ConsultantsSettings/SettingsAccount.js'
+import SettingsNotifications from './ConsultantsSettings/SettingsNotifications.js'
+import SettingsPayment from './ConsultantsSettings/SettingsPayment.js'
+import SettingsSecurity from './ConsultantsSettings/SettingsSecurity.js'
+
 import searchLogo from '../../resources/SearchLogo.png';
 import companyLogo from '../../resources/CompanyLogo.png';
 import homeLogo from '../../resources/Home.png';
@@ -57,7 +63,7 @@ function Consultants() {
           <li>
             <Link
               to="/ConsultantsWork"
-              className={location.pathname === "/ConsultantsWork" ? "current" : ""}
+              className={location.pathname.startsWith("/ConsultantsWork") ? "current" : ""}
             >
               <img className="navIcon" src={workLogo} alt="Work Logo" />
               My Work
@@ -75,7 +81,7 @@ function Consultants() {
           <li>
             <Link
               to="/ConsultantsSettings"
-              className={location.pathname === "/ConsultantsSettings" ? "current" : ""}
+              className={location.pathname.startsWith("/ConsultantsSettings") ? "current" : ""}
             >
               <img className="navIcon" src={settingsLogo} alt="Settings Logo" />
               Settings
@@ -105,7 +111,8 @@ function Consultants() {
           <Route path="/ConsultantsProfile" element={<Profile />} />
           <Route path="/ConsultantsWork" element={<Navigate to="/ConsultantsWork/invites" />} />
           <Route path="/ConsultantsWork/:tab" element={<WorkRouter />} />
-
+          <Route path="/ConsultantsSettings" element={<Navigate to="/ConsultantsSettings/account" />} />
+          <Route path="/ConsultantsSettings/:tab" element={<SettingsRouter />} />
         </Routes>
       </div>
     </div>
