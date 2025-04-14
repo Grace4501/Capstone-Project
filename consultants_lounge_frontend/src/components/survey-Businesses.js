@@ -150,8 +150,8 @@ const SurveyBusinesses = () => {
             </div>
 
             {/* Decorative images */}
-            <img src="/resources/Detail1.png" className="detail1" />
-            <img src="/resources/Detail1.png" className="detail2" />
+            <img src="/resources/Detail1.png" className="detail1-survey" />
+            <img src="/resources/Detail1.png" className="detail2-survey" />
         </div>
     );
 };

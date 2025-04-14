@@ -1,0 +1,117 @@
+/* Overall styling for the consultants search section */
+.consultants-search {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Text section within the consultants search */
+.consultants-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+}
+
+/* Title styling within the text section */
+.consultants-title {
+    font-size: 65px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    font-family: 'Almarai', serif;
+    font-weight: 500;
+    letter-spacing: -3px;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.85);
+    transform-origin: top left;
+}
+
+/* Paragraph styling within the text section */
+.consultants-paragraph {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Image styling within the landing section */
+.consultants-img img {
+    max-width: 900px;
+    padding-right: 50px;
+}
+
+/* Consultants List Title */
+.consultants-list-title {
+    text-align: center;
+    font-size: 47px;
+    margin-top: 50px;
+    font-family: 'Almarai', serif;
+    font-weight: 500;
+    letter-spacing: -3px;
+    transform: scaleY(1.3);
+    transform: scaleX(0.85);
+    padding: 40px 0;
+}
+
+/* Consultants List Container */
+.consultants-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+    margin-top: 30px;
+    padding: 20px 40px 80px 40px;
+}
+
+/* Individual Consultant Card */
+.consultant-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 40px 40px 80px 40px;
+    width: 65%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(229, 229, 229);
+}
+
+/* Consultant Image */
+.consultant-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Consultant Info */
+.consultant-info {
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+/* Consultant Name */
+.consultant-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0e4b69;
+    background: white;
+    margin-bottom: 0;
+}
+
+/* Consultant Title */
+.consultant-title {
+    font-size: 18px;
+    color: #8b8b8b;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+/* Consultant Description */
+.consultant-description {
+    font-size: 16px;
+    color: #666;
+    background: white;
+}
+

@@ -81,6 +81,7 @@
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
     height: 40px;
     width: 45px;
+    cursor: pointer;
 }
 
 /* Search icon image styling */
@@ -566,8 +567,8 @@
 
 /* Styling for Expert section title */
 .title-findexpert {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 33px;
+    margin-bottom: 60px;
     font-family: 'Almarai', serif;
     font-weight: 600;
     transform: scaleY(1.3) translateX(-25px);
