@@ -1,6 +1,6 @@
-
 import '../styles/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logoBackground from '../resources/LogoBackground.jpg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postData } from '../utilities/fetchOps';
@@ -68,9 +68,18 @@ export default function Login() {
 
     return (
         <div className="Login">
+            <div style={{
+                backgroundImage: `url(${logoBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }} className="logo-container">
+                <h1>Consultants Lounge</h1>
+                <h5>Your Professional Network</h5>
+            </div>
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
-                    <h4> Login to Your Account </h4>
+                    <h4>Login to Your Account</h4>
                     
                     {serverMessage && (
                         <div className={`alert alert-${serverMessageType}`} role="alert">
@@ -92,7 +101,6 @@ export default function Login() {
 
                     <div className="buttons">
                         <button type="submit" className="btn btn-primary">LOGIN</button>
-
                     </div>
                 </form>
             </div>
