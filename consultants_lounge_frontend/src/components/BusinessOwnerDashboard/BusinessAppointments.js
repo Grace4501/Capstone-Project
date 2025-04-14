@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Options2 from '../../resources/Options2.png'
 import Calendar from '../../components/BusinessOwnerDashboard/Calender.js';
+import './styles/BusinessAppointments.css'
 
 export default function BusinessAppointments() {
     const [activeTab, setActiveTab] = useState("tasks");
@@ -28,6 +29,10 @@ export default function BusinessAppointments() {
     
     return (
         <div>
+     <br/>
+      <br/>
+      <br/>
+      <br/>
             <h2> Appointments </h2>
             <button onClick={() => setActiveTab("tasks")}>Tasks</button>
             <button onClick={() => setActiveTab("calendar")}> Calendar </button>

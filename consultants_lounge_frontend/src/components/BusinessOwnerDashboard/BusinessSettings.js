@@ -6,6 +6,10 @@ export default function BusinessSettings() {
     const [activeTab, setActiveTab] = useState("account");
     return (
         <div>
+     <br/>
+      <br/>
+      <br/>
+      <br/>
             <h1> Settings </h1>
             {/* Navigation Tabs */}
             <div>

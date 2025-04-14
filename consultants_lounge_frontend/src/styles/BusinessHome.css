@@ -1,0 +1,159 @@
+/* Recent Posts section */
+.recent-posts {
+    margin-bottom: 30px;
+}
+
+.recent-posts h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.recent-posts button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.recent-posts .options-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-posts .options-menu button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recent-posts .options-menu button:hover {
+    background-color: #1558b3; /* Darker blue on hover */
+}
+
+/* Post cards */
+.post {
+    display: flex;
+    align-items: row;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.post h5 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.post p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.post button img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Edit Post Form */
+.edit-form {
+    margin-top: 20px;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-form button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-form button.cancel {
+    background-color: #f44336;
+}
+
+.edit-form button:hover {
+    background-color: #1558b3;
+}
+
+.edit-form button.cancel:hover {
+    background-color: #c0392b;
+}
+
+/* Top Members section */
+.top-members {
+    margin-top: 40px;
+}
+
+.top-members p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+.top-members li {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-members img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.top-members div {
+    font-weight: bold;
+    color: #333;
+}
+
+.top-members small {
+    color: #666;
+}

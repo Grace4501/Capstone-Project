@@ -1,0 +1,111 @@
+/* General styling for the whole component */
+
+
+.Business {
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Navigation side bar styling */
+.business-Nav {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 20px 0;
+    height: 500vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.business-Nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.business-NavIcon {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.business-Nav li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.business-Nav button{
+    border: none;
+}
+
+.business-Nav li:hover {
+    background-color: #EBF3F8;
+    border-radius: 20px;
+}
+
+.companyLogo {
+    width: 150px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* Top div bar styling */
+.business-topDiv {
+    margin-left: 16.5%;
+    display: flex;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    width: 100%; 
+    z-index: 1; 
+}
+.business-topDiv input[type="search"] {
+    width: 300px;
+    margin-left: 600px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    outline: none;
+}
+
+.business-topDiv input[type="search"]:focus {
+    border-color: #007bff;
+}
+
+
+
+.business-searchLogo {
+    width: 24px;
+    cursor: pointer;
+    margin-left:  -70px;
+    margin-right: 200px;
+}
+
+.material-icons-outlined {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.material-icons-outlined:hover {
+    color: #007bff;
+}
+
+.business-topDiv img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.main-content {
+    margin-left: 250px; 
+    flex-grow: 1;
+    padding: 16px;
+}

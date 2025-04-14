@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import '../../styles/BusinessHome.css';
+
 import Options from '../../resources/Options.png';
 import CourseA from '../../resources/CourseA.png';
 import CourseB from '../../resources/CourseB.png';
@@ -12,7 +15,7 @@ import ColoredPencils from '../../resources/ColoredPencils.png';
 import BlankProfile from '../../resources/BlankProfile.png';
 
 export default function BusinessesHome() {
-  
+
 
   // State for managing posts
   const [posts, setPosts] = useState([
@@ -60,22 +63,22 @@ export default function BusinessesHome() {
   // Function to delete a post
   const deletePost = (id) => {
     setPosts(posts.filter(post => post.id !== id));
-     setShowOptionsMenu(false); // Close menu after action
+    setShowOptionsMenu(false); // Close menu after action
 
   };
 
   const handleEditClick = (post) => {
     setEditingPostId(post.id);
-    setEditedContent({ image: post.image, author: post.author, date: post.date, title: post.title,  description: post.description, tags: post.tags});
+    setEditedContent({ image: post.image, author: post.author, date: post.date, title: post.title, description: post.description, tags: post.tags });
   };
 
   // Function to save changes to the post
   const handleSaveClick = () => {
-    
-// Update the post with the edited content
+
+    // Update the post with the edited content
     setPosts(posts.map(post =>
       post.id === editingPostId
-        ? { ...post, image: editedContent.image, author: editedContent.author,  date: editedContent.date, title: editedContent.title, description: editedContent.description, tags: editedContent.tags}
+        ? { ...post, image: editedContent.image, author: editedContent.author, date: editedContent.date, title: editedContent.title, description: editedContent.description, tags: editedContent.tags }
         : post
     ));
     setEditingPostId(null); // Exit edit mode
@@ -85,7 +88,7 @@ export default function BusinessesHome() {
     setEditingPostId(null); // Exit edit mode without saving
   };
 
-  
+
   // Top members data
   const topMembers = [
     { id: 1, name: 'Phoenix Baker', date: 'Member since Feb 2022', image: P },
@@ -101,18 +104,26 @@ export default function BusinessesHome() {
   ];
 
   return (
-    <div>
+    <div className="BusinessHome">
+      <br />
+      <br />
+      <br />
+      <br />
       <h2>Welcome Back, Business Owner Name!</h2>
-      <div>
+      <br/>
+      <br/>
+      <div className="recent-posts">
         <h4>Recent Posts</h4>
         <div style={{ position: 'relative' }}>
           <button onClick={() => setShowOptionsMenu(!showOptionsMenu)}>
             <img src={Options} alt="Options" />
           </button>
+          <br/>
+          <br/>
           {showOptionsMenu && (
-            <div style={{ position: 'absolute', background: 'white', border: '1px solid black', padding: '10px' }}>
+            <div className="options-menu">
               <button onClick={addPost}>Add Post</button>
-              {posts.length > 0 && posts.map(post => (
+              {posts.map(post => (
                 <button key={post.id} onClick={() => deletePost(post.id)}>
                   Delete Post: {post.title}
                 </button>
@@ -120,31 +131,26 @@ export default function BusinessesHome() {
             </div>
           )}
         </div>
-      </div>
-      <div>
         {posts.map(post => (
-          <div key={post.id}>
+          <div key={post.id} className="post">
             <img src={post.image} alt={post.title} />
             <p>{post.author}</p>
             <p>{post.date}</p>
             <h5>{post.title}</h5>
             <button onClick={() => handleEditClick(post)}>
-                  <img src={Arrow} alt="Edit Post" />
-             </button>
-             <p>{post.description}</p>
-            {editingPostId === post.id ? (
-              <div>
-                <h2> Edit Post</h2>
-                <label> Edit Image </label>
-                  <input 
+              <img src={Arrow} alt="Edit Post" />
+            </button>
+            <p>{post.description}</p>
+            {editingPostId === post.id && (
+              <div className="edit-form">
+                <h2>Edit Post</h2>
+                <label>Image</label>
+                <input
                   type="file"
                   onChange={(e) => {
                     const file = e.target.files[0];
                     if (file) {
-                      setEditedContent({
-                        ...editedContent,
-                        image: URL.createObjectURL(file)
-                      });
+                      setEditedContent({ ...editedContent, image: URL.createObjectURL(file) });
                     }
                   }}
                 />
@@ -158,7 +164,7 @@ export default function BusinessesHome() {
                   value={editedContent.date}
                   onChange={(e) => setEditedContent({ ...editedContent, date: e.target.value })}
                 />
-                  <input
+                <input
                   type="text"
                   value={editedContent.title}
                   onChange={(e) => setEditedContent({ ...editedContent, title: e.target.value })}
@@ -167,26 +173,24 @@ export default function BusinessesHome() {
                   value={editedContent.description}
                   onChange={(e) => setEditedContent({ ...editedContent, description: e.target.value })}
                 />
-                 <input
+                <input
                   type="text"
-                  value={editedContent.tags}
-                  onChange={(e) => setEditedContent({ ...editedContent, tags: e.target.value })}
+                  value={editedContent.tags.join(', ')}
+                  onChange={(e) => setEditedContent({ ...editedContent, tags: e.target.value.split(', ') })}
                 />
                 <button onClick={handleSaveClick}>Save</button>
-                <button onClick={handleCancelClick}>Cancel</button>
+                <button onClick={handleCancelClick} className="cancel">Cancel</button>
               </div>
-            ) : (
-              <p> {post.tags} </p>
             )}
           </div>
         ))}
       </div>
-      <div>
+      <div className="top-members">
         <p>Top Members</p>
         <ul>
           {topMembers.map(member => (
             <li key={member.id}>
-              <img src={member.image} alt={member.name} width="50" />
+              <img src={member.image} alt={member.name} />
               <div>{member.name}</div>
               <small>{member.date}</small>
             </li>

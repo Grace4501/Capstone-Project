@@ -11,19 +11,13 @@ import SurveyConsultant from './components/survey-Consultant';
 import SurveyBusinesses from './components/survey-Businesses';
 import Login from './components/Login';
 
+import Business from './components/BusinessOwnerDashboard/Business.js';
 
-
-
-import BusinessHome from './components/BusinessOwnerDashboard/BusinessHome.js';
-import BusinessMyProfile from './components/BusinessOwnerDashboard/BusinessMyProfile.js';
-import BusinessSettings from './components/BusinessOwnerDashboard/BusinessSettings.js';
-import BusinessMyProjects from './components/BusinessOwnerDashboard/BusinessMyProjects.js';
-import BusinessAppointments from './components/BusinessOwnerDashboard/BusinessAppointments.js';
 function App() {
 
   return (
     <div>
-      <BusinessAppointments/>
+      <Business/>
      {/* <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />

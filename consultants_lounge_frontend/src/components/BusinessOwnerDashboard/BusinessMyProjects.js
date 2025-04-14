@@ -8,6 +8,10 @@ export default function BusinessMyProjects() {
 
    return (
       <div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
          <h1> My Projects </h1>
          {/* Navigation sections */}
          <div>

@@ -11,20 +11,20 @@
 
   /* Styling Side nav bar */
 
+  
+.companyLogo{
+  width: 200px;
+  height: 50px;
+  margin-bottom: 50px;
+  }
+  
+
 .Nav{
     border-style: solid 4px rgb(255, 255, 255);
     background-color: rgb(252, 252, 252);
     width: 600px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-.companyLogo{
-width: 200px;
-height: 50px;
-margin-bottom: 50px;
-}
-
-
 
 
 .Nav ul li { 

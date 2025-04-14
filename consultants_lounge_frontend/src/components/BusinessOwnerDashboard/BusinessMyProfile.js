@@ -27,6 +27,10 @@ export default function BusinessMyProfile() {
 
   return (
     <div>
+        <br/>
+      <br/>
+      <br/>
+      <br/>
       <h2>My Profile</h2>
       <div className="profile-container"> {/* Container for the entire page */}
       <div className="profile-section"> {/* Profile picture section */}
