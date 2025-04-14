@@ -1,4 +1,3 @@
-
 import './App.css';
 import React from 'react';
 import{Routes, Route, Link} from 'react-router-dom';
@@ -12,6 +11,7 @@ import Resources from './components/resources';
 import HowItWorks from './components/howItWorks';
 import Consultants from './components/consultants';
 import Login from './components/Login';
+import Consultants from './components/ConsultantsDashboard/ConsultantsDB.js';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Route path='/Login' element={<Login />} />
       </Routes>
     </div>
-  );
-}
+   );
+ }
 
-export default App;
+ export default App;

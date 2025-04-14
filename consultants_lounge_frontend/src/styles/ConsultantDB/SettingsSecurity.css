@@ -1,0 +1,386 @@
+.ConsultantsSettings {
+    padding-left: 20px;
+  }
+  
+  .ConsultantsSettings h2 {
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  
+  .settings-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .tab.active {
+    background-color: #def0f9;
+  }
+
+  .settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-block {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+
+.section-label {
+  min-width: 150px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.section-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sub-header {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+  max-width: 600px;
+}
+
+.primary-btn {
+  padding: 8px 20px;
+  background-color: white;
+  border: 1.5px solid black;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.primary-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.toggle-label {
+  position: relative;
+  width: 45px;
+  height: 24px;
+  display: inline-block;
+}
+
+.toggle-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.toggle-label input:checked + .toggle-slider {
+  background-color: #0e4b69;
+}
+
+.toggle-slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.toggle-label input:checked + .toggle-slider::before {
+  transform: translateX(21px);
+}
+
+.toggle-status {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.button-group button {
+  padding: 6px 18px;
+  font-size: 0.85rem;
+  border: 1.5px solid #ccc;
+  background: white;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.button-group button.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+.delete-btn {
+  padding: 8px 20px;
+  background-color: white;
+  border: 1.5px solid black;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.delete-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.section-block.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .section-block.two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .section-title {
+    min-width: 150px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .section-subtitle {
+    flex: 1;
+  }
+  
+  .section-subtitle p {
+    font-size: 0.85rem;
+    color: #555;
+    max-width: 600px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .primary-btn {
+    margin-top: 10px;
+    padding: 10px 24px;
+    background: white;
+    border: 1.5px solid black;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  
+  .primary-btn:hover {
+    background: black;
+    color: white;
+  }
+  
+  /* Toggle placeholders */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .toggle {
+    width: 44px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 999px;
+    position: relative;
+  }
+  
+  .toggle.disabled {
+    background-color: #ddd;
+  }
+  
+  .toggle-btn {
+    border: 1px solid black;
+    background: white;
+    padding: 6px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .toggle-btn.active {
+    background: black;
+    color: white;
+  }
+  
+  .danger-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: 1.5px solid black;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .danger-btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /* Align password title and subtitle */
+.password-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .password-header h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+
+  .section-subtitle h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 25px;;
+    text-align: left;
+  }
+  
+  .password-header p {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .section-subtitle > h3,
+.section-subtitle > p,
+.section-subtitle > .danger-btn {
+  text-align: left;
+}
+
+.section-subtitle .danger-btn {
+  margin-left: 0;
+  margin-top: -10px;
+}
+
+/* ONLY apply this flex layout to that specific instance */
+.section-block.my-account .section-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .section-block.my-account .section-subtitle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+  }
+  
+  .section-block.my-account .danger-btn {
+    flex-shrink: 0;
+  }
+  
+  .toggle {
+    width: 44px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .toggle::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .toggle.enabled {
+    background-color: #0e4b69;
+  }
+  
+  .toggle.enabled::before {
+    transform: translateX(20px);
+  }
+  
+  

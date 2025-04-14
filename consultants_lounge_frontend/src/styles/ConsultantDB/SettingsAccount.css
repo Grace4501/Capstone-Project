@@ -1,0 +1,246 @@
+.ConsultantsSettings {
+    padding-left: 20px;
+  }
+  
+  .ConsultantsSettings h2 {
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  
+  .settings-tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .tab.active {
+    background-color: #def0f9;
+  }
+  
+  .settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-block {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding-bottom: 30px;
+  }
+  
+  .section-label {
+    min-width: 150px;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-top: 5px;
+  }
+  
+  .section-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-group.two-col {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .input-group.two-col > div {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .input-group.single-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 340px;
+  }
+  
+  .input-group input, .input-group select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1.5px solid #ccc;
+    border-radius: 0;
+    background-color: #fdfdfd;
+    transition: border 0.2s ease-in-out;
+    height: 42px;
+    box-sizing: border-box;
+    line-height: normal;
+    appearance: none;
+    }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #0e4b69;
+    outline: none;
+  }
+  
+  .input-group label {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #333;
+    text-align: left;
+  }
+  
+  .subtext {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: -8px;
+    margin-bottom: 8px;
+  }
+  
+  .add-language-btn {
+    padding: 8px 20px;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    align-self: flex-start;
+  }
+  
+  .add-language-btn:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .input-group.language-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  
+  .language-col {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  /* Ensures label/input/select stack uniformly */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .input-group.language-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .input-group.language-row input,
+  .input-group.language-row select {
+    height: 42px;
+    line-height: 1.2;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1.5px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    appearance: none;
+  }
+  
+  .input-group.language-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .form-field.aligned-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .form-field.aligned-field input,
+  .form-field.aligned-field select {
+    height: 40px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1.5px solid #ccc;
+    background-color: #fdfdfd;
+    box-sizing: border-box;
+    appearance: none;
+    margin: 0;
+  }
+  
+  .form-field.aligned-field label {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  .remove-language-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 28px;
+    align-self: flex-start;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .remove-language-btn:hover {
+    color: #333;
+  }
+  
+  .input-group .language-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .input-group.full-width {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .input-group.full-width input {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .input-group.full-width .subtext {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: left;
+  }
+  
