@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import '../../styles/BusinessHome.css';
 
 import Options from '../../resources/Options.png';
@@ -15,34 +14,39 @@ import ColoredPencils from '../../resources/ColoredPencils.png';
 import BlankProfile from '../../resources/BlankProfile.png';
 
 export default function BusinessesHome() {
-
-
-  // State for managing posts
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      image: CourseA,
-      author: 'Olivia Rhye',
-      date: '20 Jan 2022',
-      title: 'UX review presentations',
-      description: 'How do you create compelling presentations that wow your colleagues and impress your managers?',
-      tags: ['Design', 'Research', 'Presentation']
-    },
-    {
-      id: 2,
-      image: CourseB,
-      author: 'Phoenix Baker',
-      date: '19 Jan 2022',
-      title: 'Migrating to Linear 101',
-      description: 'Linear helps streamline software projects, sprints, tasks, and bug tracking.',
-      tags: ['Design', 'Research']
-    }
-  ]);
+  // State for managing posts, initialized from localStorage
+  const [posts, setPosts] = useState(() => {
+    const savedPosts = localStorage.getItem('posts');
+    return savedPosts ? JSON.parse(savedPosts) : [
+      {
+        id: 1,
+        image: CourseA,
+        author: 'Olivia Rhye',
+        date: '20 Jan 2022',
+        title: 'UX review presentations',
+        description: 'How do you create compelling presentations that wow your colleagues and impress your managers?',
+        tags: ['Design', 'Research', 'Presentation']
+      },
+      {
+        id: 2,
+        image: CourseB,
+        author: 'Phoenix Baker',
+        date: '19 Jan 2022',
+        title: 'Migrating to Linear 101',
+        description: 'Linear helps streamline software projects, sprints, tasks, and bug tracking.',
+        tags: ['Design', 'Research']
+      }
+    ];
+  });
 
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
   const [editingPostId, setEditingPostId] = useState(null); // Tracks which post is being edited
   const [editedContent, setEditedContent] = useState({ title: '', description: '' });
 
+  // Save posts to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('posts', JSON.stringify(posts));
+  }, [posts]);
 
   // Function to add a post
   const addPost = () => {
@@ -57,28 +61,24 @@ export default function BusinessesHome() {
     };
     setPosts([...posts, newPost]);
     setShowOptionsMenu(false); // Close menu after action
-
   };
 
   // Function to delete a post
   const deletePost = (id) => {
     setPosts(posts.filter(post => post.id !== id));
     setShowOptionsMenu(false); // Close menu after action
-
   };
 
   const handleEditClick = (post) => {
     setEditingPostId(post.id);
-    setEditedContent({ image: post.image, author: post.author, date: post.date, title: post.title, description: post.description, tags: post.tags });
+    setEditedContent({ ...post });
   };
 
   // Function to save changes to the post
   const handleSaveClick = () => {
-
-    // Update the post with the edited content
     setPosts(posts.map(post =>
       post.id === editingPostId
-        ? { ...post, image: editedContent.image, author: editedContent.author, date: editedContent.date, title: editedContent.title, description: editedContent.description, tags: editedContent.tags }
+        ? { ...post, ...editedContent }
         : post
     ));
     setEditingPostId(null); // Exit edit mode
@@ -87,7 +87,6 @@ export default function BusinessesHome() {
   const handleCancelClick = () => {
     setEditingPostId(null); // Exit edit mode without saving
   };
-
 
   // Top members data
   const topMembers = [
@@ -105,21 +104,17 @@ export default function BusinessesHome() {
 
   return (
     <div className="BusinessHome">
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <h2>Welcome Back, Business Owner Name!</h2>
-      <br/>
-      <br/>
       <div className="recent-posts">
         <h4>Recent Posts</h4>
         <div style={{ position: 'relative' }}>
           <button onClick={() => setShowOptionsMenu(!showOptionsMenu)}>
             <img src={Options} alt="Options" />
           </button>
-          <br/>
-          <br/>
           {showOptionsMenu && (
             <div className="options-menu">
               <button onClick={addPost}>Add Post</button>
@@ -144,16 +139,6 @@ export default function BusinessesHome() {
             {editingPostId === post.id && (
               <div className="edit-form">
                 <h2>Edit Post</h2>
-                <label>Image</label>
-                <input
-                  type="file"
-                  onChange={(e) => {
-                    const file = e.target.files[0];
-                    if (file) {
-                      setEditedContent({ ...editedContent, image: URL.createObjectURL(file) });
-                    }
-                  }}
-                />
                 <input
                   type="text"
                   value={editedContent.author}

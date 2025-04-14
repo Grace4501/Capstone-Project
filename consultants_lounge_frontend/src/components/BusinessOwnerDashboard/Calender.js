@@ -55,6 +55,10 @@ const Calendar = () => {
       <select> 
         <option> All time</option>
       </select>
+      <br/> 
+      <br/>
+      <br/>
+      <br/>
       <div className="calendar-header">
         <button onClick={prevMonth}> Next </button>
         <span>{monthName} {year}</span>

@@ -8,11 +8,11 @@ export default function BusinessSettings() {
         <div>
      <br/>
       <br/>
-      <br/>
+      <br/> 
       <br/>
             <h1> Settings </h1>
             {/* Navigation Tabs */}
-            <div>
+            <div id="settings-tabs">
                 <button onClick={() => setActiveTab("account")}>Account</button>
                 <button onClick={() => setActiveTab("privacy-security")}>Privacy & Security</button>
                 <button onClick={() => setActiveTab("payments")}>Payments</button>
@@ -105,8 +105,8 @@ export default function BusinessSettings() {
                         <button> ADD BANK ACCOUNT </button>
                     </div>
                     <h2> Tax Documents</h2>
+                    <p> This will help us provide better/job matching experience</p>
                     <div>
-                        <p> This will help us provide better search/job matching experience </p>
                     </div>
                 </div>
             )}
