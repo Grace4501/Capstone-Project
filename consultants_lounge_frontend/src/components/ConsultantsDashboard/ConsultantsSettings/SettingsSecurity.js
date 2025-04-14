@@ -23,7 +23,7 @@ export default function SettingsSecurity() {
         {tabs.map((tabItem) => (
           <Link
             key={tabItem.id}
-            to={`/ConsultantsSettings/${tabItem.id}`}
+            to={`/Consultants/settings/${tabItem.id}`}
             className={tab === tabItem.id ? 'tab active' : 'tab'}
           >
             {tabItem.label}

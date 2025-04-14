@@ -30,7 +30,7 @@ export default function WorkInvoices() {
         {tabs.map((tabItem) => (
           <Link
             key={tabItem.id}
-            to={`/ConsultantsWork/${tabItem.id}`}
+            to={`/Consultants/work/${tabItem.id}`}
             className={tab === tabItem.id ? 'tab active' : 'tab'}
           >
             {tabItem.label}

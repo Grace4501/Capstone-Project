@@ -7,7 +7,7 @@ import LeadershipTeam from "./aboutUs-Leaders";
 
 const AboutUs = () => {
   return (
-    <div className="App">
+    <div className="aboutUs">
       {/* Header */}
       <div className="header">
         <div className="logo-container">

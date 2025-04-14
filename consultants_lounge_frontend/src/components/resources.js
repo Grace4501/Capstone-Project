@@ -33,7 +33,7 @@ const Resources = () => {
 
 
   return (
-    <div className="App">
+    <div className="resources">
       {/* Header */}
       <div className="header">
         <div className="logo-container">

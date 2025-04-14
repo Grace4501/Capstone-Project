@@ -1,5 +1,5 @@
 
-* {
+.homePage {
     text-align: left;
     background-color: #fbfbfb;
 }
@@ -16,6 +16,7 @@
     height: 700px;
     margin-bottom: 20px;
     overflow: hidden;
+    background-color: #fbfbfb;
 }
 
 /* Text section within the landing */
@@ -47,16 +48,17 @@
 }
 
 /* Search container styling within the text section */
-.search-container {
+.text-landing > .search-container, .consultants-text > .search-container{
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
     max-width: 500px;
+    background-color: #fbfbfb;
 }
 
 /* Input field styling for the search */
-.search-landing {
+.search-landing input[type="text"]{
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -139,10 +141,11 @@
         justify-content: center;
         width: 100%;
         margin-top: 20px;
+        background-color: #fbfbfb;
     }
 
     /* Mobile-specific styling for search input */
-    .search-landing {
+    .search-landing input[type="text"] {
         padding: 12px;
         font-size: 14px;
         height: 40px;
@@ -179,6 +182,7 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
     overflow: hidden;
+    background-color: #fbfbfb;
 }
 
 /* Title and image layout within How it Works section */
@@ -340,6 +344,7 @@
     overflow: hidden;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    background-color: #fbfbfb;
 }
 
 /* Text layout within Become a Consultant section */
@@ -453,6 +458,7 @@
     overflow: hidden;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    background-color: #fbfbfb;
 }
 
 /* Text layout within the Blog section */
@@ -694,6 +700,7 @@
     text-align: center;
     position: relative;
     z-index: 10000;
+    background-color: #fbfbfb;
 }
 
 .close-btn {

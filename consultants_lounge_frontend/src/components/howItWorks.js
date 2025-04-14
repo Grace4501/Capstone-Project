@@ -15,11 +15,10 @@ const HowItWorks = () => {
       .catch(error => console.error("Error loading json", error));
   }, []);
 
-  // ✅ Use 'data' instead of 'HIWContent'
   const activeSection = data.find(section => section.sectionTitle === activeTab);
 
   return (
-    <div className="App">
+    <div className="howItWorks">
       {/* Header */}
       <div className="header">
         <div className="logo-container">

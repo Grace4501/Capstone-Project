@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Route,
   Link,
   Routes,
@@ -25,7 +24,7 @@ import workLogo from '../../resources/crm.png';
 import learningLogo from '../../resources/Learning.png';
 import settingsLogo from '../../resources/Settings.png';
 
-function Consultants() {
+function ConsultantsDB() {
   const location = useLocation();
 
   const [showAccountDropdown, setShowAccountDropdown] = useState(false);
@@ -49,52 +48,37 @@ function Consultants() {
         <ul>
           <img className="companyLogo" src={companyLogo} alt="Company Logo" />
           <li>
-            <Link to="/" className={location.pathname === "/" ? "current" : ""}>
+            <Link to="/Consultants/home" className={location.pathname === "/Consultants/home" ? "current" : ""}>
               <img className="navIcon" src={homeLogo} alt="Home Logo" />
               Home
             </Link>
           </li>
           <li>
-            <Link
-              to="/ConsultantsProfile"
-              className={location.pathname === "/ConsultantsProfile" ? "current" : ""}
-            >
+            <Link to="/Consultants/profile" className={location.pathname === "/Consultants/profile" ? "current" : ""}>
               <img className="navIcon" src={userLogo} alt="Profile Logo" />
               My Profile
             </Link>
           </li>
           <li>
-            <Link
-              to="/ConsultantsAppointments"
-              className={location.pathname === "/ConsultantsAppointments" ? "current" : ""}
-            >
+            <Link to="/Consultants/appointments" className={location.pathname === "/Consultants/appointments" ? "current" : ""}>
               <img className="navIcon" src={appointmentLogo} alt="Appointments Logo" />
               Appointments
             </Link>
           </li>
           <li>
-            <Link
-              to="/ConsultantsWork"
-              className={location.pathname.startsWith("/ConsultantsWork") ? "current" : ""}
-            >
+            <Link to="/Consultants/work/invites" className={location.pathname.startsWith("/Consultants/work") ? "current" : ""}>
               <img className="navIcon" src={workLogo} alt="Work Logo" />
               My Work
             </Link>
           </li>
           <li>
-            <Link
-              to="/ConsultantsLearning"
-              className={location.pathname === "/ConsultantsLearning" ? "current" : ""}
-            >
+            <Link to="/Consultants/learning" className={location.pathname === "/Consultants/learning" ? "current" : ""}>
               <img className="navIcon" src={learningLogo} alt="Learning Logo" />
               My Learning
             </Link>
           </li>
           <li>
-            <Link
-              to="/ConsultantsSettings"
-              className={location.pathname.startsWith("/ConsultantsSettings") ? "current" : ""}
-            >
+            <Link to="/Consultants/settings/account" className={location.pathname.startsWith("/Consultants/settings") ? "current" : ""}>
               <img className="navIcon" src={settingsLogo} alt="Settings Logo" />
               Settings
             </Link>
@@ -114,12 +98,7 @@ function Consultants() {
 
         {/* Account Dropdown */}
         <div className="icon-wrapper" ref={accountRef}>
-          <p
-            className="AdminAccount"
-            onClick={() => setShowAccountDropdown(prev => !prev)}
-          >
-            A
-          </p>
+          <p className="AdminAccount" onClick={() => setShowAccountDropdown(prev => !prev)}>A</p>
           {showAccountDropdown && (
             <div className="dropdown account-dropdown">
               <p>Help Centre</p>
@@ -133,24 +112,18 @@ function Consultants() {
       {/* Main content area with routes */}
       <div className='main-content'>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ConsultantsLearning" element={<Learning />} />
-          <Route path="/ConsultantsAppointments" element={<Appointments />} />
-          <Route path="/ConsultantsProfile" element={<Profile />} />
-          <Route path="/ConsultantsWork" element={<Navigate to="/ConsultantsWork/invites" />} />
-          <Route path="/ConsultantsWork/:tab" element={<WorkRouter />} />
-          <Route path="/ConsultantsSettings" element={<Navigate to="/ConsultantsSettings/account" />} />
-          <Route path="/ConsultantsSettings/:tab" element={<SettingsRouter />} />
+          <Route path="home" element={<Home />} />
+          <Route path="learning" element={<Learning />} />
+          <Route path="appointments" element={<Appointments />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="work" element={<Navigate to="work/invites" />} />
+          <Route path="work/:tab" element={<WorkRouter />} />
+          <Route path="settings" element={<Navigate to="settings/account" />} />
+          <Route path="settings/:tab" element={<SettingsRouter />} />
         </Routes>
       </div>
     </div>
   );
 }
 
-export default function App() {
-  return (
-    <Router>
-      <Consultants />
-    </Router>
-  );
-}
+export default ConsultantsDB;

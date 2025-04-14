@@ -44,7 +44,7 @@ const HomePage = () => {
   };
   
   return (
-    <div className="App">
+    <div className="homePage">
 
     {showPopup && (
       <div className='popup-overlay'>

@@ -11,7 +11,7 @@ import Resources from './components/resources';
 import HowItWorks from './components/howItWorks';
 import Consultants from './components/consultants';
 import Login from './components/Login';
-import Consultants from './components/ConsultantsDashboard/ConsultantsDB.js';
+import ConsultantsDB from './components/ConsultantsDashboard/ConsultantsDB.js';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <Route path='/howItWorks' element={<HowItWorks />} />
         <Route path='/consultants' element={<Consultants />} />
         <Route path='/Login' element={<Login />} />
+        <Route path='/Consultants/*' element={<ConsultantsDB />} />
       </Routes>
     </div>
    );
