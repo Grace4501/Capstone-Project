@@ -1,4 +1,4 @@
-/* Sidebar Styling - Fixed sidebar on the left side of the screen */
+/* Sidebar Styling */
 .Nav {
     position: fixed;
     left: 0;
@@ -15,13 +15,13 @@
     z-index: 1000;
 }
 
-/* Company Logo - Adjust logo width and spacing */
+/* Company Logo */
 .companyLogo {
     width: 85%;
     margin-bottom: 30px;
 }
 
-/* Navigation List - Styles for the sidebar navigation list */
+/* Navigation List */
 .Nav ul {
     list-style: none;
     padding: 0;
@@ -32,14 +32,14 @@
     align-items: center;
 }
 
-/* Navigation Items - Defines layout for each navigation item */
+/* Navigation Items */
 .Nav li {
     width: 100%;
     text-align: left;
     margin: 5px 0;
 }
 
-/* Navigation Links - Style for links within the sidebar */
+/* Navigation Links */
 .Nav a {
     text-decoration: none;
     color: black;
@@ -54,23 +54,23 @@
     box-sizing: border-box;
 }
 
-/* Hover Effect - Changes background color on hover */
+/* Hover Effect */
 .Nav a:hover {
     background-color: #def0f9;
 }
 
-/* Navigation Icons - Adjusts icon size and spacing */
+/* Navigation Icons */
 .navIcon {
     width: 25px;
     margin-right: 12px;
 }
 
-/* Current Active Link - Highlights the currently active link */
+/* Current Active Link */
 .current {
     background-color: #def0f9;
 }
 
-/* Top Bar Styling - Fixed top bar on the right of the sidebar */
+/* Top Bar Styling */
 .topDiv {
     position: fixed;
     top: 0;
@@ -89,14 +89,14 @@
     box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Search Wrapper - Contains the search bar and icon */
+/* Search Wrapper */
 .searchWrapper {
     position: relative;
     width: 300px;
     padding-right: 20px;
 }
 
-/* Search Bar - Input field for searching */
+/* Search Bar */
 .topDiv input[type="search"] {
     padding: 6px 15px;
     padding-left: 45px;
@@ -108,7 +108,7 @@
     box-sizing: border-box;
 }
 
-/* Search Icon - Positioning for the search icon inside the bar */
+/* Search Icon */
 .searchLogo {
     position: absolute;
     left: 15px;
@@ -119,14 +119,14 @@
     cursor: pointer;
 }
 
-/* Icon Buttons - Styles for action icons in the top bar */
+/* Icon Buttons */
 .material-icons-outlined {
     font-size: 24px;
     margin: 10px;
     cursor: pointer;
 }
 
-/* Admin Account - Circular profile icon for admin user */
+/* Admin Account */
 .AdminAccount {
     background-color: #0e4b69;
     color: white;
@@ -140,7 +140,7 @@
     cursor: pointer;
 }
 
-/* Main Content Styling - Ensures content does not overlap with the sidebar */
+/* Main Content Styling */
 .main-content {
     margin-left: 320px;
     padding: 20px;
@@ -148,3 +148,38 @@
     box-sizing: border-box;
     margin-top: 70px;
 }
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .clickable-icon {
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 160px;
+    z-index: 1000;
+  }
+  
+  .dropdown p {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .dropdown p:hover {
+    background-color: #f5f5f5;
+  }
+  

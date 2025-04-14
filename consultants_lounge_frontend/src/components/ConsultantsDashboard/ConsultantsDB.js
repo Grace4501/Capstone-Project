@@ -1,22 +1,20 @@
-import { BrowserRouter as Router, Route, Link, Routes, useLocation, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+  useLocation,
+  Navigate
+} from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+
 import Home from './ConsultantsHome.js';
 import Learning from './ConsultantsLearning.js';
 import Appointments from './ConsultantsAppointments';
 import Profile from './ConsultantsProfile.js';
 
 import WorkRouter from './ConsultantsWork/WorkRouter.js';
-import WorkInvites from './ConsultantsWork/WorkInvites.js'
-import NewProjects from './ConsultantsWork/WorkNewProjects.js'
-import CurrentProjects from './ConsultantsWork/WorkProjects.js'
-import Reviews from './ConsultantsWork/WorkReviews.js'
-import Invoices from './ConsultantsWork/WorkInvoices.js'
-import ProjectHistory from './ConsultantsWork/WorkHistory.js'
-
 import SettingsRouter from './ConsultantsSettings/SettingsRouter.js';
-import SettingsAccount from './ConsultantsSettings/SettingsAccount.js'
-import SettingsNotifications from './ConsultantsSettings/SettingsNotifications.js'
-import SettingsPayment from './ConsultantsSettings/SettingsPayment.js'
-import SettingsSecurity from './ConsultantsSettings/SettingsSecurity.js'
 
 import searchLogo from '../../resources/SearchLogo.png';
 import companyLogo from '../../resources/CompanyLogo.png';
@@ -29,6 +27,20 @@ import settingsLogo from '../../resources/Settings.png';
 
 function Consultants() {
   const location = useLocation();
+
+  const [showAccountDropdown, setShowAccountDropdown] = useState(false);
+  const accountRef = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (accountRef.current && !accountRef.current.contains(event.target)) {
+        setShowAccountDropdown(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <div className="Consultants">
@@ -96,10 +108,26 @@ function Consultants() {
           <img className="searchLogo" src={searchLogo} alt="Search Logo" />
           <input type="search" placeholder="Search" />
         </div>
+
         <span className="material-icons-outlined">help_outline</span>
         <span className="material-icons-outlined" style={{ border: 'none' }}>notifications</span>
-        {/* Admin Account */}
-        <p className="AdminAccount">A</p>
+
+        {/* Account Dropdown */}
+        <div className="icon-wrapper" ref={accountRef}>
+          <p
+            className="AdminAccount"
+            onClick={() => setShowAccountDropdown(prev => !prev)}
+          >
+            A
+          </p>
+          {showAccountDropdown && (
+            <div className="dropdown account-dropdown">
+              <p>Help Centre</p>
+              <hr />
+              <p>Log Out</p>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Main content area with routes */}
