@@ -1,0 +1,35 @@
+.UserActivity {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    margin-left: 20%;
+    justify-content: flex-start;
+    gap: 50px; 
+}
+
+
+.dates {
+    margin-left: 20%;
+    float: left;
+    list-style-type: none;
+}
+
+.dates li, .descriptions li {
+    margin-bottom: 10px;
+}
+
+.descriptions{
+width: 400px;
+margin-left: 50%;
+}
+
+
+.descriptions  {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.descriptions ::marker {
+    color: rgb(4, 84, 104);
+}
+

@@ -14,6 +14,7 @@ import session from "express-session"
 import MongoStore from 'connect-mongo'
 import { startSessionChangeStream } from './controls/events/change_stream.js';
 import { track_metadata_from_user } from './controls/middlewares/tracker.js'
+import { errorHandler } from './middleware/errorHandler.js';
 
 
 connectDB();
@@ -30,7 +31,7 @@ app.use(express.static(path.join(__dirname, "build")))
 //CORS policies..
 app.use( 
     cors({
-      origin: 'http://localhost:3000', //Receiving only from port:3000 for development purposes.
+      origin: process.env.CORS_ORIGIN || 'http://localhost:3000', // Use env variable for CORS origin
       methods: ['GET', 'POST', 'PUT', 'DELETE'], //Allowed Methods
       allowedHeaders: ['Content-Type', 'Authorization'], // Auith for JWT.
       credentials: true, //allows cookies to be attached with the response.
@@ -38,22 +39,14 @@ app.use(
   );
 
 app.use(express.json()) //Json Parsing
-app.use(express.urlencoded({extended: true})) //WebForms Parsing.
-app.use(cookieParser());  
+app.use(express.urlencoded({extended: true})) //WebForms Parsing
 
-app.use(async (req, res, next) => {
-    // Check if the client has a session cookie
-    const hasSessionCookie = req.cookies["connect.sid"];
+app.use((req,res,next)=>{
+    if(!req.session) req.isNew = true
+    else req.isNew = false
 
-    if (hasSessionCookie) { req.isNew = false; console.log(hasSessionCookie);} // If session exists, it's not new.
-        
-    else req.isNew = true; // No session cookie means a new visitor
-    
-    next();
-});
-
-
-
+    next()
+})
 
 //Session Store
 app.use( 
@@ -70,7 +63,7 @@ app.use(
         cookie: {
             name: process.env.SESSION_COOKIE_NAME,
             httpOnly: process.env.SESSION_COOKIE_HTTPONLY === "true",
-            secure: process.env.SESSION_COOKIE_SECURE === "true",
+            secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
             //expires: parseInt(process.env.SESSION_COOKIE_MAXAGE)
             maxAge: parseInt(process.env.SESSION_COOKIE_MAXAGE),  // 1 hour
         },
@@ -86,8 +79,20 @@ app.use(passport.session());
 //Routes Funnelling
 app.use('/api/v1', track_metadata_from_user, router) 
 
+// 404 Handler - Place this after all routes
+app.use((req, res) => {
+    res.status(404).json({
+        success: false,
+        error: 'Route not found',
+        path: req.originalUrl
+    });
+});
+
+// Error Handler (Should be last middleware)
+app.use(errorHandler);
+
 //Express Server Listening...
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
     console.log(`Server is running on port: ${PORT}`)
     startSessionChangeStream()

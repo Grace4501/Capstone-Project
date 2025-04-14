@@ -1,10 +1,10 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loadExperts } from './homePage-Experts';
 import '../App.css';
 import '../styles/homePage.css';
 import '../styles/headerFooter.css';
+
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -21,7 +21,7 @@ const HomePage = () => {
 
   const handleToBusinessSurvey = () => {
     window.location.href = '/survey-Businesses';
-};
+  };
 
   const handleToConsultantSurvey = () => {
     window.location.href = '/survey-Consultant';
@@ -74,8 +74,8 @@ const HomePage = () => {
             <li><Link to="/consultants" id="landingPage">CONSULTANTS</Link></li>
             <li><Link to="/resources" id="landingPage">RESOURCES</Link></li>
             <li><Link to="/FAQ" id="landingPage">FAQ</Link></li>
-            <li><Link to="/login" className="login">LOGIN</Link></li>
-            <li><Link to="/signUp" className="signup">SIGN UP</Link></li>
+            <li><Link to="/Login" className="login">LOGIN</Link></li>
+            <li><Link to="/Signup" className="signup">SIGN UP</Link></li>
           </ul>
         </div>
       </div>
@@ -146,7 +146,7 @@ const HomePage = () => {
         <div className="text-consultant">
           <h1 className="title-consultant">BECOME A CONSULTANT</h1>
           <p className="paragraph-consultant">Do you have the skills that can help a small business thrive? Become a consultant and earn from your very own fine-tune set of skills. Work wherever suits you, choose a full-time, part-time, or flexi-time project.</p>
-          <Link to="/signUp" className="signup-consultant">SIGN UP</Link>
+          <Link to="/signup" className="signup-consultant">SIGN UP</Link>
         </div>
         <img className="img-consultant" src="resources/consultant_section.png" alt="Consultant Section" />
       </div>
@@ -219,7 +219,7 @@ const HomePage = () => {
 
         <div className="signupFooter">
           <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
-          <Link to="/signUp" className="signupFooterBtn">SIGN UP</Link>
+          <Link to="/signup" className="signupFooterBtn">SIGN UP</Link>
         </div>
       </div>
     </div>
