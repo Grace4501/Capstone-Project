@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { loadExperts } from './homePage-Experts';
 import '../App.css';
-import { Link } from 'react-router-dom';
 import '../styles/homePage.css';
 import '../styles/headerFooter.css';
-import { loadExperts } from './homePage-Experts';
 
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadExperts();
@@ -32,6 +34,12 @@ const HomePage = () => {
       expertsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     } else if (direction === 'left') {
       expertsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      navigate(`/consultants?search=${encodeURIComponent(searchQuery)}`)
     }
   };
   
@@ -78,10 +86,19 @@ const HomePage = () => {
           <h1 className="title-landing">BRINGING YOUR BUSINESS TO THE NEXT LEVEL</h1>
           <p className="paragraph-landing">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis </p>
           <div className="search-container">
-            <input type="text" placeholder="search for a skill" className="search-landing" />
-            <div className="search-icon-container">
+            <input 
+              type="text" 
+              placeholder="search for a skill" 
+              className="search-landing"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+            />
+            
+            <div className="search-icon-container" onClick={handleSearch}>
               <img src="resources/search-icon.png" className="search-icon" alt="search icon" />
             </div>
+
           </div>
         </div>
         <div className="img-landing">
