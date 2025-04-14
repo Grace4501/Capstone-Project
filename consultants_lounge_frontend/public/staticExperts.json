@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Sandy Oh",
+        "title": "Financial Advisor",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Adam Perez",
+        "title": "Developer",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Ruth Thompson",
+        "title": "Product Manager",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Eli Palmieri",
+        "title": "UX/UI Designer",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Alex Shum",
+        "title": "Scrum Master",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Jay Sonuga",
+        "title": "Banking Consultant",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Alex Johnson",
+        "title": "UX Designer",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    },
+
+    {
+        "name": "Jane Smith",
+        "title": "Developer",
+        "image": "resources/placeholderExpert.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure."
+    }
+]

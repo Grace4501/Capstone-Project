@@ -1,0 +1,274 @@
+/* General Styles for the Survey Page */
+.survey-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background color */
+    position: relative;
+}
+
+/* Container for the survey content */
+.survey-container {
+    background: #f8f9fa;
+    padding: 60px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    max-width: 700px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Styling for paragraph inside the survey container */
+.survey-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* Heading styling */
+.survey-container h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-family: 'Almarai', serif;
+    font-weight: 500;
+    transform: scaleY(1.3) translateX(-25px);
+    transform: scaleX(0.8);
+}
+
+/* Navigation Button Styles */
+.survey-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.survey-nav button {
+    flex: 1;
+    max-width: 180px;
+    padding: 8px 20px !important;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Back Button Styling */
+.back-btn {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid black !important;
+}
+
+/* Next Button Styling */
+.nxt-btn {
+    background-color: black !important;
+    color: white !important;
+    border: none;
+}
+
+/* Logo positioning */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    max-width: 60%;
+    height: auto;
+    margin: 0;
+}
+
+/* Detail Images Positioning */
+.detail1-survey {
+    position: absolute;
+    bottom: 90px;
+    left: 230px;
+    width: 120px;
+}
+
+.detail2-survey {
+    position: absolute;
+    top: 100px;
+    right: 230px;
+    width: 120px;
+}
+
+/* Button styles for the start button */
+.start-btn, .survey-nav button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* Detail Images Styling */
+.detail-img {
+    position: absolute;
+    width: 150px;
+    opacity: 0.8;
+}
+
+/* Positioning for images at different corners */
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+/* Styles for the Thank You Section */
+.survey-container {
+    background: #f8f9fa;
+    padding: 60px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    max-width: 700px;
+}
+
+/* Return to Homepage Button */
+.survey-container .nxt-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    width: auto;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.progress-box {
+    width: 60px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* When progress box is active (filled) */
+.progress-box.active {
+    background-color: #104f6e;
+}
+
+/* Input field styling */
+.survey-input {
+    width: 70%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Radio & Checkbox options container */
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* Hide the default radio and checkbox inputs */
+.options input[type="radio"] {
+    display: none;
+}
+
+.options input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom styling for the label of radio and checkbox options */
+.options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+/* When radio button or checkbox is selected, change background */
+.options label.selected {
+    background-color: #d3e9f3;
+}
+
+.options label.selected span {
+    background-color: #d3e9f3;
+}
+
+/* Custom radio button style (circle) */
+.options label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #b7b6b6;
+    background-color: white;
+    margin-right: 10px;
+}
+
+/* Custom checkbox styling (square shape) */
+.options label.checkbox::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #b7b6b6;
+    background-color: white;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When the radio button is selected, change its circle color */
+.options label.selected::before {
+    background-color: #2d799e;
+    border-color: #2d799e;
+}
+
+/* Text styling within the options label */
+.options label span {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .company-logo {
+        width: 120px;
+    }
+    .survey-container {
+        padding: 30px;
+        width: 80%;
+    }
+    .detail-img {
+        width: 100px;
+    }
+}
