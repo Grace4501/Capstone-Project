@@ -1,30 +1,47 @@
 import './App.css';
 import React from 'react';
-import{Routes, Route, Link} from 'react-router-dom';
-import SignUp from './components/Signup.js';
-import AboutUs from './components/aboutUs';
+import { Routes, Route } from 'react-router-dom';
+
+// General Pages
 import HomePage from './components/HomePage';
+import AboutUs from './components/aboutUs';
+import SignUp from './components/Signup.js';
+import Login from './components/Login';
+
+// Surveys
 import SurveyConsultant from './components/survey-Consultant';
 import SurveyBusinesses from './components/survey-Businesses';
-import Login from './components/Login';
+
+// Informational Pages
+import FAQ from './components/FAQ';
+import Resources from './components/resources';
+import HowItWorks from './components/howItWorks';
+import Consultants from './components/consultants';
+
+// Dashboards
 import Business from './components/BusinessOwnerDashboard/Business.js';
 import Admin from './components/AdminDashboard/Admin.js';
+import ConsultantsDB from './components/ConsultantsDashboard/ConsultantsDB.js';
 
 function App() {
-
   return (
-    <div>
-       <Routes>
+    <div className="App">
+      <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />
         <Route path='/signUp' element={<SignUp />} />
-        <Route path='/survey-Consultant' element={<SurveyConsultant />} />
-        <Route path='/survey-Businesses' element={<SurveyBusinesses />} />
-        <Route path='/Login' element={<Login />} />
-        <Route path='/Business' element={<Business />} />
-        <Route path='/Admin' element={<Admin />} />
-      </Routes>  
-    </div>  
+        <Route path='/login' element={<Login />} />
+        <Route path='/survey-consultant' element={<SurveyConsultant />} />
+        <Route path='/survey-businesses' element={<SurveyBusinesses />} />
+        <Route path='/faq' element={<FAQ />} />
+        <Route path='/resources' element={<Resources />} />
+        <Route path='/how-it-works' element={<HowItWorks />} />
+        <Route path='/consultants' element={<Consultants />} />
+        <Route path='/business' element={<Business />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/consultants/*' element={<ConsultantsDB />} />
+      </Routes>
+    </div>
   );
 }
 
