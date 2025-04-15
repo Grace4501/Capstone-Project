@@ -83,7 +83,7 @@
 }
 
 .Signup input,
-.Signup .role-select {
+.Signup select {
     border: none;
     border-bottom: 1px solid rgb(136, 133, 133);
     margin-bottom: 15px;
@@ -92,7 +92,27 @@
     background: transparent;
 }
 
-.Signup .role-select {
+.Signup input[name="first_name"],
+.Signup input[name="middle_name"],
+.Signup input[name="last_name"] {
+    border: none;
+    border-bottom: 1px solid rgb(136, 133, 133);
+}
+
+.Signup input:focus,
+.Signup select:focus {
+    outline: none;
+    border-bottom: 2px solid #5dc0f9;
+}
+
+.Signup input[name="first_name"]:focus,
+.Signup input[name="middle_name"]:focus,
+.Signup input[name="last_name"]:focus {
+    outline: none;
+    border-bottom: 2px solid #5dc0f9;
+}
+
+.Signup select {
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -102,12 +122,6 @@
     background-position: right 1px center;
     background-size: 16px;
     padding-right: 24px;
-}
-
-.Signup input:focus,
-.Signup .role-select:focus {
-    outline: none;
-    border-bottom: 2px solid #5dc0f9;
 }
 
 .Signup input::placeholder {
