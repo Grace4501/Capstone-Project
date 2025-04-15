@@ -56,7 +56,8 @@ html, body {
 }
 
 /* Styling for current active link*/
-.current {
+.pageList a.current {
+    background-color: transparent;
     color: #1d4587;
 }
 

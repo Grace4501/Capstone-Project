@@ -1,3 +1,8 @@
+.consultants {
+    text-align: left;
+    background-color: #fbfbfb;
+}
+
 /* Overall styling for the consultants search section */
 .consultants-search {
     display: flex;

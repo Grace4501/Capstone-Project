@@ -43,7 +43,7 @@ const Consultants = () => {
     );
   
   return (
-    <div className="App">
+    <div className="consultants">
 
       {/* Header Section */}
       <div className="header">

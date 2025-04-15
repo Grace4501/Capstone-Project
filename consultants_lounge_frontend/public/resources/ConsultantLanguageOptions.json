@@ -1,0 +1,21 @@
+{
+    "Proficiency-Options": [
+        {
+          "label": "Basic",
+          "description": "I am only able to communicate in this language through written communication"
+        },
+        {
+            "label": "Conversational",
+            "description": "I know this language well enough to verbally discuss project details with a client"
+        },
+        {
+            "label": "Fluent",
+            "description": "I have command of this language with perfect grammer"
+        },
+        {
+            "label": "Native or Bilingual",
+            "description": "I have complete command of this language, including breadth of vocabulary, idioms, and colloguialisms"
+        }
+    ]
+}
+  

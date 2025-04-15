@@ -1,0 +1,249 @@
+.ConsultantsHome {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ConsultantsHome h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+  }
+  
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
+  
+  .profile-image p {
+    font-size: 0.85rem;
+    color: #0077cc;
+    cursor: pointer;
+  }
+  
+  .profile-progress {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+  }
+  
+  .profile-progress p:first-child {
+    font-size: 1rem;
+  }
+  
+  .profile-progress p:nth-child(2) {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+    max-width: 600px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #e2e2e2;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  
+  .progress-bar .filled {
+    height: 100%;
+    background-color: #00c17c;
+    transition: width 0.3s ease;
+    border-radius: 999px;
+  }
+  
+  /* Section Headers */
+  .section {
+    margin-bottom: 50px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .section-header a {
+    font-size: 0.85rem;
+    color: #0e4b69;
+    text-decoration: none;
+  }
+  
+  /* Cards Grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Course Card */
+  .card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .card .course-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+  
+  .card p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .card span {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+  }
+  
+  /* Resource Card */
+  .resource-card-home {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .resource-card-home h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .resource-card-home p {
+    font-size: 12px;
+    margin: 0;
+    color: #666;
+  }
+  
+  /* Buttons */
+  .primary-btn-home {
+    padding: 8px 20px;
+    background-color: #0e4b69 ;
+    color: white;
+    border: none ;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    width: fit-content;
+  }
+
+  .profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    margin-bottom: 40px;
+    max-width: 65%;
+  }
+  
+  .profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+  }
+  
+  .profile-center {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    max-width: 180px;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .profile-center h2 {
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: -2px;
+    margin: 0;
+  }
+
+  .profile-center p {
+    margin: 0;
+  }
+  
+  .profile-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+  
+  .profile-description {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .add-photo {
+    font-size: 0.85rem;
+    color: #0077cc;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  
+  .resource-wrapper {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  

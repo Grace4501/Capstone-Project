@@ -55,7 +55,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="App">
+    <div className="FAQ">
 
 
       {/* Header */}

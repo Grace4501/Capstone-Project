@@ -1,0 +1,185 @@
+/* Sidebar Styling */
+.Nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fafbfc;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset -2px 0px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Company Logo */
+.companyLogo {
+    width: 85%;
+    margin-bottom: 30px;
+}
+
+/* Navigation List */
+.Nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Items */
+.Nav li {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+}
+
+/* Navigation Links */
+.Nav a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    margin-bottom: 7px;
+    border-radius: 15px;
+    width: 100%;
+    transition: background 0.3s;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Hover Effect */
+.Nav a:hover {
+    background-color: #def0f9;
+}
+
+/* Navigation Icons */
+.navIcon {
+    width: 25px;
+    margin-right: 12px;
+}
+
+/* Current Active Link */
+.current {
+    background-color: #def0f9;
+}
+
+/* Top Bar Styling */
+.topDiv {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 300px);
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 40px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    z-index: 10;
+    border: #eeeeee solid 1px;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Wrapper */
+.searchWrapper {
+    position: relative;
+    width: 300px;
+    padding-right: 20px;
+}
+
+/* Search Bar */
+.topDiv input[type="search"] {
+    padding: 6px 15px;
+    padding-left: 45px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Search Icon */
+.searchLogo {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Icon Buttons */
+.material-icons-outlined {
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Admin Account */
+.AdminAccount {
+    background-color: #0e4b69;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 320px;
+    padding: 20px;
+    width: calc(100% - 320px);
+    box-sizing: border-box;
+    margin-top: 70px;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .clickable-icon {
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 160px;
+    z-index: 1000;
+  }
+  
+  .dropdown p {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .dropdown p:hover {
+    background-color: #f5f5f5;
+  }
+  

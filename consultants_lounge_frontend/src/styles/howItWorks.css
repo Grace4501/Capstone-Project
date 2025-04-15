@@ -1,3 +1,8 @@
+.howItWorks {
+  text-align: left;
+  background-color: #fbfbfb;
+}
+
 /* Tab Container */
 .hiw-tabs {
     display: flex;
