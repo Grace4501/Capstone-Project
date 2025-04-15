@@ -120,6 +120,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .Signup button {
@@ -128,6 +129,36 @@
     padding: 12px;
     cursor: pointer;
     font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.Signup .btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+}
+
+.Signup .btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.Signup .btn-light {
+    border: 1px solid rgb(185, 185, 185);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Signup .btn-light:hover {
+    background-color: #f8f8f8;
+}
+
+.Signup .btn-light img {
+    width: 20px;
+    height: 20px;
 }
 
 .Signup .signup-button {

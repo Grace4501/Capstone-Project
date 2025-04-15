@@ -1,6 +1,7 @@
 import '../styles/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logoBackground from '../resources/LogoBackground.jpg';
+import googleLogo from '../resources/GoogleLogo.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { postData } from '../utilities/fetchOps';
@@ -101,6 +102,9 @@ export default function Login() {
 
                     <div className="buttons">
                         <button type="submit" className="btn btn-primary">LOGIN</button>
+                        <button type="button" className="btn btn-light">
+                            <img src={googleLogo} alt='GoogleLogo' /> LOGIN WITH GOOGLE
+                        </button>
                     </div>
                 </form>
             </div>
