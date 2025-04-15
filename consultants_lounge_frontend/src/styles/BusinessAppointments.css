@@ -1,0 +1,93 @@
+
+.appointments-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-buttons button:hover {
+    border-radius: 50px;
+    background-color: #99BCD1;
+}
+
+.tasks-timeline-wrapper {
+   display: flex;
+    gap: 30px;
+}
+
+.schedule-tasks {
+    width: 50%;
+    border: 1px solid gray;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.schedule-tasks h3 {
+    margin-bottom: 10px;
+}
+
+.schedule-tasks input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 90%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.schedule-tasks button {
+    padding: 8px 15px;
+    margin: 0px 10px;
+    background-color: gray;
+    color: #3B3B3B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.schedule-tasks button:hover {
+    background-color:  #3B3B3B;;
+}
+
+.timeline {
+    float: right;
+    border: 1px solid gray;
+    width: 40%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.timeline h3 {
+    margin-bottom: 10px;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline ul li {
+    margin-bottom: 10px;
+}
+
+.today-tasks {
+    margin-right: 20%;
+    border: 1px solid gray;
+    width: 51%;
+    padding: 20px;
+    border-radius: 10px;
+}

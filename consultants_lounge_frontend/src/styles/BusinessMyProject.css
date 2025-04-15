@@ -1,0 +1,78 @@
+
+/* Content section layout */
+#my-invites, #current-projects, #new-projects, #reviews, #my-invoices, #my-projecthistory {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Tab navigation styling */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-navigation button {
+    flex: 1;
+    margin: 0 5px;
+    border: none;
+}
+
+.tab-navigation button:hover{
+    background-color: #99BCD1;
+    border-radius: 15px;
+}
+
+/* Content section layout */
+.content-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Row alignment for project containers */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Project Content Styling */
+.project-content {
+    flex: 2;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Project Details Styling */
+.project-details {
+    flex: 1;
+    background-color: #f7f7f7;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 70%; 
+    height: 25px;
+    background-color: #00ff7b;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    font-weight: bold;
+}
+

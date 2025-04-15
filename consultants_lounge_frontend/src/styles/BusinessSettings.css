@@ -1,0 +1,152 @@
+/* Account Section Buttons */
+#account button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#account button:hover {
+  background-color: #218838;
+}
+
+/* Privacy & Security Section Buttons */
+#privacy-security button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#privacy-security button:hover {
+  background-color: #e0a800;
+}
+
+/* Payments Section Buttons */
+#payments button {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#payments button:hover {
+  background-color: #138496;
+}
+
+/* Notifications Section Buttons */
+#notifications button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#notifications button:hover {
+  background-color: #5a6268;
+}
+
+#settings-tabs button{
+  margin-left: 20px;
+  border:none;
+}
+
+#settings-tabs button:hover{
+  background-color: #99BCD1;
+    border-radius: 15px;
+}
+#account h2 {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#account input{
+  margin-left: 30px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+#account div{
+  margin-top: 30px;
+}
+
+
+#privacy-security h2 {
+  margin-top: 30px;
+}
+
+#privacy-security div{
+  margin-top: 30px;
+}
+
+
+#payments h2  {
+margin-top: 30px;
+}
+
+#payments div {
+  margin-top: 20px;
+}
+
+/* Notifications section spacing */
+#notifications div {
+  margin-top: 20px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #0E4B69;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(25px);
+  }
