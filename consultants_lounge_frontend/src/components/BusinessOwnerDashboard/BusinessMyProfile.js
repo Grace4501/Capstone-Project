@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/BusinessMyProfile.css';
 import Profile from '../../resources/Profile.png';
-import Edit from '../../resources/Edit.png';
+import Edit from '../../resources/edit.png';
 
 export default function BusinessMyProfile() {
   // State for managing profile picture

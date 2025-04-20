@@ -6,7 +6,7 @@ import companyLogo from '../../resources/CompanyLogo.png';
 import homelogo from '../../resources/Home.png';
 import userLogo from '../../resources/User.png';
 import Appointments from '../../resources/Appointments.png'
-import Folder from '../../resources/folder.png'
+import Folder from '../../resources/crm.png'
 import Settings from '../../resources/Settings.png';
 import B from '../../resources/B.png';
 

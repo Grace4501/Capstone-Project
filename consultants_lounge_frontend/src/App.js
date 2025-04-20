@@ -12,6 +12,8 @@ import HowItWorks from './components/howItWorks';
 import Consultants from './components/consultants';
 import Login from './components/Login';
 import ConsultantsDB from './components/ConsultantsDashboard/ConsultantsDB.js';
+import Admin from './components/AdminDashboard/Admin.js';
+import Business from './components/BusinessOwnerDashboard/Business.js'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path='/consultants' element={<Consultants />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Consultants/*' element={<ConsultantsDB />} />
+        <Route path='/Admin' element={<Admin/>}/>
+        <Route path='/Business' element={<Business/>}/>  
       </Routes>
     </div>
    );
