@@ -25,6 +25,7 @@ const app = express()
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
 //Serving React's static files
 app.use(express.static(path.join(__dirname, "build")))
 
@@ -92,7 +93,7 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 //Express Server Listening...
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 app.listen(PORT, ()=>{
     console.log(`Server is running on port: ${PORT}`)
     startSessionChangeStream()

@@ -1,4 +1,3 @@
-
 import '../styles/Signup.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logoBackground from '../resources/LogoBackground.jpg';
@@ -71,19 +70,19 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-    
-        try {
 
+        try {
             const response = await postData('http://localhost:5000/api/v1/session/register', formData);
-            console.log("response", response)
-            if (response.success) {
+            console.log("response", response);
+
+            if (response && response.success) {
                 // Successful registration
                 setServerMessage("Registration successful! Redirecting to login...");
                 setServerMessageType("success");
                 setTimeout(() => navigate('/login'), 2000);
-            } else{
+            } else {
                 // Error from server (400 or 500)
-                setServerMessage(response.message);  // Directly use the error message
+                setServerMessage(response ? response.message : 'Unknown error');
                 setServerMessageType("danger");
             }
         } catch (error) {
@@ -92,7 +91,6 @@ export default function Signup() {
             setServerMessageType("danger");
         }
     };
-    
 
     return (
         <div className="Signup">
@@ -104,7 +102,6 @@ export default function Signup() {
                 <h5> Logo </h5>
             </div>
             <div className="form-container">
-
                 <form onSubmit={handleSubmit}>
                     <h4> Create Your Account </h4>
 
@@ -115,51 +112,51 @@ export default function Signup() {
                         </div>
                     )}
 
-                    {/** First Name */}
+                    {/* First Name */}
                     <div>
                         <label>First Name*</label>
-                        <input type="text" name="first_name" value={formData.first_name} onChange={handleChange}  />
+                        <input type="text" name="first_name" value={formData.first_name} onChange={handleChange} />
                         {errors.first_name && <p className="error">{errors.first_name}</p>}
                     </div>
 
-                    {/** Middle Name */}
+                    {/* Middle Name */}
                     <div>
                         <label>Middle Name</label>
                         <input type="text" name="middle_name" value={formData.middle_name} onChange={handleChange} />
                     </div>
 
-                    {/** Last Name */}
+                    {/* Last Name */}
                     <div>
                         <label>Last Name*</label>
-                        <input type="text" name="last_name" value={formData.last_name} onChange={handleChange}  />
+                        <input type="text" name="last_name" value={formData.last_name} onChange={handleChange} />
                         {errors.last_name && <p className="error">{errors.last_name}</p>}
                     </div>
 
-                    {/** Email */}
+                    {/* Email */}
                     <div>
                         <label>Email*</label>
-                        <input type="email" name="email" value={formData.email} onChange={handleChange}  />
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} />
                         {errors.email && <p className="error">{errors.email}</p>}
                     </div>
 
-                    {/** Phone */}
+                    {/* Phone */}
                     <div>
                         <label>Phone Number*</label>
-                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange}  placeholder="123-456-7890" />
+                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="123-456-7890" />
                         {errors.phone && <p className="error">{errors.phone}</p>}
                     </div>
 
-                    {/** Password */}
+                    {/* Password */}
                     <div>
                         <label>Password*</label>
-                        <input type="password" name="password" value={formData.password} onChange={handleChange}  />
+                        <input type="password" name="password" value={formData.password} onChange={handleChange} />
                         {errors.password && <p className="error">{errors.password}</p>}
                     </div>
 
-                    {/** Role */}
+                    {/* Role */}
                     <div>
                         <label>Role*</label>
-                        <select name="role" value={formData.role} onChange={handleChange} >
+                        <select name="role" value={formData.role} onChange={handleChange}>
                             <option value="">Select your role</option>
                             <option value="Business Owner">Business Owner</option>
                             <option value="Consultant">Consultant</option>
@@ -167,18 +164,15 @@ export default function Signup() {
                         {errors.role && <p className="error">{errors.role}</p>}
                     </div>
 
-                    {/** Buttons */}
+                    {/* Buttons */}
                     <div className="buttons">
                         <button type="submit" className="btn btn-primary">SIGN UP</button>
                         <button type="button" className="btn btn-light">
-                            <img src={googleLogo} alt='GoogleLogo' /> SIGN UP WITH GOOGLE
+                            <img src={googleLogo} alt="GoogleLogo" /> SIGN UP WITH GOOGLE
                         </button>
-
                     </div>
                 </form>
             </div>
         </div>
-
     );
 }
-
