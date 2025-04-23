@@ -19,8 +19,8 @@ function App() {
  
   return (
     <div className="App">
-        <Admin/>
-        {/*
+      {/*  <Admin/> */}
+       {/* <Business/> */}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/aboutUs' element={<AboutUs />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path='/Consultants/*' element={<ConsultantsDB />} />
         <Route path='/Admin' element={<Admin/>}/>
         <Route path='/Business' element={<Business/>}/>  
-      </Routes>  */}
+      </Routes> 
     </div>
    );
  }
