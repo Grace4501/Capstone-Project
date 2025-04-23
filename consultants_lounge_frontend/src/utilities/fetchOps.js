@@ -32,19 +32,24 @@ export const deleteData = async (url)=>{
 
 export const postData = async (url, payload) => {
     try {
-      axios.defaults.withCredentials = true;
-      const response = await axios.post(url, payload || {}, { withCredentials: true });
-
-      console.log("response: \n", response);
-      return response.data; // Directly return the standardized API response {success, message, [content]}
+        axios.defaults.withCredentials = true;
+        const response = await axios.post(url, payload || {}, { withCredentials: true });
+        console.log("response: \n", response);
+        return response.data; // Directly return the standardized API response {success, message, [content]}
     } 
     catch (error) {
-      console.log("error: ", error);
-      return error.response.data
-    };
-  }
-
-
+        console.log("error: ", error);
+        // Check if there's a response with data
+        if (error.response && error.response.data) {
+            return error.response.data;
+        }
+        // If no response data, return a standardized error object
+        return {
+            success: false,
+            message: error.message || "An error occurred while processing your request"
+        };
+    }
+};
 
 export const getData = async (url)=>{
   
