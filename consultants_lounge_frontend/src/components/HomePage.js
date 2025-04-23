@@ -5,7 +5,6 @@ import '../App.css';
 import '../styles/homePage.css';
 import '../styles/headerFooter.css';
 
-
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,31 +38,30 @@ const HomePage = () => {
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      navigate(`/consultants?search=${encodeURIComponent(searchQuery)}`)
+      navigate(`/consultants?search=${encodeURIComponent(searchQuery)}`);
     }
   };
-  
+
   return (
     <div className="homePage">
-
-    {showPopup && (
-      <div className='popup-overlay'>
-        <div className='popup'>
-          <button className='close-btn' onClick={handleClosePopup}>x</button>
-          <h1>SURVEY</h1>
-          <p>Would you like to take part in our survey to let us know how we can help you better?</p>
-          <div className='popup-btns'>
-            <button onClick={handleToBusinessSurvey} className='popup-btn primary'>BUSINESS OWNERS</button>
-            <button onClick={handleToConsultantSurvey} className='popup-btn secondary'>CONSULTANTS</button>
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <button className="close-btn" onClick={handleClosePopup}>x</button>
+            <h1>SURVEY</h1>
+            <p>Would you like to take part in our survey to let us know how we can help you better?</p>
+            <div className="popup-btns">
+              <button onClick={handleToBusinessSurvey} className="popup-btn primary">BUSINESS OWNERS</button>
+              <button onClick={handleToConsultantSurvey} className="popup-btn secondary">CONSULTANTS</button>
+            </div>
           </div>
         </div>
-      </div>
-    )}
+      )}
 
       {/* Header Section */}
       <div className="header">
         <div className="logo-container">
-        <img src="resources/CompanyLogo-White.png" className="logo" alt="company logo" />
+          <img src="resources/CompanyLogo-White.png" className="logo" alt="company logo" />
         </div>
 
         <div className="pageList">
@@ -84,21 +82,19 @@ const HomePage = () => {
       <div className="landing">
         <div className="text-landing">
           <h1 className="title-landing">BRINGING YOUR BUSINESS TO THE NEXT LEVEL</h1>
-          <p className="paragraph-landing">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis </p>
+          <p className="paragraph-landing">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           <div className="search-container">
-            <input 
-              type="text" 
-              placeholder="search for a skill" 
+            <input
+              type="text"
+              placeholder="search for a skill"
               className="search-landing"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
             />
-            
             <div className="search-icon-container" onClick={handleSearch}>
               <img src="resources/search-icon.png" className="search-icon" alt="search icon" />
             </div>
-
           </div>
         </div>
         <div className="img-landing">
@@ -117,22 +113,22 @@ const HomePage = () => {
           <div className="founding">
             <h1 className="numbering-founding">01</h1>
             <h1 className="title-founding">Founding Your Business</h1>
-            <p className="paragraph-founding">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+            <p className="paragraph-founding">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           </div>
           <div className="expanding">
             <h1 className="numbering-founding">02</h1>
             <h1 className="title-founding">Expanding Your Business</h1>
-            <p className="paragraph-founding">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+            <p className="paragraph-founding">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           </div>
           <div className="optimizing">
             <h1 className="numbering-optimizing">03</h1>
             <h1 className="title-optimizing">Optimizing Your Business</h1>
-            <p className="paragraph-optimizing">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+            <p className="paragraph-optimizing">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           </div>
         </div>
       </div>
 
-      {/* Company Logos Section */}
+      {/* Company Logos */}
       <div className="companylogos">
         <img className="img-companylogos" src="resources/logo1.png" alt="Logo 1" />
         <img className="img-companylogos" src="resources/logo2.png" alt="Logo 2" />
@@ -141,11 +137,11 @@ const HomePage = () => {
         <img className="img-companylogos" src="resources/logo5.png" alt="Logo 5" />
       </div>
 
-      {/* Become a Consultant Section */}
+      {/* Consultant Section */}
       <div className="consultant">
         <div className="text-consultant">
           <h1 className="title-consultant">BECOME A CONSULTANT</h1>
-          <p className="paragraph-consultant">Do you have the skills that can help a small business thrive? Become a consultant and earn from your very own fine-tune set of skills. Work wherever suits you, choose a full-time, part-time, or flexi-time project.</p>
+          <p className="paragraph-consultant">Do you have the skills that can help a small business thrive?...</p>
           <Link to="/signup" className="signup-consultant">SIGN UP</Link>
         </div>
         <img className="img-consultant" src="resources/consultant_section.png" alt="Consultant Section" />
@@ -153,34 +149,31 @@ const HomePage = () => {
 
       {/* Blog Section */}
       <div className="blog">
-      <img className="img-blog" src="resources/consultant_section.png" alt="Blog Section" />
+        <img className="img-blog" src="resources/consultant_section.png" alt="Blog Section" />
         <div className="text-blog">
           <h1 className="title-blog">VISIT THE BLOG</h1>
-          <p className="paragraph-blog">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis</p>
+          <p className="paragraph-blog">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           <a href="https://blog.consultantslounge.com/" className='blog-btn' target="_blank" rel="noopener noreferrer">BLOG</a>
         </div>
       </div>
 
-      {/* Find an Expert Section */}
+      {/* Experts Section */}
       <div className="findexpert">
         <h1 className="title-findexpert">FIND AN EXPERT</h1>
-
         <div className="experts-container" id="experts-container"></div>
-
         <div className="scroll-arrow-left">
-        <span onClick={() => handleScroll('left')}>&#8592;</span>
+          <span onClick={() => handleScroll('left')}>&#8592;</span>
         </div>
-        
         <div className="scroll-arrow-right">
-        <span onClick={() => handleScroll('right')}>&#8594;</span>
+          <span onClick={() => handleScroll('right')}>&#8594;</span>
         </div>
       </div>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <div className="footer">
         <div className="logo-list-container">
           <div className="footer-logo-container">
-          <img src="resources/CompanyLogo-Blue.png" className="footer-logo" alt="company logo" />
+            <img src="resources/CompanyLogo-Blue.png" className="footer-logo" alt="company logo" />
           </div>
 
           <div className="footer-lists">
@@ -218,13 +211,12 @@ const HomePage = () => {
         </div>
 
         <div className="signupFooter">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisci elit...</p>
           <Link to="/signup" className="signupFooterBtn">SIGN UP</Link>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default HomePage;

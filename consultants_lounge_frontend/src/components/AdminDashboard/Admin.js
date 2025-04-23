@@ -1,5 +1,5 @@
 import '../../styles/Admin.css';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Route, Link, Routes } from 'react-router-dom';
 import Home from './AdminHome.js'
 import UserAccess from './UAC/UserAccessControls.js';
 import CustomerService from './CS/CostumerService.js';
@@ -18,7 +18,6 @@ import crmLogo from '../../resources/crm.png';
 
 export default function Admin() {
   return (
-    <Router>
       <div className="Admin">
               {/* Navigation side bar */}
         <nav className="Nav">
@@ -83,6 +82,5 @@ export default function Admin() {
           </Routes>
         </div>
       </div>
-    </Router>
   );
 }

@@ -1,3 +1,7 @@
+.Home{
+margin-left: 400px;
+}
+
 .container-welcome-buttons{
 display: flex;
 flex-direction: row;
