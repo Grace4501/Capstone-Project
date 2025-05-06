@@ -1,9 +1,20 @@
-export function require_role(req, res, next) {
+export function require_role(allowed_roles) {
+    return function(req, res, next) {
+        if (!req.user) {
+            return res.status(403).json({
+                success: false,
+                message: 'Forbidden: Authentication required.'
+            });
+        }
 
-    if (req.user && req.user.info.role === "Consultant") 
-        return next();
-    
-    return res.status(403).json({success: false,  message: 'Forbidden: Access denied.' });
+        if (allowed_roles.includes(req.user.info.role)) {
+            return next();
+        }
 
+        return res.status(403).json({
+            success: false,
+            message: 'Forbidden: Access denied.'
+        });
+    };
 }
   

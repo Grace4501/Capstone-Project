@@ -30,14 +30,16 @@ const __dirname = dirname(__filename);
 app.use(express.static(path.join(__dirname, "build")))
 
 //CORS policies..
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 app.use( 
     cors({
-      origin: process.env.CORS_ORIGIN || 'http://localhost:3000', // Use env variable for CORS origin
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], //Allowed Methods
-      allowedHeaders: ['Content-Type', 'Authorization'], // Auith for JWT.
-      credentials: true, //allows cookies to be attached with the response.
+      origin: isDevelopment ? true : process.env.CORS_ORIGIN, // Allow all origins in development
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+      credentials: true,
     })
-  );
+);
 
 app.use(express.json()) //Json Parsing
 app.use(express.urlencoded({extended: true})) //WebForms Parsing

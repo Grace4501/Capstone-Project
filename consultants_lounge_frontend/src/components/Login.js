@@ -47,7 +47,6 @@ export default function Login() {
         if (!validateForm()) return;
 
         try {
-
             const response = await postData('http://localhost:5000/api/v1/session/login', formData);
             if (response.success) {
                 setServerMessage("Login successful! Redirecting...");
@@ -55,11 +54,9 @@ export default function Login() {
                 setTimeout(() => navigate('/'), 2000);
             }
             else {
-                setServerMessage(response.message);
+                setServerMessage(response.message || "Login failed. Please try again.");
                 setServerMessageType("danger");
             }          
-     
-
         } catch (error) {
             console.error("Login error:", error);
             setServerMessage("Server error. Please try again later.");

@@ -3,11 +3,13 @@ import CreditCard from '../../../resources/CreditCard.png';
 import PercentTag from '../../../resources/PercentTag.png';
 import ShoppingCart from '../../../resources/ShoppingCart.png';
 import Percent from '../../../resources/Percent.png'
+import SurveyResponses from './SurveyResponses';
 
 export default function Analytics() {
     return (
         <div className='Analytics'>
             <h4> Analytics </h4>
+            <SurveyResponses />
             <div className='AnalyticFilter'>
                 <input type="search" placeholder='Search...' />
                 <select>

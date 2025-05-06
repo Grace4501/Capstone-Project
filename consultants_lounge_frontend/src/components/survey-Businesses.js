@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import '../styles/survey.css';
+import { postData } from '../utilities/fetchOps';
 
 const SurveyBusinesses = () => {
     const [step, setStep] = useState(0);  // State to track the current step of the survey
@@ -39,8 +40,23 @@ const SurveyBusinesses = () => {
     };
 
     // Submit the survey and move to the "thank you" screen
-    const handleSubmit = () => {
-        setStep(6);
+    const handleSubmit = async () => {
+        try {
+            const response = await postData('http://localhost:5000/api/v1/survey/submit', {
+                surveyType: 'Business Owner',
+                answers: answers
+            });
+
+            if (response.success) {
+                setStep(6); // Move to thank you screen
+            } else {
+                console.error('Error submitting survey:', response.message);
+                // Optionally show error message to user
+            }
+        } catch (error) {
+            console.error('Error submitting survey:', error);
+            // Optionally show error message to user
+        }
     };
 
     // Redirect to the homepage
